@@ -37,21 +37,21 @@ namespace cristal_caverns
     }
     class Program
     {
-        static void Load()
+        static void Load() // loads map from file
         {
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "save.txt"); 
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "save.txt"); // stores current directory in path
             foreach (string line in File.ReadLines(path))
             {
-                if (line.Contains("Cavern:"))
+                if (line.Contains("Cavern:")) // finds all cavern defs from file
                 {
-                    string temp = line.Substring(8);
+                    string temp = line.Substring(8); // looses the "Cavern:" part of the string
                     int i = 8; 
-                    for (int I = 1; I <= temp.Length; I++)
+                    for (int I = 1; I <= temp.Length; I++) // iterates through the line
                     {
-                        if (temp[I] == ","[0] )
+                        if (temp[I] == ","[0] ) // finds commas
                         {
                             string test = (temp.Substring(i, (i - I)));
-                            int.Parse(test); //
+                            int.Parse(test); //pointer
                         }
                     }
                 }
@@ -60,7 +60,7 @@ namespace cristal_caverns
         static void Main(string[] args)
         {
             Load();
-            Console.ReadKey();
+            Console.ReadKey(); // pause...
         }
     }
 }
