@@ -15,7 +15,7 @@ while (1) {
         "stop" { 
                         netsh wlan stop hostednetwork;
                         echo "Stopped.";
-                        Exit
+                        Exit;
                         }
         "list" { 
                         netsh wlan show hostednetwork | format-list;
