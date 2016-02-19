@@ -1,6 +1,6 @@
-﻿// day 1 2 hours
+// day 1 2 hours
 // day 2 2:15 + 1:30 hours
-
+// day 3 0:30 hours
 
 
 using System;
@@ -33,7 +33,11 @@ namespace cristal_caverns
         public override String ToString()
         {
             return string.Format("({0}, {1}, {2}) ({3}) ({4})", pos[0], pos[1] ,pos[2], discribe, exits[0]);
+            //string[] Text = {discribe, exits};
+            //return string.Format(Text);
         }
+        
+        
 
         // Return a copy of this point object by making a simple field copy.
         public cavern Copy()
@@ -43,7 +47,7 @@ namespace cristal_caverns
     }
     class Program
     {
-        static object[,,] Map1 = new object[100,100,100];
+        static object[,,] Map1 = new object[100000000,100000000,100000000];
 
         static void Load() // loads map from file
         {
@@ -61,7 +65,7 @@ namespace cristal_caverns
 
                     string[] E = new string[6];
                     int[][] D = new int[5][]; // ...
-                    string F = "";
+                    string F ;
 
                     string T = line.Substring(8); // looses the "Cavern:" part of the string
                     int i = 0;
@@ -134,10 +138,8 @@ namespace cristal_caverns
                 }
             }
         }
-
-        static void Main(string[] args)
-        {
-            Load();
+        
+        static void debugCheck() {
             for(byte x = 0; x < 100; x++)
             {
                 for(byte y = 0; y < 100; y++)
@@ -146,11 +148,23 @@ namespace cristal_caverns
                     {
                         if (Map1[x, y, z] != null)
                         {
-                            Console.WriteLine(Map1[x, y, z]);
+                            object current = Map1[x, y, z];
+                            Console.WriteLine(current.pos);
+                            Console.WriteLine(current.discribe);
+                            for (byte w = 0; w < current.exits.length; w++) 
+                            {
+                                Console.WriteLine(current.exits[w]);
+                            }
                         }
                     }
                 }
             }
+        }
+        
+        static void Main(string[] args)
+        {
+            Load();
+            debugCheck(); // Debug!
             Console.ReadKey(); // pause...
         }
     }
