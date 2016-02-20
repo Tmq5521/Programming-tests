@@ -140,11 +140,11 @@ namespace cristal_caverns
         }
         
         static void debugCheck() {
-            for(byte x = 0; x < 100; x++)
+            for(byte x = 0; x < 100000000; x++)
             {
-                for(byte y = 0; y < 100; y++)
+                for(byte y = 0; y < 100000000; y++)
                 {
-                    for(byte z = 0; z < 100; z++)
+                    for(byte z = 0; z < 100000000; z++)
                     {
                         if (Map1[x, y, z] != null)
                         {
