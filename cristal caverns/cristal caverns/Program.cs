@@ -15,7 +15,7 @@ namespace cristal_caverns
 {
     class cavern //object template for each room
     {
-        public sbyte[] pos; // position in array
+        public int[] pos; // position in array
         public string discribe; // strings containing discription of the room
         public string[] exits; //strings containing discriptions of the exits
         public int[][] paths ; //array containing the path each exit takes
@@ -61,7 +61,7 @@ namespace cristal_caverns
                     int d = 0;
 
                     sbyte[] C;
-                    C = new sbyte[3];
+                    C = new int[3];
 
                     string[] E = new string[6];
                     int[][] D = new int[5][]; // ...
@@ -78,7 +78,7 @@ namespace cristal_caverns
                             string test = (T.Substring(i, (I - i)));
                             Console.WriteLine(test); //Debug
                             Console.WriteLine("{0},{1}", I, i); //Debug
-                            C[c] = sbyte.Parse(test); // pulls numerical value followed by a <
+                            C[c] = int.Parse(test); // pulls numerical value followed by a <
 
                             i = I + 1; //Advances start pointer
                             c++;
