@@ -1,1 +1,21 @@
+// Template save file
+// Formated in plain text
+// Cristal Caverns is a project created by TMQ inspired by the DOS game of a simmalar name
+// Directions are always in North South East West Up Down
+// Start room is ALWAYS (0,0,0)
+// End room is ALWAYS (100000000,100000000,100000000)
+// Map dimentions are from 0 to 100000000 in all axis NEGITIVE VALUES DONT WORK
+// Save file REQUIRES Items to be defined AFTER Caverns
 
+// Cavern Format is as follows 
+// Cavern: X< Y< Z< Room Discription; N Discription: S Discription: E Discription: W Discription: U Discription: D Discription: X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|>
+// X,Y,Z Are absolute position
+// Discriptions are NOT allowed to contain the following <;:|>~
+// Path routes (X|Y|Z|>) are the XYZ of the destination room
+
+
+// Item format is as follows
+// Item: X< Y< Z< Item name; Item discription: Amount~
+// X,Y,Z Are absolute position
+// Discriptions are NOT allowed to contain the following <;:|>~
+// Items have NO use aside from place markers
