@@ -3,6 +3,7 @@
 // day 3 0:30 hours
 // day 4 1:15 hours
 
+// Type exeption error ???
 
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,11 @@ namespace cristal_caverns
 {
     class cavern //object template for each room
     {
-        public int[] pos; // position in array
-        public string discribe; // strings containing discription of the room
-        public string[] exits; //strings containing discriptions of the exits
-        public int[][] paths ; //array containing the path each exit takes
-        public object[] inventory ; // array containing Items on the ground
+        public int[] pos { get; set; } // position in array
+        public string discribe { get; set; } // strings containing discription of the room
+        public string[] exits { get; set; } //strings containing discriptions of the exits
+        public int[][] paths { get; set; } //array containing the path each exit takes
+        public item[] inventory { get; set; } // array containing Items on the ground
 
         public cavern(int[] pos, string discribe, string[] exits, int[][] paths )
         {
@@ -59,7 +60,7 @@ namespace cristal_caverns
             this.discription = discription;
         }
         
-        public overide String ToString() // overides the string value of this object
+        public override String ToString() // overides the string value of this object
         {
             return string.Format( "{0}, {1}", name, discription);
         }
@@ -72,7 +73,7 @@ namespace cristal_caverns
     
     class Program
     {
-        static object[,,] Map1 = new object[100000000,100000000,100000000];
+        static cavern[,,] Map1 { get; set; }  = new cavern[100000000, 100000000, 100000000];
 
         static void Load() // loads map from file
         {
@@ -93,7 +94,7 @@ namespace cristal_caverns
                     string[] Exits = new string[6]; //
                     int[][] Route = new int[5][];   // ...
                     
-                    string Dis ; // String
+                    string Dis = ""; // String
 
                     string T = line.Substring(8); // looses the "Cavern:" part of the string
                     int i = 0;
@@ -154,23 +155,21 @@ namespace cristal_caverns
                             Route[route] = Delta; // pulls string value followed by a >
 
                             i = I + 1; //Advances start pointer
-                            d++;
+                            route++;
                         }
 
                     }
 
-                    cavern Cavern = new cavern(Pos, Dis, Exits, Route); //make new room
-
-                    Map1[ C[0], C[1], C[2]] = Cavern; // store into a array
+                    Map1[Pos[0], Pos[1], Pos[2]] = new cavern(Pos, Dis, Exits, Route); //make new room and store into an array
 
                 }
                 else if (line.Contains("Item:"))
                 {
                     int pos = 0; // pointer
-                    int Pos[] = new int[3];
-                    string Dis ;  // string
-                    string Name ; // 
-                    int Amount ;  // int
+                    int[] Pos = new int[3];
+                    string Dis = "" ;  // string
+                    string Name = "" ; // 
+                    int Amount = 1;  // int
                     
                     string T = line.Substring(5); // looses the "Item:" part of the string
                     int i = 0; // start pointer
@@ -216,9 +215,9 @@ namespace cristal_caverns
                     }
                     for (var I = 0; I < Amount; I++)
                     {
-                        item Item = new item( name, dis); //build item
-                        int index = Map1[ Pos[0], Pos[1], Pos[2]].inventory.length; // find the dimintion of inventory
-                        Map1[ Pos[0], Pos[1], Pos[2]].inventory[index] = Item; // store into array
+                        item Item = new item( Name, Dis); //build item
+                        //int index = Map1[ Pos[0], Pos[1], Pos[2]].inventory.length; // find the dimintion of inventory
+                        //Map1[ Pos[0], Pos[1], Pos[2]].inventory[index] = Item; // store into array
                     }
                 }
                 // outside if-else
@@ -228,16 +227,16 @@ namespace cristal_caverns
         static void debugCheck() {
             for(int x = 0; x < 100000000; x++)
             {
-                for(int y = 0; y < 100000000; y++)
+                for (int y = 0; y < 100000000; y++)
                 {
-                    for(int z = 0; z < 100000000; z++)
+                    for (int z = 0; z < 100000000; z++)
                     {
-                        if (Map1[x, y, z] != null)
+                        if (Map1[x,y,z] != null)
                         {
-                            object current = Map1[x, y, z];
+                            cavern current = Map1[x, y, z];
                             Console.WriteLine(current.pos);
                             Console.WriteLine(current.discribe);
-                            for (byte w = 0; w < current.exits.length; w++) 
+                            for (byte w = 0; w < 5; w++) 
                             {
                                 Console.WriteLine(current.exits[w]);
                             }
