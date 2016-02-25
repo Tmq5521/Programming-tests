@@ -2,6 +2,7 @@
 // day 2 2:15 + 1:30 hours
 // day 3 0:30 hours
 // day 4 1:15 hours
+// day 5 1:15 hours
 
 // Type exeption error ???
 
@@ -15,7 +16,7 @@ using System.Reflection;
 
 namespace cristal_caverns
 {
-    class cavern //object template for each room
+    public class cavern //object template for each room
     {
         public int[] pos { get; set; } // position in array
         public string discribe { get; set; } // strings containing discription of the room
@@ -23,13 +24,22 @@ namespace cristal_caverns
         public int[][] paths { get; set; } //array containing the path each exit takes
         public item[] inventory { get; set; } // array containing Items on the ground
 
-        public cavern(int[] pos, string discribe, string[] exits, int[][] paths )
+        public cavern() // empty constructor
+        {
+            // temp variables set
+            pos = null;
+            discribe = null;
+            exits = null;
+            paths = null;
+        }
+
+        public cavern(int[] Pos, string Discribe, string[] Exits, int[][] Paths ) // Room constructor
         {
             // sets variables in the new object
-            this.pos = pos;
-            this.discribe = discribe;
-            this.exits = exits;
-            this.paths = paths;
+            pos = Pos;
+            discribe = Discribe;
+            exits = Exits;
+            paths = Paths;
         }
 
         // Return the point's value as a string.
@@ -49,15 +59,17 @@ namespace cristal_caverns
         }
     }
     
-    class item //object template for Items
+    public class item //object template for Items
     {
-        public string name; // Item Name
-        public string discription; // Item Discription
+        public string name = ""; // Item Name
+        public bool movable = false; // Item Movability
+        public string discription = ""; // Item Discription
         
-        public item ( string name, string discription) // sets Variables
+        public item ( string Name, string Discription, bool Movable) // sets Variables
         {
-            this.name = name;
-            this.discription = discription;
+            name = Name;
+            discription = Discription;
+            movable = Movable;
         }
         
         public override String ToString() // overides the string value of this object
@@ -71,10 +83,25 @@ namespace cristal_caverns
         }
     }
     
+    public class player
+    {
+        public string name { get; set;} = "";
+        public object[] inventory { get; set;} = new object[];
+        
+        public player (string Name)
+        {
+            name = Name;
+        }
+        
+        public override String ToString()
+        {
+            return string.Format( "{0}", name);
+        }
+    }
+    
     class Program
     {
-        static cavern[,,] Map1 { get; set; }  = new cavern[100000000, 100000000, 100000000];
-
+        // Initalization of functions
         static void Load() // loads map from file
         {
             string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "save.txt"); // stores current directory in path
@@ -170,6 +197,7 @@ namespace cristal_caverns
                     string Dis = "" ;  // string
                     string Name = "" ; // 
                     int Amount = 1;  // int
+                    bool Move = false;
                     
                     string T = line.Substring(5); // looses the "Item:" part of the string
                     int i = 0; // start pointer
@@ -212,18 +240,26 @@ namespace cristal_caverns
 
                             i = I + 1; //Advances start pointer
                         }
+                        if (T[I] == "|"[0]) // finds route values apended with a |
+                        {
+                            string test = (T.Substring(i, (I - i)));
+                            Console.WriteLine(test); //Debug
+                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            Move = bool.Parse(test); // pulls string value followed by a |
+                                
+                            i = I + 1; //Advances start pointer
+                        }
                     }
                     for (var I = 0; I < Amount; I++)
                     {
-                        item Item = new item( Name, Dis); //build item
-                        //int index = Map1[ Pos[0], Pos[1], Pos[2]].inventory.length; // find the dimintion of inventory
-                        //Map1[ Pos[0], Pos[1], Pos[2]].inventory[index] = Item; // store into array
+                        int index = Map1[ Pos[0], Pos[1], Pos[2]].inventory.length; // find the dimintion of inventory
+                        Map1[ Pos[0], Pos[1], Pos[2]].inventory[index] = new item( Name, Dis, Move); //build item and enter it into an array
                     }
                 }
-                // outside if-else
+                // outside if-else for file read
             }
         }
-        
+        // More functions
         static void debugCheck() {
             for(int x = 0; x < 100000000; x++)
             {
@@ -245,6 +281,14 @@ namespace cristal_caverns
                 }
             }
         }
+        // Yet more
+        static void loadRoom(int x, int y, int z) // current room loader
+            {
+                cavern current = Map1[ x, y, z]; // loads current room into the local variable current
+                
+                
+            }
+        cavern[,,] Map1 = new cavern[100000000,100000000,100000000]()
         
         static void Main(string[] args)
         {
