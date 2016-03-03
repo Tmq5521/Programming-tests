@@ -23,19 +23,19 @@ namespace cristal_caverns
         public int[] pos { get; set; } // position in array
         public string discribe { get; set; } // strings containing discription of the room
         public string[] exits { get; set; } //strings containing discriptions of the exits
-        public int[][] paths { get; set; } //array containing the path each exit takes
+        public int[,] paths { get; set; } //array containing the path each exit takes
         public item[] inventory { get; set; } // array containing Items on the ground
 
         public cavern() // empty constructor
         {
             // temp variables set
-            pos = null;
-            discribe = null;
-            exits = null;
-            paths = null;
+            int[] pos = { 0, 0, 0};
+            discribe = "null";
+            string[] exits = { "N", "S", "E", "W", "U", "D" };
+            int[,] paths = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
         }
 
-        public cavern(int[] Pos, string Discribe, string[] Exits, int[][] Paths ) // Room constructor
+        public cavern(int[] Pos, string Discribe, string[] Exits, int[,] Paths ) // Room constructor
         {
             // sets variables in the new object
             pos = Pos;
@@ -106,7 +106,8 @@ namespace cristal_caverns
         // Initalization of functions
         static void Load() // loads map from file
         {
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "save.txt"); // stores current directory in path
+            string @path = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"../../", "Save_tempalate.txt")); // stores current directory in path
+            Console.WriteLine("Breadcrumb");
             foreach (string line in File.ReadLines(path))
             {
                 if (line.Contains("//")) // finds comments and reads them in debug
@@ -121,7 +122,7 @@ namespace cristal_caverns
 
                     int[] Pos = new int[3];         // Arrays 
                     string[] Exits = new string[6]; //
-                    int[][] Route = new int[5][];   // ...
+                    int[,] Route = new int[5,2];   // ...
                     
                     string Dis = ""; // String
 
@@ -175,13 +176,14 @@ namespace cristal_caverns
                                     string testSub = (T.Substring(Start, (End - Start)));
                                     Console.WriteLine(testSub); //Debug
                                     Console.WriteLine("{0},{1}", End, Start); //Debug
-                                    Delta[pointer]= int.Parse(testSub); // pulls string value followed by a |
+                                    //Delta[pointer]= int.Parse(testSub); // pulls string value followed by a |
+                                    Route[route,pointer]= int.Parse(testSub); // pulls string value followed by a |
 
                                     Start = End + 1; //Advances start pointer
                                     pointer++;
                                 }
                             }
-                            Route[route] = Delta; // pulls string value followed by a >
+                            //Route[route] = Delta; // pulls string value followed by a >
 
                             i = I + 1; //Advances start pointer
                             route++;
@@ -254,7 +256,7 @@ namespace cristal_caverns
                     }
                     for (var I = 0; I < Amount; I++)
                     {
-                        int index = Map1[ Pos[0], Pos[1], Pos[2]].inventory.length; // find the dimintion of inventory
+                        int index = Map1[ Pos[0], Pos[1], Pos[2]].inventory.GetLength(0); // find the dimintion of inventory
                         Map1[ Pos[0], Pos[1], Pos[2]].inventory[index] = new item( Name, Dis, Move); //build item and enter it into an array
                     }
                 }
@@ -291,11 +293,10 @@ namespace cristal_caverns
                 
             }
 
-        cavern[,,] Map1 = null;
+        static cavern[,,] Map1 = new cavern[100000000, 100000000, 100000000]; //define the map
 
         static void Main(string[] args)
         {
-            cavern[,,] Map1 = new cavern[100000000, 100000000, 100000000]; //define the map
 
             Load();
             debugCheck(); // Debug!
