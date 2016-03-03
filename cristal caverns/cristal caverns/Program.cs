@@ -16,6 +16,8 @@ using System.Reflection;
 
 namespace cristal_caverns
 {
+
+    
     public class cavern //object template for each room
     {
         public int[] pos { get; set; } // position in array
@@ -86,7 +88,7 @@ namespace cristal_caverns
     public class player
     {
         public string name { get; set;} = "";
-        public object[] inventory { get; set;} = new object[];
+        public object[] inventory { get; set;} = new object[100000000];
         
         public player (string Name)
         {
@@ -99,7 +101,7 @@ namespace cristal_caverns
         }
     }
     
-    class Program
+    public class Program
     {
         // Initalization of functions
         static void Load() // loads map from file
@@ -267,7 +269,7 @@ namespace cristal_caverns
                 {
                     for (int z = 0; z < 100000000; z++)
                     {
-                        if (Map1[x,y,z] != null)
+                        if (Map1[ x, y, z] != null)
                         {
                             cavern current = Map1[x, y, z];
                             Console.WriteLine(current.pos);
@@ -288,10 +290,13 @@ namespace cristal_caverns
                 
                 
             }
-        cavern[,,] Map1 = new cavern[100000000,100000000,100000000]()
-        
+
+        cavern[,,] Map1 = null;
+
         static void Main(string[] args)
         {
+            cavern[,,] Map1 = new cavern[100000000, 100000000, 100000000]; //define the map
+
             Load();
             debugCheck(); // Debug!
             Console.ReadKey(); // pause...
