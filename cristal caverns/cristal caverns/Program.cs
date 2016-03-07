@@ -64,9 +64,16 @@ namespace cristal_caverns
 
     public class item //object template for Items
     {
-        public string name = ""; // Item Name
-        public bool movable = false; // Item Movability
-        public string discription = ""; // Item Discription
+        public string name { get; set; } = @"_"; // Item Name
+        public bool movable { get; set; } = false; // Item Movability
+        public string discription { get; set; } = null; // Item Discription
+
+        public item() // empty constructor
+        {
+            name = null;
+            discription = null;
+            movable = false;
+        }
 
         public item(string Name, string Discription, bool Movable) // sets Variables
         {
@@ -75,9 +82,10 @@ namespace cristal_caverns
             movable = Movable;
         }
 
-        public override String ToString() // overides the string value of this object
+        public bool equals() // overides the string value of this object
         {
-            return string.Format("{0}, {1}", name, discription);
+            return (name == @"_");
+            
         }
 
         public item Copy()
@@ -113,7 +121,7 @@ namespace cristal_caverns
             {
                 if (line.Contains("//")) // finds comments and reads them in debug
                 {
-                    Console.WriteLine(line); // debug comment reader
+                    // Console.WriteLine(line); // debug comment reader
                 }
                 else if (line.Contains("Cavern:")) // finds all cavern defs from file
                 {
@@ -136,8 +144,8 @@ namespace cristal_caverns
 
 
                             string test = (T.Substring(i, (I - i)));
-                            Console.WriteLine(test); //Debug
-                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            //Console.WriteLine(test);            //Debug
+                            //Console.WriteLine("{0},{1}", I, i); //Debug
                             Pos[pos] = int.Parse(test); // pulls numerical value followed by a <
 
                             i = I + 1; //Advances start pointer
@@ -146,8 +154,12 @@ namespace cristal_caverns
                         else if (T[I] == ";"[0]) // finds Room discription values apended with a ;
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Console.WriteLine(test); //Debug
-                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            if (test[0] == " "[0])
+                            {
+                                test = test.Substring(1, test.Length - 1);
+                            }
+                            //Console.WriteLine(test);            //Debug
+                            //Console.WriteLine("{0},{1}", I, i); //Debug
                             Dis = test; // pulls string value followed by a ;
 
                             i = I + 1; //Advances start pointer
@@ -155,8 +167,12 @@ namespace cristal_caverns
                         else if (T[I] == ":"[0]) // finds Exit discription values apended with a :
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Console.WriteLine(test); //Debug
-                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            if (test[0] == " "[0])
+                            {
+                                test = test.Substring(1, test.Length - 1);
+                            }
+                            //Console.WriteLine(test);            //Debug
+                            //Console.WriteLine("{0},{1}", I, i); //Debug
                             Exits[exits] = test; // pulls string value followed by a :
 
                             i = I + 1; //Advances start pointer
@@ -168,24 +184,21 @@ namespace cristal_caverns
                             int pointer = 0;
                             int[] Delta = new int[2];
                             string test = (T.Substring(i, (I - i)));
-                            Console.WriteLine(test); //Debug
-                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            //Console.WriteLine(test);            //Debug
+                            //Console.WriteLine("{0},{1}", I, i); //Debug
                             for (int End = 1; End < test.Length; End++)
                             {
                                 if (T[End] == "|"[0]) // finds route values apended with a |
                                 {
                                     string testSub = (T.Substring(Start, (End - Start)));
-                                    Console.WriteLine(testSub); //Debug
-                                    Console.WriteLine("{0},{1}", End, Start); //Debug
-                                    //Delta[pointer]= int.Parse(testSub); // pulls string value followed by a |
+                                    //Console.WriteLine(testSub);               //Debug
+                                    //Console.WriteLine("{0},{1}", End, Start); //Debug
                                     Route[route, pointer] = int.Parse(testSub); // pulls string value followed by a |
 
                                     Start = End + 1; //Advances start pointer
                                     pointer++;
                                 }
                             }
-                            //Route[route] = Delta; // pulls string value followed by a >
-
                             i = I + 1; //Advances start pointer
                             route++;
                         }
@@ -197,11 +210,11 @@ namespace cristal_caverns
                 }
                 else if (line.Contains("Item:"))
                 {
-                    int pos = 0; // pointer
+                    int pos = 0;      // pointer
                     int[] Pos = new int[3];
                     string Dis = "";  // string
                     string Name = ""; // 
-                    int Amount = 1;  // int
+                    int Amount = 1;   // int
                     bool Move = false;
 
                     string T = line.Substring(5); // looses the "Item:" part of the string
@@ -211,8 +224,8 @@ namespace cristal_caverns
                         if (T[I] == "<"[0]) // finds pos values apended with a < 
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Console.WriteLine(test); //Debug
-                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            //Console.WriteLine(test);            //Debug
+                            //Console.WriteLine("{0},{1}", I, i); //Debug
                             Pos[pos] = int.Parse(test); // pulls numerical value followed by a <
 
                             i = I + 1; //Advances start pointer
@@ -221,8 +234,12 @@ namespace cristal_caverns
                         else if (T[I] == ";"[0]) // finds Item name values apended with a ;
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Console.WriteLine(test); //Debug
-                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            if (test[0] == " "[0])
+                            {
+                                test = test.Substring(1, test.Length - 1);
+                            }
+                            //Console.WriteLine(test);            //Debug
+                            //Console.WriteLine("{0},{1}", I, i); //Debug
                             Name = test; // pulls string value followed by a ;
 
                             i = I + 1; //Advances start pointer
@@ -230,17 +247,21 @@ namespace cristal_caverns
                         else if (T[I] == ":"[0]) // finds Item discription values apended with a :
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Console.WriteLine(test); //Debug
-                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            if (test[0] == " "[0])
+                            {
+                                test = test.Substring(1, test.Length - 1);
+                            }
+                            //Console.WriteLine(test);            //Debug
+                            //Console.WriteLine("{0},{1}", I, i); //Debug
                             Dis = test; // pulls string value followed by a :
 
                             i = I + 1; //Advances start pointer
                         }
-                        else if (T[I] == "~"[0]) // finds Item discription values apended with a ~
+                        else if (T[I] == "~"[0]) // finds Item amount values apended with a ~
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Console.WriteLine(test); //Debug
-                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            //Console.WriteLine(test);            //Debug
+                            //Console.WriteLine("{0},{1}", I, i); //Debug
                             Amount = int.Parse(test); // pulls string value followed by a ~
 
                             i = I + 1; //Advances start pointer
@@ -248,26 +269,35 @@ namespace cristal_caverns
                         if (T[I] == "|"[0]) // finds route values apended with a |
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Console.WriteLine(test); //Debug
-                            Console.WriteLine("{0},{1}", I, i); //Debug
+                            //Console.WriteLine(test);            //Debug
+                            //Console.WriteLine("{0},{1}", I, i); //Debug
                             Move = bool.Parse(test); // pulls string value followed by a |
 
                             i = I + 1; //Advances start pointer
                         }
                     }
-                    for (var I = 0; I < Amount; I++)
+
+                    int max = Map1[Pos[0], Pos[1], Pos[2]].inventory.GetLength(0); // finds the max inventory size
+                    item[] inventory = Map1[Pos[0], Pos[1], Pos[2]].inventory; // sets inventory as a local variable for simplicity
+
+                    for (var I = 0; I < Amount; I++) // adds one itm to the frst null entry in the inventory
                     {
-                        for (int index = 0; 0 < Map1[Pos[0], Pos[1], Pos[2]].inventory.GetLength(0); index++)
+                        for (int index = 0; index < max ; index++) // finds first null entry
                         {
-                            if(Map1[Pos[0], Pos[1], Pos[2]].inventory[index].name == null)
+                            if(inventory[index] == null) // null entry
                             {
-                                Map1[Pos[0], Pos[1], Pos[2]].inventory[index] = new item(Name, Dis, Move);
+                                inventory[index] = new item(Name, Dis, Move);
                                 break;
                             }
+                            else if (inventory[index].equals()) // empty entry
+                            {
+                                inventory[index] = new item(Name, Dis, Move);
+                                break;
+                            }
+
                         }
-                        //int index = Map1[Pos[0], Pos[1], Pos[2]].inventory.GetLength(0); // find the dimintion of inventory
-                        //build item and enter it into an array
                     }
+                    Map1[Pos[0], Pos[1], Pos[2]].inventory = inventory; // dump the resulting local inventory into the cavern inventory
                 }
                 // outside if-else for file read
             }
@@ -275,20 +305,20 @@ namespace cristal_caverns
         // More functions
         static void debugCheck()
         {
-            for (int x = 0; x < Map1.GetLength(0); x++)
+            for (int x = 0; x < Map1.GetLength(0); x++) //x iterator
             {
-                for (int y = 0; y < Map1.GetLength(1); y++)
+                for (int y = 0; y < Map1.GetLength(1); y++) // y iterator
                 {
-                    for (int z = 0; z < Map1.GetLength(2); z++)
+                    for (int z = 0; z < Map1.GetLength(2); z++) // z iterator
                     {
-                        if (Map1[x, y, z] != null)
+                        if (Map1[x, y, z] != null) // safety
                         {
-                            cavern current = Map1[x, y, z];
-                            Console.WriteLine(current.pos);
-                            Console.WriteLine(current.discribe);
-                            for (byte w = 0; w < 5; w++)
+                            cavern current = Map1[x, y, z]; // set local var current to cavern
+                            Console.WriteLine( "{0}, {1}, {2}", current.pos[0], current.pos[1], current.pos[2]); // debug pos
+                            Console.WriteLine(current.discribe); // debug discription
+                            for (byte w = 0; w < 6; w++) // exit iterator
                             {
-                                Console.WriteLine(current.exits[w]);
+                                Console.WriteLine(current.exits[w]); // debug exits
                             }
                         }
                     }
@@ -307,8 +337,7 @@ namespace cristal_caverns
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Test");
-            Load();
+            Load(); // load function
             debugCheck(); // Debug!
             Console.ReadKey(); // pause...
         }
