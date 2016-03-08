@@ -26,6 +26,7 @@ namespace cristal_caverns
         public string[] exits { get; set; } //strings containing discriptions of the exits
         public int[,] paths { get; set; } //array containing the path each exit takes
         public item[] inventory { get; set; } = new item[100]; // array containing Items on the ground
+        public string pic = "error.txt"; // ascii art pic file
 
         public cavern() // empty constructor
         {
@@ -36,13 +37,14 @@ namespace cristal_caverns
             int[,] paths = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
         }
 
-        public cavern(int[] Pos, string Discribe, string[] Exits, int[,] Paths) // Room constructor
+        public cavern(int[] Pos, string Discribe, string[] Exits, int[,] Paths, string Pic) // Room constructor
         {
             // sets variables in the new object
             pos = Pos;
             discribe = Discribe;
             exits = Exits;
             paths = Paths;
+            pic = Pic;
         }
 
         // Return the point's value as a string.
@@ -115,14 +117,13 @@ namespace cristal_caverns
         // Initalization of functions
         static void Load() // loads map from file
         {
-            string path = Path.GetFullPath(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "../../", "Save_template.txt")); // stores current directory in path
-            Debug.WriteLine(DateTime.Now + " | Path | " + path);
-            foreach (string line in File.ReadLines(path))
+            Debug.WriteLine(DateTime.Now + " | Path    | " + "../../Save_template.txt"); // print path
+            foreach (string line in File.ReadLines("../../Save_template.txt")) // reads file at path
             {
-                Debug.WriteLine(DateTime.Now + " | Line | " + line);
+                Debug.WriteLine(DateTime.Now + " | Line    | " + line);
                 if (line.Contains("//")) // finds comments and reads them in debug
                 {
-                    Debug.WriteLine(DateTime.Now + " | Comment | " + line); // debug comment reader
+                    // Debug.WriteLine(DateTime.Now + " | Comment | " + line); // debug comment reader
                 }
                 else if (line.Contains("Cavern:")) // finds all cavern defs from file
                 {
@@ -140,60 +141,60 @@ namespace cristal_caverns
                     int i = 0;
                     for (int I = 1; I < T.Length; I++) // iterates through the line
                     {
-                        if (T[I] == "<"[0]) // finds pos values apended with a < 
+                        if (T[I] == '<') // finds pos values apended with a < 
                         {
 
 
                             string test = (T.Substring(i, (I - i)));
-                            Debug.WriteLine(DateTime.Now + " | Pos |  " + test);            //Debug
-                            Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", I, i); //Debug
+                            Debug.WriteLine(DateTime.Now + " | Pos     |  " + test);            //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
                             Pos[pos] = int.Parse(test); // pulls numerical value followed by a <
 
                             i = I + 1; //Advances start pointer
                             pos++;
                         }
-                        else if (T[I] == ";"[0]) // finds Room discription values apended with a ;
+                        else if (T[I] == ';') // finds Room discription values apended with a ;
                         {
                             string test = (T.Substring(i, (I - i)));
-                            if (test[0] == " "[0])
+                            if (test[0] == ' ')
                             {
                                 test = test.Substring(1, test.Length - 1);
                             }
-                            Debug.WriteLine(DateTime.Now + " | Discription | " + test);            //Debug
-                            Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", I, i); //Debug
+                            Debug.WriteLine(DateTime.Now + " | Discrip | " + test);            //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
                             Dis = test; // pulls string value followed by a ;
 
                             i = I + 1; //Advances start pointer
                         }
-                        else if (T[I] == ":"[0]) // finds Exit discription values apended with a :
+                        else if (T[I] == ':') // finds Exit discription values apended with a :
                         {
                             string test = (T.Substring(i, (I - i)));
-                            if (test[0] == " "[0])
+                            if (test[0] == ' ')
                             {
                                 test = test.Substring(1, test.Length - 1);
                             }
-                            Debug.WriteLine(DateTime.Now + " | Exit | " + test);            //Debug
-                            Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", I, i); //Debug
+                            Debug.WriteLine(DateTime.Now + " | Exit    | " + test);            //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
                             Exits[exits] = test; // pulls string value followed by a :
 
                             i = I + 1; //Advances start pointer
                             exits++;
                         }
-                        else if (T[I] == ">"[0]) // finds route sets apended with a >
+                        else if (T[I] == '>') // finds route sets apended with a >
                         {
                             int Start = 0;
                             int pointer = 0;
                             int[] Delta = new int[2];
                             string test = (T.Substring(i, (I - i)));
-                            Debug.WriteLine(DateTime.Now + " | Route |" + test);            //Debug
-                            Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", I, i); //Debug
+                            Debug.WriteLine(DateTime.Now + " | Route   |" + test);            //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
                             for (int End = 1; End < test.Length; End++)
                             {
-                                if (T[End] == "|"[0]) // finds route values apended with a |
+                                if (T[End] == '|') // finds route values apended with a |
                                 {
                                     string testSub = (T.Substring(Start, (End - Start)));
-                                    Debug.WriteLine(DateTime.Now + " | Route | " + testSub);               //Debug
-                                    Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", End, Start); //Debug
+                                    Debug.WriteLine(DateTime.Now + " | Route   | " + testSub);               //Debug
+                                    Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", End, Start); //Debug
                                     Route[route, pointer] = int.Parse(testSub); // pulls string value followed by a |
 
                                     Start = End + 1; //Advances start pointer
@@ -206,7 +207,7 @@ namespace cristal_caverns
 
                     }
 
-                    Map1[Pos[0], Pos[1], Pos[2]] = new cavern(Pos, Dis, Exits, Route); //make new room and store into an array
+                    Map1[Pos[0], Pos[1], Pos[2]] = new cavern(Pos, Dis, Exits, Route, "error.txt"); //make new room and store into an array
 
                 }
                 else if (line.Contains("Item:"))
@@ -222,56 +223,56 @@ namespace cristal_caverns
                     int i = 0; // start pointer
                     for (int I = 1; I < T.Length; I++) // iterates through the line
                     {
-                        if (T[I] == "<"[0]) // finds pos values apended with a < 
+                        if (T[I] == '<') // finds pos values apended with a < 
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Debug.WriteLine(DateTime.Now + " | Pos | " + test);            //Debug
-                            Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", I, i); //Debug
+                            Debug.WriteLine(DateTime.Now + " | Pos     | " + test);            //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
                             Pos[pos] = int.Parse(test); // pulls numerical value followed by a <
 
                             i = I + 1; //Advances start pointer
                             pos++;
                         }
-                        else if (T[I] == ";"[0]) // finds Item name values apended with a ;
+                        else if (T[I] == ';') // finds Item name values apended with a ;
                         {
                             string test = (T.Substring(i, (I - i)));
-                            if (test[0] == " "[0])
+                            if (test[0] == ' ')
                             {
                                 test = test.Substring(1, test.Length - 1);
                             }
-                            Debug.WriteLine(DateTime.Now + " | Name | " + test);            //Debug
-                            Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", I, i); //Debug
+                            Debug.WriteLine(DateTime.Now + " | Name    | " + test);            //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
                             Name = test; // pulls string value followed by a ;
 
                             i = I + 1; //Advances start pointer
                         }
-                        else if (T[I] == ":"[0]) // finds Item discription values apended with a :
+                        else if (T[I] == ':') // finds Item discription values apended with a :
                         {
                             string test = (T.Substring(i, (I - i)));
-                            if (test[0] == " "[0])
+                            if (test[0] == ' ')
                             {
                                 test = test.Substring(1, test.Length - 1);
                             }
-                            Debug.WriteLine(DateTime.Now + " | Discription | " + test);            //Debug
-                            Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", I, i); //Debug
+                            Debug.WriteLine(DateTime.Now + " | Discrip | " + test);            //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
                             Dis = test; // pulls string value followed by a :
 
                             i = I + 1; //Advances start pointer
                         }
-                        else if (T[I] == "~"[0]) // finds Item amount values apended with a ~
+                        else if (T[I] == '~') // finds Item amount values apended with a ~
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Debug.WriteLine(DateTime.Now + " | Amount | " + test);            //Debug
-                            Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", I, i); //Debug
+                            Debug.WriteLine(DateTime.Now + " | Amount  | " + test);            //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
                             Amount = int.Parse(test); // pulls string value followed by a ~
 
                             i = I + 1; //Advances start pointer
                         }
-                        if (T[I] == "|"[0]) // finds Movable values apended with a |
+                        if (T[I] == '|') // finds Movable values apended with a |
                         {
                             string test = (T.Substring(i, (I - i)));
                             Debug.WriteLine(DateTime.Now + " | Movable | " + test);            //Debug
-                            Debug.WriteLine("{0} Pointer | {1},{2}", DateTime.Now + " | ", I, i); //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
                             Move = bool.Parse(test); // pulls string value followed by a |
 
                             i = I + 1; //Advances start pointer
@@ -315,11 +316,11 @@ namespace cristal_caverns
                         if (Map1[x, y, z] != null) // safety
                         {
                             cavern current = Map1[x, y, z]; // set local var current to cavern
-                            Debug.WriteLine( "{0} Cavern Pos| {1}, {2}, {3}", DateTime.Now + " | ", current.pos[0], current.pos[1], current.pos[2]); // debug pos
-                            Debug.WriteLine(DateTime.Now + " | " +  current.discribe); // debug discription
+                            Debug.WriteLine( "{0} {1}, {2}, {3}", DateTime.Now + " | Cavern  | ", current.pos[0], current.pos[1], current.pos[2]); // debug pos
+                            Debug.WriteLine(DateTime.Now + " | Discrip | " +  current.discribe); // debug discription
                             for (byte w = 0; w < 6; w++) // exit iterator
                             {
-                                Debug.WriteLine(DateTime.Now + " | " + current.exits[w]); // debug exits
+                                Debug.WriteLine(DateTime.Now + " | exit    | " + string.Format("{0} |", w) + current.exits[w]); // debug exits
                             }
                         }
                     }
@@ -330,8 +331,63 @@ namespace cristal_caverns
         static void loadRoom(int x, int y, int z) // current room loader
         {
             cavern current = Map1[x, y, z]; // loads current room into the local variable current
+            Console.Clear(); // clears console
 
+            for (byte i = 0; i < 3; i++) // i = 0 to 2
+            Console.Write(current.pos[i] + " "); // debug
 
+            Image(current.pic, Console.WindowWidth, 10); // draw pic
+
+            // Console.SetCursorPosition(0, 10); // sets cursor position
+            WordWrap(current.discribe); // writes discription
+            WordWrap(" "); // blank line
+
+            for(byte i = 0; i < 6; i++) // i = 0 to 5
+            WordWrap(current.exits[i]); // writes exits
+            WordWrap(" "); // blank line
+        }
+
+        static void WordWrap( string str) // word wrap function
+        {
+            Console.SetCursorPosition(0, Console.CursorTop + 1);
+            string[] Str = str.Split(' ');
+            foreach (string word in Str)
+            {
+                int space = Console.BufferWidth - Console.CursorLeft;
+                if (word.Length < space)
+                {
+                    Console.Write(word + ' ');
+                } 
+                else
+                {
+                    Console.SetCursorPosition( 0, Console.CursorTop + 1);
+                    Console.Write(word + ' ');
+                }
+
+            }
+        }
+
+        static void Image(string name, int sizeX, int sizeY)
+        {
+            List<string> Doc = new List<string>();
+            string @path = Path.Combine(Path.GetFullPath("../../"), @"pic\",name); // stores current directory in path
+            //
+            {
+                foreach (string line in File.ReadAllLines(@path))
+                {
+                    Debug.WriteLine("breadcrumb");
+                    Doc.Add(line);
+                }
+            }
+            //catch { Debug.WriteLine(DateTime.Now + " | Draw    | Path error: " + @path); }
+            for (int x = 0; x < Doc.Count && x < sizeY; x++)
+            {
+                for (int y = 0; y < Doc[x].Length && y < sizeX; y++)
+                {
+                    Console.SetCursorPosition(y, x);
+                    Console.Write(Doc[x][y]);
+                }
+            }
         }
 
         static cavern[,,] Map1 = new cavern[100, 100, 100]; //define the map
@@ -342,11 +398,20 @@ namespace cristal_caverns
 
         static void Main(string[] args)
         {
+            Console.Title = "Cristal Caverns";
+            try
+            {
+                Console.SetWindowSize(100, 30);
+            }
+            catch { Debug.WriteLine(DateTime.Now + " | Setup   | Buffer resize failed"); }
             Debug.AutoFlush = true;
-            Debug.WriteLine(DateTime.Now + " | " + "Debug data for Cristal caverns."); // inital debug output
+            Debug.WriteLine(DateTime.Now + " | @@@@@@@ | " + "Debug data for Cristal caverns."); // inital debug output
 
             Load(); // load function
             debugCheck(); // Debug!
+
+            loadRoom(0, 0, 0);
+
             Console.ReadKey(); // pause...
             
         }

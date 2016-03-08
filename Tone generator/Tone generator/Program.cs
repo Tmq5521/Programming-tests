@@ -10,23 +10,35 @@ namespace Tone_generator
     {
         static void Main(string[] args)
         {
+            Console.Title = "Tone Generator";
             while (true)
             {
-                int[] Num = { 0, 0};
-                Console.WriteLine("Frequency (Hz) ?");
-                string Freq = Console.ReadLine();
-                Num[0] = int.Parse(Freq + "0")/10;
-                Console.WriteLine("Duration (S) ?");
-                string Dura = Console.ReadLine();
-                Num[1] = int.Parse(Dura + "0")*100;
-                if (Num[1] > 37 && Num[1] < 32000)
+                int[] Num = { 0, 0}; // default values
+
+                Freq: // freq
+                Console.WriteLine("Frequency (Hz) ?"); //Q
+                string Freq = Console.ReadLine(); // Input
+                try { Num[0] = int.Parse(Freq); } // Parse
+                catch
                 {
-                    Console.Beep(Num[0], Num[1]);
+                    Console.WriteLine("Error invalid input. Range from 37 to 32000.");
+                    goto Freq;
                 }
-                else
+
+                Dura: //duration
+                Console.WriteLine("Duration (mS) ?"); //Q
+                string Dura = Console.ReadLine(); // Input
+                try { Num[1] = int.Parse(Dura); } // Parse
+                catch
                 {
-                    Console.WriteLine("Error: Frequency has to be greater than 37 and less than 32000 Hz.");
+                    Console.WriteLine("Error invalid input. Range from 0 to 2 trillion.");
+                    goto Dura;
                 }
+
+                try { Console.Beep(Num[0], Num[1]); } // Beep
+                catch { Console.WriteLine("invalid range."); }
+                Console.WriteLine("Done");
+                Console.WriteLine(" "); // clear space
             }
         }
     }
