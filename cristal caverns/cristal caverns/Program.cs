@@ -3,7 +3,11 @@
 // day 3 0:30 hours
 // day 4 1:15 hours
 // day 5 1:15 hours
-// day 6 
+// day 6 3:30
+// day 7 3:30
+// day 8 3:30
+// day 9 3:30
+// day 10 3:30
 
 // Type exeption error ???
 
@@ -21,21 +25,15 @@ namespace cristal_caverns
 
     public class cavern //object template for each room
     {
-        public int[] pos { get; set; } // position in array
-        public string discribe { get; set; } // strings containing discription of the room
-        public string[] exits { get; set; } //strings containing discriptions of the exits
-        public int[,] paths { get; set; } //array containing the path each exit takes
+        public int[] pos { get; set; } = { 0, 0, 0 }; // position in array
+        public string discribe { get; set; } = "null";// strings containing discription of the room
+        public string[] exits { get; set; } = { "North", "South", "East", "West", "Up", "Down" }; //strings containing discriptions of the exits
+        public int[,] paths { get; set; } = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } }; //array containing the path each exit takes
         public item[] inventory { get; set; } = new item[100]; // array containing Items on the ground
         public string pic = "404.txt"; // ascii art pic file
 
         public cavern() // empty constructor
-        {
-            // temp variables set
-            int[] pos = { 0, 0, 0 };
-            discribe = "null";
-            string[] exits = { "N", "S", "E", "W", "U", "D" };
-            int[,] paths = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
-        }
+        { }
 
         public cavern(int[] Pos, string Discribe, string[] Exits, int[,] Paths, string Pic) // Room constructor
         {
@@ -87,7 +85,7 @@ namespace cristal_caverns
         public bool equals() // overides the string value of this object
         {
             return (name == @"_");
-            
+
         }
 
         public item Copy()
@@ -133,9 +131,10 @@ namespace cristal_caverns
 
                     int[] Pos = new int[3];         // Arrays 
                     string[] Exits = new string[6]; //
-                    int[,] Route = new int[5, 2];   // ...
+                    int[,] Route = new int[6, 3];   // ...
 
                     string Dis = ""; // String
+                    string @Pic = "404.txt";
 
                     string T = line.Substring(8); // looses the "Cavern:" part of the string
                     int i = 0;
@@ -188,12 +187,12 @@ namespace cristal_caverns
                             string test = (T.Substring(i, (I - i)));
                             Debug.WriteLine(DateTime.Now + " | Route   |" + test);            //Debug
                             Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
-                            for (int End = 1; End < test.Length; End++)
+                            for (int End = 0; End < test.Length; End++)
                             {
-                                if (T[End] == '|') // finds route values apended with a |
+                                if (test[End] == '|') // finds route values apended with a |
                                 {
-                                    string testSub = (T.Substring(Start, (End - Start)));
-                                    Debug.WriteLine(DateTime.Now + " | Route   | " + testSub);               //Debug
+                                    string testSub = (test.Substring(Start, ((End) - Start)));
+                                    Debug.WriteLine(DateTime.Now + " | Route[] | " + testSub);               //Debug
                                     Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", End, Start); //Debug
                                     Route[route, pointer] = int.Parse(testSub); // pulls string value followed by a |
 
@@ -204,10 +203,23 @@ namespace cristal_caverns
                             i = I + 1; //Advances start pointer
                             route++;
                         }
+                        else if (T[I] == '^')
+                        {
+                            string test = (T.Substring(i, (I - i)));
+                            if (test[0] == ' ')
+                            {
+                                test = test.Substring(1, test.Length - 1);
+                            }
+                            Debug.WriteLine(DateTime.Now + " | Exit    | " + test);            //Debug
+                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            @Pic = test; // pulls string value followed by a :
+
+                            i = I + 1; //Advances start pointer
+                        }
 
                     }
 
-                    Map1[Pos[0], Pos[1], Pos[2]] = new cavern(Pos, Dis, Exits, Route, "404.txt"); //make new room and store into an array
+                    Map1[Pos[0], Pos[1], Pos[2]] = new cavern(Pos, Dis, Exits, Route, @Pic); //make new room and store into an array
 
                 }
                 else if (line.Contains("Item:"))
@@ -284,9 +296,9 @@ namespace cristal_caverns
 
                     for (var I = 0; I < Amount; I++) // adds one itm to the frst null entry in the inventory
                     {
-                        for (int index = 0; index < max ; index++) // finds first null entry
+                        for (int index = 0; index < max; index++) // finds first null entry
                         {
-                            if(inventory[index] == null) // null entry
+                            if (inventory[index] == null) // null entry
                             {
                                 inventory[index] = new item(Name, Dis, Move);
                                 break;
@@ -305,51 +317,58 @@ namespace cristal_caverns
             }
         }
         // More functions
-        static void debugCheck()
+        static void debugCheck(int x, int y, int z)
         {
-            for (int x = 0; x < Map1.GetLength(0); x++) //x iterator
+
+            if (Map1[x, y, z] != null) // safety
             {
-                for (int y = 0; y < Map1.GetLength(1); y++) // y iterator
+                cavern current = Map1[x, y, z]; // set local var current to cavern
+                Debug.WriteLine("{0} {1}, {2}, {3}", DateTime.Now + " | Cavern  | ", current.pos[0], current.pos[1], current.pos[2]); // debug pos
+                Debug.WriteLine(DateTime.Now + " | Discrip | " + current.discribe); // debug discription
+                for (byte w = 0; w < 6; w++) // exit iterator
                 {
-                    for (int z = 0; z < Map1.GetLength(2); z++) // z iterator
-                    {
-                        if (Map1[x, y, z] != null) // safety
-                        {
-                            cavern current = Map1[x, y, z]; // set local var current to cavern
-                            Debug.WriteLine( "{0} {1}, {2}, {3}", DateTime.Now + " | Cavern  | ", current.pos[0], current.pos[1], current.pos[2]); // debug pos
-                            Debug.WriteLine(DateTime.Now + " | Discrip | " +  current.discribe); // debug discription
-                            for (byte w = 0; w < 6; w++) // exit iterator
-                            {
-                                Debug.WriteLine(DateTime.Now + " | exit    | " + string.Format("{0} |", w) + current.exits[w]); // debug exits
-                            }
-                        }
-                    }
+                    Debug.WriteLine(DateTime.Now + " | exit    | " + string.Format("{0} |", w) + current.exits[w]); // debug exits
                 }
             }
         }
         // Yet more
-        static void loadRoom(int x, int y, int z) // current room loader
+        static int[] loadRoom(int x, int y, int z) // current room loader
         {
-            cavern current = Map1[x, y, z]; // loads current room into the local variable current
+            debugCheck(x, y, z); // debugs room
+
+            cavern current = new cavern();
+            if (Map1[x, y, z] != null)
+                current = Map1[x, y, z];
+           
             Console.Clear(); // clears console
 
-            for (byte i = 0; i < 3; i++) // i = 0 to 2
-            Console.Write(current.pos[i] + " "); // debug
-
-            Image(current.pic, Console.WindowWidth, 20); // draw pic
+            Image(current.pic, Console.WindowWidth); // draw pic
 
             // Console.SetCursorPosition(0, 10); // sets cursor position
             WordWrap(current.discribe); // writes discription
             WordWrap(" "); // blank line
 
-            for(byte i = 0; i < 6; i++) // i = 0 to 5
+            for(byte i = 0; i < current.exits.Length; i++) // i = 0 to 5
             WordWrap(current.exits[i]); // writes exits
-            WordWrap(" "); // blank line
+
+            input:
+            WordWrap("What direction do You go (N,S,E,W,U,D)?");
+            string choice = string.Format(Console.ReadLine()).ToUpper();
+            try
+            {
+                int c = "NSEWUD".IndexOf(choice[0]);
+                int[] @return = new int[3] { current.paths[c, 0], current.paths[c, 1], current.paths[c, 2] };
+                return @return; // returns next room
+            }
+            catch
+            {
+                WordWrap("Error Input, please only use North, South, East, West, Up, and Down as directions. ");
+                goto input;
+            } 
         }
 
         static void WordWrap( string str) // word wrap function
         {
-            Console.SetCursorPosition(0, Console.CursorTop + 1); // advance a line
             string[] Str = str.Split(' '); // split words
             foreach (string word in Str) // run throught the words
             {
@@ -365,9 +384,10 @@ namespace cristal_caverns
                 }
 
             }
+            Console.SetCursorPosition(0, Console.CursorTop + 1); // advance a line
         }
 
-        static void Image(string name, int sizeX, int sizeY) // image draw function
+        static void Image(string name, int sizeX) // image draw function
         {
             string @pic = Path.Combine( @"pic/",name); // stores current directory in path
             if (!File.Exists(@pic))
@@ -377,17 +397,17 @@ namespace cristal_caverns
             {
                 string[] file = File.ReadAllLines(@pic); // put the pic in an string array
 
-                for (int y = 0; y < file.Length && y < sizeY; y++) // go through the array
+                for (int y = 0; y < file.Length; y++) // go through the array
                 {
                     
                     Console.SetCursorPosition(0, y);
-                    Console.Write(file[y]);
+                    Console.Write(file[y]); // write line
                 }
 
-                Debug.WriteLine(DateTime.Now + " | Draw    | Draw sucsess: " + @pic);
+                Debug.WriteLine(DateTime.Now + " | Draw    | Draw sucsess: " + @pic); //debug
             }
 
-            catch { Debug.WriteLine(DateTime.Now + " | Draw    | Path error: " + @pic); }
+            catch { Debug.WriteLine(DateTime.Now + " | Draw    | Path error: " + @pic); } // catch errors
         }
 
         static cavern[,,] Map1 = new cavern[100, 100, 100]; //define the map
@@ -396,7 +416,6 @@ namespace cristal_caverns
 
         static FileStream fs = new FileStream("../../Debug.txt", FileMode.Create, FileAccess.ReadWrite); // starts the debug stream
         static StreamWriter Debug = new StreamWriter(fs);
-        
 
         static void Main(string[] args)
         {
@@ -411,9 +430,25 @@ namespace cristal_caverns
             Debug.WriteLine(DateTime.Now + " | @@@@@@@ | " + "Debug data for Cristal caverns."); // inital debug output
 
             Load(); // load function
-            debugCheck(); // Debug!
+            for (int x = 0; x < Map1.GetLength(0); x++) //x iterator
+            {
+                for (int y = 0; y < Map1.GetLength(1); y++) // y iterator
+                {
+                    for (int z = 0; z < Map1.GetLength(2); z++) // z iterator
+                    {
+                        debugCheck(x, y, z); // Debug!
+                    }
+                }
+            }
 
-            loadRoom(0, 0, 0);
+            int[] exit = { 100, 100, 100 };
+            int[] now = loadRoom(0, 0, 0); // load the start room
+
+            while (now != exit )
+            {
+                now = loadRoom(now[0], now[1], now[2]);
+                Debug.WriteLine(DateTime.Now + " | Load R | " + now);
+            }
 
             Console.ReadKey(); // pause...
             
