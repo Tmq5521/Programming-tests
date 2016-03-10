@@ -1,0 +1,153 @@
+3/10/2016 1:57:55 PM | @@@@@@@ | Debug data for Cristal caverns.
+3/10/2016 1:57:55 PM | Path    | \Save_template.txt
+3/10/2016 1:57:55 PM | Line    | // Template save file
+3/10/2016 1:57:55 PM | Line    | // Formated in plain text
+3/10/2016 1:57:55 PM | Line    | // Cristal Caverns is a project created by TMQ inspired by the DOS game of a simmalar name
+3/10/2016 1:57:55 PM | Line    | // Directions are always in North South East West Up Down
+3/10/2016 1:57:55 PM | Line    | // Start room is ALWAYS at (0,0,0)
+3/10/2016 1:57:55 PM | Line    | // End room is ALWAYS at (100,100,100)
+3/10/2016 1:57:55 PM | Line    | // Map dimentions are from 0 to 100 in all axis NEGITIVE VALUES DONT WORK
+3/10/2016 1:57:55 PM | Line    | // Save file REQUIRES Items to be defined AFTER Caverns
+3/10/2016 1:57:55 PM | Line    | 
+3/10/2016 1:57:55 PM | Line    | // Cavern Format is as follows 
+3/10/2016 1:57:55 PM | Line    | // Cavern: X< Y< Z< Room Discription; N Discription: S Discription: E Discription: W Discription: U Discription: D Discription: X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|>
+3/10/2016 1:57:55 PM | Line    | // X,Y,Z Are absolute position
+3/10/2016 1:57:55 PM | Line    | // Discriptions are NOT allowed to contain the following <;:|>~
+3/10/2016 1:57:55 PM | Line    | // Path routes (X|Y|Z|>) are the XYZ of the destination room
+3/10/2016 1:57:55 PM | Line    | 
+3/10/2016 1:57:55 PM | Line    | Cavern: 0< 0< 0< You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.; To the North, the path is clear and straight leading to what You think is another similar cavern.: To the South, the path is winding and narrow leading into the darkness.: To the East, the path winds and pans down out of view.: To the West, there is a straight narrow path leading to a much larger looking cavern.: Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.: Floor: 1|0|0|> 99|0|1|> 0|99|0|> 0|0|99|> 0|0|0|> 0|0|0|>
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  1,0
+3/10/2016 1:57:55 PM | Pos     |   0
+3/10/2016 1:57:55 PM | Pointer |  4,2
+3/10/2016 1:57:55 PM | Pos     |   0
+3/10/2016 1:57:55 PM | Pointer |  7,5
+3/10/2016 1:57:55 PM | Discrip | You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.
+3/10/2016 1:57:55 PM | Pointer |  217,8
+3/10/2016 1:57:55 PM | Exit    | To the North, the path is clear and straight leading to what You think is another similar cavern.
+3/10/2016 1:57:55 PM | Pointer |  316,218
+3/10/2016 1:57:55 PM | Exit    | To the South, the path is winding and narrow leading into the darkness.
+3/10/2016 1:57:55 PM | Pointer |  389,317
+3/10/2016 1:57:55 PM | Exit    | To the East, the path winds and pans down out of view.
+3/10/2016 1:57:55 PM | Pointer |  445,390
+3/10/2016 1:57:55 PM | Exit    | To the West, there is a straight narrow path leading to a much larger looking cavern.
+3/10/2016 1:57:55 PM | Pointer |  532,446
+3/10/2016 1:57:55 PM | Exit    | Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.
+3/10/2016 1:57:55 PM | Pointer |  658,533
+3/10/2016 1:57:55 PM | Exit    | Floor
+3/10/2016 1:57:55 PM | Pointer |  665,659
+3/10/2016 1:57:55 PM | Route   | 1|0|0|
+3/10/2016 1:57:55 PM | Pointer |  673,666
+3/10/2016 1:57:55 PM | Route   | 99|0|1|
+3/10/2016 1:57:55 PM | Pointer |  682,674
+3/10/2016 1:57:55 PM | Route   | 0|99|0|
+3/10/2016 1:57:55 PM | Pointer |  691,683
+3/10/2016 1:57:55 PM | Route   | 0|0|99|
+3/10/2016 1:57:55 PM | Pointer |  700,692
+3/10/2016 1:57:55 PM | Route   | 0|0|0|
+3/10/2016 1:57:55 PM | Pointer |  708,701
+3/10/2016 1:57:55 PM | Route   | 0|0|0|
+3/10/2016 1:57:55 PM | Pointer |  716,709
+3/10/2016 1:57:55 PM | Line    | Cavern: 1< 0< 0< You Enter a medium sized circular cavern percing through many layers above. The cavern has a small clear pool in the middle with what looks to be a glowing cristal in the bottom. There is an exit to the South.; North: To the south a straight and narrow tunnel leads to an unfamiliar room.: East: West: Up: Down: 100|100|100|> 1|0|0|> 1|0|0|> 1|0|0|> 1|0|0|> 1|0|0|>
+3/10/2016 1:57:55 PM | Pos     |  1
+3/10/2016 1:57:55 PM | Pointer |  1,0
+3/10/2016 1:57:55 PM | Pos     |   0
+3/10/2016 1:57:55 PM | Pointer |  4,2
+3/10/2016 1:57:55 PM | Pos     |   0
+3/10/2016 1:57:55 PM | Pointer |  7,5
+3/10/2016 1:57:55 PM | Discrip | You Enter a medium sized circular cavern percing through many layers above. The cavern has a small clear pool in the middle with what looks to be a glowing cristal in the bottom. There is an exit to the South.
+3/10/2016 1:57:55 PM | Pointer |  218,8
+3/10/2016 1:57:55 PM | Exit    | North
+3/10/2016 1:57:55 PM | Pointer |  225,219
+3/10/2016 1:57:55 PM | Exit    | To the south a straight and narrow tunnel leads to an unfamiliar room.
+3/10/2016 1:57:55 PM | Pointer |  297,226
+3/10/2016 1:57:55 PM | Exit    | East
+3/10/2016 1:57:55 PM | Pointer |  303,298
+3/10/2016 1:57:55 PM | Exit    | West
+3/10/2016 1:57:55 PM | Pointer |  309,304
+3/10/2016 1:57:55 PM | Exit    | Up
+3/10/2016 1:57:55 PM | Pointer |  313,310
+3/10/2016 1:57:55 PM | Exit    | Down
+3/10/2016 1:57:55 PM | Pointer |  319,314
+3/10/2016 1:57:55 PM | Route   | 100|100|100|
+3/10/2016 1:57:55 PM | Pointer |  333,320
+3/10/2016 1:57:55 PM | Route   | 1|0|0|
+3/10/2016 1:57:55 PM | Pointer |  341,334
+3/10/2016 1:57:55 PM | Route   | 1|0|0|
+3/10/2016 1:57:55 PM | Pointer |  349,342
+3/10/2016 1:57:55 PM | Route   | 1|0|0|
+3/10/2016 1:57:55 PM | Pointer |  357,350
+3/10/2016 1:57:55 PM | Route   | 1|0|0|
+3/10/2016 1:57:55 PM | Pointer |  365,358
+3/10/2016 1:57:55 PM | Route   | 1|0|0|
+3/10/2016 1:57:55 PM | Pointer |  373,366
+3/10/2016 1:57:55 PM | Line    | 
+3/10/2016 1:57:55 PM | Line    | 
+3/10/2016 1:57:55 PM | Line    | // Item format is as follows
+3/10/2016 1:57:55 PM | Line    | // Item: X< Y< Z< Item name; Item discription: Amount~
+3/10/2016 1:57:55 PM | Line    | // X,Y,Z Are absolute position
+3/10/2016 1:57:55 PM | Line    | // Discriptions are NOT allowed to contain the following <;:|>~
+3/10/2016 1:57:55 PM | Line    | // Items have NO use aside from place markers
+3/10/2016 1:57:55 PM | Line    | 
+3/10/2016 1:57:55 PM | Line    | Item: 0< 0< 0< Torch; This torch was found in the cavern after you fell. It seems to be exelent at keeping the darkness at bay.: 1~ True|
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  2,0
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  5,3
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  8,6
+3/10/2016 1:57:55 PM | Name    | Torch
+3/10/2016 1:57:55 PM | Pointer |  15,9
+3/10/2016 1:57:55 PM | Discrip | This torch was found in the cavern after you fell. It seems to be exelent at keeping the darkness at bay.
+3/10/2016 1:57:55 PM | Pointer |  122,16
+3/10/2016 1:57:55 PM | Amount  |  1
+3/10/2016 1:57:55 PM | Pointer |  125,123
+3/10/2016 1:57:55 PM | Movable |  True
+3/10/2016 1:57:55 PM | Pointer |  131,126
+3/10/2016 1:57:55 PM | Line    | Item: 0< 0< 0< Lighter; This Lighter survived the fall and was used to light the torch.: 1~ True|
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  2,0
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  5,3
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  8,6
+3/10/2016 1:57:55 PM | Name    | Lighter
+3/10/2016 1:57:55 PM | Pointer |  17,9
+3/10/2016 1:57:55 PM | Discrip | This Lighter survived the fall and was used to light the torch.
+3/10/2016 1:57:55 PM | Pointer |  82,18
+3/10/2016 1:57:55 PM | Amount  |  1
+3/10/2016 1:57:55 PM | Pointer |  85,83
+3/10/2016 1:57:55 PM | Movable |  True
+3/10/2016 1:57:55 PM | Pointer |  91,86
+3/10/2016 1:57:55 PM | Line    | Item: 0< 0< 0< Skull; Apears to be the skull of some other unfortunate who fell down centuries ago.: 1~ False|
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  2,0
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  5,3
+3/10/2016 1:57:55 PM | Pos     |  0
+3/10/2016 1:57:55 PM | Pointer |  8,6
+3/10/2016 1:57:55 PM | Name    | Skull
+3/10/2016 1:57:55 PM | Pointer |  15,9
+3/10/2016 1:57:55 PM | Discrip | Apears to be the skull of some other unfortunate who fell down centuries ago.
+3/10/2016 1:57:55 PM | Pointer |  94,16
+3/10/2016 1:57:55 PM | Amount  |  1
+3/10/2016 1:57:55 PM | Pointer |  97,95
+3/10/2016 1:57:55 PM | Movable |  False
+3/10/2016 1:57:55 PM | Pointer |  104,98
+3/10/2016 1:57:55 PM | Cavern  |  0, 0, 0
+3/10/2016 1:57:55 PM | Discrip | You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.
+3/10/2016 1:57:55 PM | exit    | 0 |To the North, the path is clear and straight leading to what You think is another similar cavern.
+3/10/2016 1:57:55 PM | exit    | 1 |To the South, the path is winding and narrow leading into the darkness.
+3/10/2016 1:57:55 PM | exit    | 2 |To the East, the path winds and pans down out of view.
+3/10/2016 1:57:55 PM | exit    | 3 |To the West, there is a straight narrow path leading to a much larger looking cavern.
+3/10/2016 1:57:55 PM | exit    | 4 |Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.
+3/10/2016 1:57:55 PM | exit    | 5 |Floor
+3/10/2016 1:57:55 PM | Cavern  |  1, 0, 0
+3/10/2016 1:57:55 PM | Discrip | You Enter a medium sized circular cavern percing through many layers above. The cavern has a small clear pool in the middle with what looks to be a glowing cristal in the bottom. There is an exit to the South.
+3/10/2016 1:57:55 PM | exit    | 0 |North
+3/10/2016 1:57:55 PM | exit    | 1 |To the south a straight and narrow tunnel leads to an unfamiliar room.
+3/10/2016 1:57:55 PM | exit    | 2 |East
+3/10/2016 1:57:55 PM | exit    | 3 |West
+3/10/2016 1:57:55 PM | exit    | 4 |Up
+3/10/2016 1:57:55 PM | exit    | 5 |Down
+3/10/2016 1:57:56 PM | Draw    | Draw sucsess: pic/404.txt

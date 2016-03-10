@@ -26,7 +26,7 @@ namespace cristal_caverns
         public string[] exits { get; set; } //strings containing discriptions of the exits
         public int[,] paths { get; set; } //array containing the path each exit takes
         public item[] inventory { get; set; } = new item[100]; // array containing Items on the ground
-        public string pic = "error.txt"; // ascii art pic file
+        public string pic = "404.txt"; // ascii art pic file
 
         public cavern() // empty constructor
         {
@@ -117,8 +117,8 @@ namespace cristal_caverns
         // Initalization of functions
         static void Load() // loads map from file
         {
-            Debug.WriteLine(DateTime.Now + " | Path    | " + "../../Save_template.txt"); // print path
-            foreach (string line in File.ReadLines("../../Save_template.txt")) // reads file at path
+            Debug.WriteLine(DateTime.Now + " | Path    | " + @"\Save_template.txt"); // print path
+            foreach (string line in File.ReadLines(@"Save_template.txt")) // reads file at path
             {
                 Debug.WriteLine(DateTime.Now + " | Line    | " + line);
                 if (line.Contains("//")) // finds comments and reads them in debug
@@ -207,7 +207,7 @@ namespace cristal_caverns
 
                     }
 
-                    Map1[Pos[0], Pos[1], Pos[2]] = new cavern(Pos, Dis, Exits, Route, "error.txt"); //make new room and store into an array
+                    Map1[Pos[0], Pos[1], Pos[2]] = new cavern(Pos, Dis, Exits, Route, "404.txt"); //make new room and store into an array
 
                 }
                 else if (line.Contains("Item:"))
@@ -336,7 +336,7 @@ namespace cristal_caverns
             for (byte i = 0; i < 3; i++) // i = 0 to 2
             Console.Write(current.pos[i] + " "); // debug
 
-            Image(current.pic, Console.WindowWidth, 10); // draw pic
+            Image(current.pic, Console.WindowWidth, 20); // draw pic
 
             // Console.SetCursorPosition(0, 10); // sets cursor position
             WordWrap(current.discribe); // writes discription
@@ -369,32 +369,30 @@ namespace cristal_caverns
 
         static void Image(string name, int sizeX, int sizeY) // image draw function
         {
-            List<string> Doc = new List<string>();
-            string @path = Path.Combine(Path.GetFullPath("../../"), @"pic\",name); // stores current directory in path
-            FileStream ascii = new FileStream(@path, FileMode.Open, FileAccess.Read);
-            StreamReader Pic = new StreamReader(ascii)
-            //try
+            string @pic = Path.Combine( @"pic/",name); // stores current directory in path
+            if (!File.Exists(@pic))
+                Debug.WriteLine(DateTime.Now + " | Draw    | File not found"); // error 404 msg 
+
+            try
             {
-                foreach (string line in Pic.ReadLine())
+                string[] file = File.ReadAllLines(@pic); // put the pic in an string array
+
+                for (int y = 0; y < file.Length && y < sizeY; y++) // go through the array
                 {
-                    Debug.WriteLine("breadcrumb");
-                    Doc.Add(line);
+                    
+                    Console.SetCursorPosition(0, y);
+                    Console.Write(file[y]);
                 }
+
+                Debug.WriteLine(DateTime.Now + " | Draw    | Draw sucsess: " + @pic);
             }
-            //catch { Debug.WriteLine(DateTime.Now + " | Draw    | Path error: " + @path); }
-            for (int x = 0; x < Doc.Count && x < sizeY; x++)
-            {
-                for (int y = 0; y < Doc[x].Length && y < sizeX; y++)
-                {
-                    Console.SetCursorPosition(y, x);
-                    Console.Write(Doc[x][y]);
-                }
-            }
-            Pic.close(); // closes file stream
-            ascii.close();
+
+            catch { Debug.WriteLine(DateTime.Now + " | Draw    | Path error: " + @pic); }
         }
 
         static cavern[,,] Map1 = new cavern[100, 100, 100]; //define the map
+
+
 
         static FileStream fs = new FileStream("../../Debug.txt", FileMode.Create, FileAccess.ReadWrite); // starts the debug stream
         static StreamWriter Debug = new StreamWriter(fs);
@@ -402,6 +400,7 @@ namespace cristal_caverns
 
         static void Main(string[] args)
         {
+            Directory.SetCurrentDirectory("../../");
             Console.Title = "Cristal Caverns";
             try
             {
