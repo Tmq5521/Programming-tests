@@ -349,31 +349,33 @@ namespace cristal_caverns
 
         static void WordWrap( string str) // word wrap function
         {
-            Console.SetCursorPosition(0, Console.CursorTop + 1);
-            string[] Str = str.Split(' ');
-            foreach (string word in Str)
+            Console.SetCursorPosition(0, Console.CursorTop + 1); // advance a line
+            string[] Str = str.Split(' '); // split words
+            foreach (string word in Str) // run throught the words
             {
-                int space = Console.BufferWidth - Console.CursorLeft;
-                if (word.Length < space)
+                int space = Console.BufferWidth - Console.CursorLeft; // find remaining space
+                if (word.Length < space) // see if fits 
                 {
-                    Console.Write(word + ' ');
+                    Console.Write(word + ' '); // add word + space
                 } 
                 else
                 {
-                    Console.SetCursorPosition( 0, Console.CursorTop + 1);
-                    Console.Write(word + ' ');
+                    Console.SetCursorPosition( 0, Console.CursorTop + 1); // advance line
+                    Console.Write(word + ' '); // add word + space
                 }
 
             }
         }
 
-        static void Image(string name, int sizeX, int sizeY)
+        static void Image(string name, int sizeX, int sizeY) // image draw function
         {
             List<string> Doc = new List<string>();
             string @path = Path.Combine(Path.GetFullPath("../../"), @"pic\",name); // stores current directory in path
-            //
+            FileStream ascii = new FileStream(@path, FileMode.Open, FileAccess.Read);
+            StreamReader Pic = new StreamReader(ascii)
+            //try
             {
-                foreach (string line in File.ReadAllLines(@path))
+                foreach (string line in Pic.ReadLine())
                 {
                     Debug.WriteLine("breadcrumb");
                     Doc.Add(line);
@@ -388,6 +390,8 @@ namespace cristal_caverns
                     Console.Write(Doc[x][y]);
                 }
             }
+            Pic.close(); // closes file stream
+            ascii.close();
         }
 
         static cavern[,,] Map1 = new cavern[100, 100, 100]; //define the map
