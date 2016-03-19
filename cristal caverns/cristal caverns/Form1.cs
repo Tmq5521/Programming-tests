@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Test_Program
+namespace cristal_caverns
 {
-    public partial class Form1 : Form
+    public partial class Main_window : Form
     {
-        public Form1()
+        public Main_window()
         {
             InitializeComponent();
         }
 
-        private void showButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

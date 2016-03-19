@@ -8,6 +8,7 @@
 // day 8 3:30
 // day 9 3:30
 // day 10 3:30
+// day 11 4 hours
 
 // Type exeption error ???
 
@@ -45,6 +46,11 @@ namespace cristal_caverns
             pic = Pic;
         }
 
+        public cavern(item i) // single item construtor
+        {
+            inventory[99] = i;
+        }
+
         // Return the point's value as a string.
         public override String ToString()
         {
@@ -69,11 +75,7 @@ namespace cristal_caverns
         public string discription { get; set; } = null; // Item Discription
 
         public item() // empty constructor
-        {
-            name = null;
-            discription = null;
-            movable = false;
-        }
+        { }
 
         public item(string Name, string Discription, bool Movable) // sets Variables
         {
@@ -91,6 +93,11 @@ namespace cristal_caverns
         public item Copy()
         {
             return (item)this.MemberwiseClone();
+        }
+
+        public override String ToString() //tostring overide
+        {
+            return string.Format("{0}, {1}",name,discription);
         }
     }
 
@@ -336,13 +343,14 @@ namespace cristal_caverns
         {
             debugCheck(x, y, z); // debugs room
 
-            cavern current = new cavern();
-            if (Map1[x, y, z] != null)
-                current = Map1[x, y, z];
+            cavern current = new cavern(); // default config
+            if (Map1[x, y, z] != null) // is it null?
+                current = Map1[x, y, z]; // no then...
            
             Console.Clear(); // clears console
 
             Image(current.pic, Console.WindowWidth); // draw pic
+            Console.SetCursorPosition(0, Console.CursorTop + 1);
 
             // Console.SetCursorPosition(0, 10); // sets cursor position
             WordWrap(current.discribe); // writes discription
@@ -351,19 +359,41 @@ namespace cristal_caverns
             for(byte i = 0; i < current.exits.Length; i++) // i = 0 to 5
             WordWrap(current.exits[i]); // writes exits
 
-            input:
-            WordWrap("What direction do You go (N,S,E,W,U,D)?");
-            string choice = string.Format(Console.ReadLine()).ToUpper();
-            try
+            input: // label for input statement
+            WordWrap(@"What direction do You go (N,S,E,W,U,D), or do you want to check your inventory and the cave's inventory (I)?");
+            string choice = string.Format(Console.ReadLine()).ToUpper(); // to upper case
+            try // find and return next room
             {
-                int c = "NSEWUD".IndexOf(choice[0]);
-                int[] @return = new int[3] { current.paths[c, 0], current.paths[c, 1], current.paths[c, 2] };
-                return @return; // returns next room
+                int c = "NSEWUDI".IndexOf(choice[0]);
+                if (c != 6)
+                {
+                    int[] @return = new int[3] { current.paths[c, 0], current.paths[c, 1], current.paths[c, 2] };
+                    return @return; // returns next room
+                }
+                else // inventory
+                {
+                    WordWrap("");
+                    WordWrap("Items found in the cavern.");
+                    ShowInventory(current.inventory); // the cavern's inventory
+
+                    WordWrap("");
+                    WordWrap("Items found in your inventory.");
+                    ShowInventory(Player.inventory); // your inventory
+
+                    WordWrap("");
+                    WordWrap("From your inventory...");
+                    SelectItem(Player, Map1[x,y,z], current); // items from you to the cave
+
+                    WordWrap("");
+                    WordWrap("From the cave...");
+                    SelectItem(Map1[x, y, z], Player, current); // items from cave to you
+                    goto input; // back to room select
+                }
             }
-            catch
+            catch // errror catch
             {
-                WordWrap("Error Input, please only use North, South, East, West, Up, and Down as directions. ");
-                goto input;
+                WordWrap("Error Input, please only use North, South, East, West, Up, and Down as directions or use Inventory. ");
+                goto input; 
             } 
         }
 
@@ -384,7 +414,16 @@ namespace cristal_caverns
                 }
 
             }
-            Console.SetCursorPosition(0, Console.CursorTop + 1); // advance a line
+            if (Console.CursorTop < Console.WindowHeight - 2)
+                Console.SetCursorPosition(0, Console.CursorTop + 1); // advance a line
+            else
+            {
+                Console.SetCursorPosition(0, Console.CursorTop + 1); // advance a line
+                Console.Write("Press a key to continue.");
+                Console.ReadKey();
+                Console.Clear();
+                Console.SetCursorPosition(0, 0);
+            }
         }
 
         static void Image(string name, int sizeX) // image draw function
@@ -410,22 +449,110 @@ namespace cristal_caverns
             catch { Debug.WriteLine(DateTime.Now + " | Draw    | Path error: " + @pic); } // catch errors
         }
 
-        static cavern[,,] Map1 = new cavern[100, 100, 100]; //define the map
+        static void ShowInventory(item[] inv) // show all non null entries in an item array
+        {
+            foreach (item It in inv)
+            {
+                if (It != null)
+                    WordWrap(string.Format("{0}",It)); // display
+            }
+        }
+        
+        static void SelectItem(cavern @in, cavern  @out, cavern current)
+        {
+            InputSI: // first input retry
+            WordWrap("Do you wish to select an item (Y/N)?");
+            try
+            { 
+                string Input = Console.ReadLine().ToUpper(); //line to caps
+                if (Input[0] == 'Y') // yes
+                {
+                InputSIT: // second retry input
+                    int a = -1; // variable for invintory entry
+                    WordWrap("Item name?");
+                    string InputT = Console.ReadLine(); // name querry; case sensitive
+                    try
+                    {
+                        for(var i = 0; i <= @in.inventory.Length; i++) // go through the inventory
+                        {
+                            item A = @in.inventory[i]; // item to A for easy refference
+                            if (A != null) // isn null?
+                                if (A.name == InputT)
+                                {
+                                    a = i; // record index
+                                    break;  
+                                }
+                        }
+                        if (!@in.inventory[a].movable) // movable?
+                            WordWrap("This item cannot be moved.");
+                        else
+                        {
+                            InputSETT: // third input retry
+                            WordWrap("Transfer item (Y/N)?");
+                            string input = Console.ReadLine().ToUpper(); // transfer from @in to @out
+                            try
+                            {
+                                if (input[0] == 'Y') // yes...
+                                {
+                                    for (int i = 0; i < @out.inventory.Length; i++) //find first null entry in inventory
+                                        if (@out.inventory[i] == null)
+                                        {
+                                            @out.inventory[i] = @in.inventory[a]; // copy item
+                                            @in.inventory[a] = null; // delete previous item
+                                            break;
+                                        }
+                                    goto InputSI;
+                                }
+                                else if (input[0] == 'N') // no...
+                                {
+                                    WordWrap(""); // blank line?
+                                }
+                            }
+                            catch
+                            {
+                                WordWrap("Invalid input."); // third retry goto...
+                                goto InputSETT;
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        WordWrap("Invalid input."); // second retry goto...
+                        goto InputSIT;
+                    }
+                }
+                else if (Input[0] == 'N')
+                {
+                    WordWrap("Closing this inventory"); // exit...
+                }
+                else
+                {
+                    WordWrap("Invalid input."); // first retry goto if random reply
+                    goto InputSI;
+                }
+            }
+            catch
+            {
+                WordWrap("Invalid input."); // first retry goto if breaks
+                goto InputSI;
+            }
+        }
 
+        static cavern[,,] Map1 = new cavern[101, 101, 101]; //define the map
+        static item temp = new item("Backpack", "This trusty backpack has been with you for years.", false); // debug item
+        static cavern Player = new cavern(temp); // player entity soley used for inventory
 
 
         static FileStream fs = new FileStream("../../Debug.txt", FileMode.Create, FileAccess.ReadWrite); // starts the debug stream
-        static StreamWriter Debug = new StreamWriter(fs);
+        static StreamWriter Debug = new StreamWriter(fs); // debug stream
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Directory.SetCurrentDirectory("../../");
-            Console.Title = "Cristal Caverns";
-            try
-            {
-                Console.SetWindowSize(100, 30);
-            }
-            catch { Debug.WriteLine(DateTime.Now + " | Setup   | Buffer resize failed"); }
+            Directory.SetCurrentDirectory("../../"); // change directory
+            Console.Title = "Cristal Caverns"; // name my window
+
+            Console.SetWindowSize(Console.WindowWidth, Console.WindowHeight); // useless?
+
             Debug.AutoFlush = true;
             Debug.WriteLine(DateTime.Now + " | @@@@@@@ | " + "Debug data for Cristal caverns."); // inital debug output
 
@@ -441,15 +568,22 @@ namespace cristal_caverns
                 }
             }
 
-            int[] exit = { 100, 100, 100 };
+            int[] exit = new int[3]{ 100, 100, 100 }; // define the win condition
             int[] now = loadRoom(0, 0, 0); // load the start room
 
-            while (now != exit )
+            while (true)
             {
-                now = loadRoom(now[0], now[1], now[2]);
-                Debug.WriteLine(DateTime.Now + " | Load R | " + now);
+                now = loadRoom(now[0], now[1], now[2]); // loads room and displays; returns next room index
+                for (int i = 0; i < now.Length; i++) // debug
+                    Debug.WriteLine(DateTime.Now + " | Load R  | " + now[i]);
+                if (now[0] == 100 && now[1] == 100 && now[2] == 100) // if I win...
+                    break; //exit
             }
 
+            Console.Clear(); // clear
+            Image(@"100_100_100.txt", 100); // win image
+            Console.SetCursorPosition(0, Console.CursorTop + 1); // down a line
+            WordWrap("Press a key to close..."); // close message
             Console.ReadKey(); // pause...
             
         }

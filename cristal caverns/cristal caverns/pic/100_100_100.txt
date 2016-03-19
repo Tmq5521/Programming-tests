@@ -1,0 +1,8 @@
+ WWWWWWW       WWWWW       WWWWWWW    IIIIIIIII     NNNNN      NNNN
+  WWWWWWW     WWWWWWW     WWWWWWW       IIIII       NNNNNN     NNNN
+   WWWWWWW   WWWW WWWW   WWWWWWW        IIIII       NNNNNNN    NNNN
+    WWWWWWW WWWW   WWWW WWWWWWW         IIIII       NNNN NNN   NNNN
+     WWWWWWWWWW     WWWWWWWWWW          IIIII       NNNN  NNN  NNNN
+      WWWWWWWW       WWWWWWWW           IIIII       NNNN   NNN NNNN
+       WWWWWW         WWWWWW            IIIII       NNNN    NNNNNNN
+        WWWW           WWWW            IIIIIII      NNNN     NNNNNN
