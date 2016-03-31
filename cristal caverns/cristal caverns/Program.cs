@@ -9,8 +9,10 @@
 // day 9 3:30
 // day 10 3:30
 // day 11 4 hours
+// day 12 8 hours
+// day 13 3 hours
 
-// Type exeption error ???
+// complie with CFL.cs
 
 using System;
 using System.Collections.Generic;
@@ -19,113 +21,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
+using CFL;
+
 
 namespace cristal_caverns
 {
 
-
-    public class cavern //object template for each room
-    {
-        public int[] pos { get; set; } = { 0, 0, 0 }; // position in array
-        public string discribe { get; set; } = "null";// strings containing discription of the room
-        public string[] exits { get; set; } = { "North", "South", "East", "West", "Up", "Down" }; //strings containing discriptions of the exits
-        public int[,] paths { get; set; } = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } }; //array containing the path each exit takes
-        public item[] inventory { get; set; } = new item[100]; // array containing Items on the ground
-        public string pic = "404.txt"; // ascii art pic file
-
-        public cavern() // empty constructor
-        { }
-
-        public cavern(int[] Pos, string Discribe, string[] Exits, int[,] Paths, string Pic) // Room constructor
-        {
-            // sets variables in the new object
-            pos = Pos;
-            discribe = Discribe;
-            exits = Exits;
-            paths = Paths;
-            pic = Pic;
-        }
-
-        public cavern(item i) // single item construtor
-        {
-            inventory[99] = i;
-        }
-
-        // Return the point's value as a string.
-        public override String ToString()
-        {
-            return string.Format("({0}, {1}, {2}) ({3}) ({4})", pos[0], pos[1], pos[2], discribe, exits[0]);
-            //string[] Text = {discribe, exits};
-            //return string.Format(Text);
-        }
-
-
-
-        // Return a copy of this point object by making a simple field copy.
-        public cavern Copy()
-        {
-            return (cavern)this.MemberwiseClone();
-        }
-    }
-
-    public class item //object template for Items
-    {
-        public string name { get; set; } = @"_"; // Item Name
-        public bool movable { get; set; } = false; // Item Movability
-        public string discription { get; set; } = null; // Item Discription
-
-        public item() // empty constructor
-        { }
-
-        public item(string Name, string Discription, bool Movable) // sets Variables
-        {
-            name = Name;
-            discription = Discription;
-            movable = Movable;
-        }
-
-        public bool equals() // overides the string value of this object
-        {
-            return (name == @"_");
-
-        }
-
-        public item Copy()
-        {
-            return (item)this.MemberwiseClone();
-        }
-
-        public override String ToString() //tostring overide
-        {
-            return string.Format("{0}, {1}",name,discription);
-        }
-    }
-
-    public class player
-    {
-        public string name { get; set; } = "";
-        public item[] inventory { get; set; } = new item[100000000];
-
-        public player(string Name)
-        {
-            name = Name;
-        }
-
-        public override String ToString()
-        {
-            return string.Format("{0}", name);
-        }
-    }
 
     class Program
     {
         // Initalization of functions
         static void Load() // loads map from file
         {
-            Debug.WriteLine(DateTime.Now + " | Path    | " + @"\Save_template.txt"); // print path
+            Text.Log("Path",@"\Save_template.txt",Debug); // print path
             foreach (string line in File.ReadLines(@"Save_template.txt")) // reads file at path
             {
-                Debug.WriteLine(DateTime.Now + " | Line    | " + line);
+                Text.Log("Line",line,Debug);
                 if (line.Contains("//")) // finds comments and reads them in debug
                 {
                     // Debug.WriteLine(DateTime.Now + " | Comment | " + line); // debug comment reader
@@ -152,8 +63,8 @@ namespace cristal_caverns
 
 
                             string test = (T.Substring(i, (I - i)));
-                            Debug.WriteLine(DateTime.Now + " | Pos     |  " + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Pos", test, Debug);//Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             Pos[pos] = int.Parse(test); // pulls numerical value followed by a <
 
                             i = I + 1; //Advances start pointer
@@ -166,8 +77,8 @@ namespace cristal_caverns
                             {
                                 test = test.Substring(1, test.Length - 1);
                             }
-                            Debug.WriteLine(DateTime.Now + " | Discrip | " + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Discription", test, Debug);//Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             Dis = test; // pulls string value followed by a ;
 
                             i = I + 1; //Advances start pointer
@@ -179,8 +90,8 @@ namespace cristal_caverns
                             {
                                 test = test.Substring(1, test.Length - 1);
                             }
-                            Debug.WriteLine(DateTime.Now + " | Exit    | " + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Exit", test, Debug);//Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             Exits[exits] = test; // pulls string value followed by a :
 
                             i = I + 1; //Advances start pointer
@@ -192,15 +103,15 @@ namespace cristal_caverns
                             int pointer = 0;
                             int[] Delta = new int[2];
                             string test = (T.Substring(i, (I - i)));
-                            Debug.WriteLine(DateTime.Now + " | Route   |" + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Route", test, Debug);//Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             for (int End = 0; End < test.Length; End++)
                             {
                                 if (test[End] == '|') // finds route values apended with a |
                                 {
                                     string testSub = (test.Substring(Start, ((End) - Start)));
-                                    Debug.WriteLine(DateTime.Now + " | Route[] | " + testSub);               //Debug
-                                    Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", End, Start); //Debug
+                                    Text.Log("Route[]", testSub, Debug);//Debug
+                                    Text.Log("Pointer", End + "," + Start, Debug); //Debug //Debug
                                     Route[route, pointer] = int.Parse(testSub); // pulls string value followed by a |
 
                                     Start = End + 1; //Advances start pointer
@@ -217,8 +128,8 @@ namespace cristal_caverns
                             {
                                 test = test.Substring(1, test.Length - 1);
                             }
-                            Debug.WriteLine(DateTime.Now + " | Exit    | " + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Exit", test, Debug);//Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             @Pic = test; // pulls string value followed by a :
 
                             i = I + 1; //Advances start pointer
@@ -245,8 +156,8 @@ namespace cristal_caverns
                         if (T[I] == '<') // finds pos values apended with a < 
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Debug.WriteLine(DateTime.Now + " | Pos     | " + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Pos", test, Debug);//Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             Pos[pos] = int.Parse(test); // pulls numerical value followed by a <
 
                             i = I + 1; //Advances start pointer
@@ -259,8 +170,8 @@ namespace cristal_caverns
                             {
                                 test = test.Substring(1, test.Length - 1);
                             }
-                            Debug.WriteLine(DateTime.Now + " | Name    | " + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Name", test, Debug);//Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             Name = test; // pulls string value followed by a ;
 
                             i = I + 1; //Advances start pointer
@@ -272,8 +183,8 @@ namespace cristal_caverns
                             {
                                 test = test.Substring(1, test.Length - 1);
                             }
-                            Debug.WriteLine(DateTime.Now + " | Discrip | " + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Discription", test, Debug);//Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             Dis = test; // pulls string value followed by a :
 
                             i = I + 1; //Advances start pointer
@@ -281,8 +192,8 @@ namespace cristal_caverns
                         else if (T[I] == '~') // finds Item amount values apended with a ~
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Debug.WriteLine(DateTime.Now + " | Amount  | " + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Amount", test, Debug);//Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             Amount = int.Parse(test); // pulls string value followed by a ~
 
                             i = I + 1; //Advances start pointer
@@ -290,8 +201,8 @@ namespace cristal_caverns
                         if (T[I] == '|') // finds Movable values apended with a |
                         {
                             string test = (T.Substring(i, (I - i)));
-                            Debug.WriteLine(DateTime.Now + " | Movable | " + test);            //Debug
-                            Debug.WriteLine("{0} {1},{2}", DateTime.Now + " | Pointer | ", I, i); //Debug
+                            Text.Log("Movable",test,Debug); //Debug
+                            Text.Log("Pointer", I + "," + i, Debug); //Debug
                             Move = bool.Parse(test); // pulls string value followed by a |
 
                             i = I + 1; //Advances start pointer
@@ -330,11 +241,11 @@ namespace cristal_caverns
             if (Map1[x, y, z] != null) // safety
             {
                 cavern current = Map1[x, y, z]; // set local var current to cavern
-                Debug.WriteLine("{0} {1}, {2}, {3}", DateTime.Now + " | Cavern  | ", current.pos[0], current.pos[1], current.pos[2]); // debug pos
-                Debug.WriteLine(DateTime.Now + " | Discrip | " + current.discribe); // debug discription
+                Text.Log("Cavern", String.Format("{0},{1},{2}",current.pos[0], current.pos[1], current.pos[2]), Debug); // debug pos
+                Text.Log("Discription",current.discribe,Debug); // debug discription
                 for (byte w = 0; w < 6; w++) // exit iterator
                 {
-                    Debug.WriteLine(DateTime.Now + " | exit    | " + string.Format("{0} |", w) + current.exits[w]); // debug exits
+                    Text.Log("exit",string.Format("{0} |", w) + current.exits[w],Debug); // debug exits
                 }
             }
         }
@@ -349,18 +260,18 @@ namespace cristal_caverns
            
             Console.Clear(); // clears console
 
-            Image(current.pic, Console.WindowWidth); // draw pic
+            Text.Art(current.pic, Console.WindowWidth); // draw pic
             Console.SetCursorPosition(0, Console.CursorTop + 1);
 
             // Console.SetCursorPosition(0, 10); // sets cursor position
-            WordWrap(current.discribe); // writes discription
-            WordWrap(" "); // blank line
+            Text.WordWrap(current.discribe); // writes discription
+            Text.WordWrap(" "); // blank line
 
             for(byte i = 0; i < current.exits.Length; i++) // i = 0 to 5
-            WordWrap(current.exits[i]); // writes exits
+            Text.WordWrap(current.exits[i]); // writes exits
 
             input: // label for input statement
-            WordWrap(@"What direction do You go (N,S,E,W,U,D), or do you want to check your inventory and the cave's inventory (I)?");
+            Text.WordWrap(@"What direction do You go (N,S,E,W,U,D), or do you want to check your inventory and the cave's inventory (I)?");
             string choice = string.Format(Console.ReadLine()).ToUpper(); // to upper case
             try // find and return next room
             {
@@ -368,85 +279,37 @@ namespace cristal_caverns
                 if (c != 6)
                 {
                     int[] @return = new int[3] { current.paths[c, 0], current.paths[c, 1], current.paths[c, 2] };
+                    Text.Log("Room Index", "Going to: ",Debug);
+                    for (int i = 0; i < @return.Length; i++)
+                        Text.Log("Room []", @return[i].ToString(), Debug);
                     return @return; // returns next room
                 }
                 else // inventory
                 {
-                    WordWrap("");
-                    WordWrap("Items found in the cavern.");
+                    Text.WordWrap("");
+                    Text.WordWrap("Items found in the cavern.");
                     ShowInventory(current.inventory); // the cavern's inventory
 
-                    WordWrap("");
-                    WordWrap("Items found in your inventory.");
+                    Text.WordWrap("");
+                    Text.WordWrap("Items found in your inventory.");
                     ShowInventory(Player.inventory); // your inventory
 
-                    WordWrap("");
-                    WordWrap("From your inventory...");
+                    Text.WordWrap("");
+                    Text.WordWrap("From your inventory...");
                     SelectItem(Player, Map1[x,y,z], current); // items from you to the cave
 
-                    WordWrap("");
-                    WordWrap("From the cave...");
+                    Text.WordWrap("");
+                    Text.WordWrap("From the cave...");
                     SelectItem(Map1[x, y, z], Player, current); // items from cave to you
                     goto input; // back to room select
                 }
             }
             catch // errror catch
             {
-                WordWrap("Error Input, please only use North, South, East, West, Up, and Down as directions or use Inventory. ");
+                Text.WordWrap("Error Input, please only use North, South, East, West, Up, and Down as directions or use Inventory. ");
+                Text.Log("Input", "Error Invalid: " + choice,Debug);
                 goto input; 
             } 
-        }
-
-        static void WordWrap( string str) // word wrap function
-        {
-            string[] Str = str.Split(' '); // split words
-            foreach (string word in Str) // run throught the words
-            {
-                int space = Console.BufferWidth - Console.CursorLeft; // find remaining space
-                if (word.Length < space) // see if fits 
-                {
-                    Console.Write(word + ' '); // add word + space
-                } 
-                else
-                {
-                    Console.SetCursorPosition( 0, Console.CursorTop + 1); // advance line
-                    Console.Write(word + ' '); // add word + space
-                }
-
-            }
-            if (Console.CursorTop < Console.WindowHeight - 2)
-                Console.SetCursorPosition(0, Console.CursorTop + 1); // advance a line
-            else
-            {
-                Console.SetCursorPosition(0, Console.CursorTop + 1); // advance a line
-                Console.Write("Press a key to continue.");
-                Console.ReadKey();
-                Console.Clear();
-                Console.SetCursorPosition(0, 0);
-            }
-        }
-
-        static void Image(string name, int sizeX) // image draw function
-        {
-            string @pic = Path.Combine( @"pic/",name); // stores current directory in path
-            if (!File.Exists(@pic))
-                Debug.WriteLine(DateTime.Now + " | Draw    | File not found"); // error 404 msg 
-
-            try
-            {
-                string[] file = File.ReadAllLines(@pic); // put the pic in an string array
-
-                for (int y = 0; y < file.Length; y++) // go through the array
-                {
-                    
-                    Console.SetCursorPosition(0, y);
-                    Console.Write(file[y]); // write line
-                }
-
-                Debug.WriteLine(DateTime.Now + " | Draw    | Draw sucsess: " + @pic); //debug
-            }
-
-            catch { Debug.WriteLine(DateTime.Now + " | Draw    | Path error: " + @pic); } // catch errors
         }
 
         static void ShowInventory(item[] inv) // show all non null entries in an item array
@@ -454,14 +317,14 @@ namespace cristal_caverns
             foreach (item It in inv)
             {
                 if (It != null)
-                    WordWrap(string.Format("{0}",It)); // display
+                    Text.WordWrap(string.Format("{0}",It)); // display
             }
         }
         
         static void SelectItem(cavern @in, cavern  @out, cavern current)
         {
             InputSI: // first input retry
-            WordWrap("Do you wish to select an item (Y/N)?");
+            Text.WordWrap("Do you wish to select an item (Y/N)?");
             try
             { 
                 string Input = Console.ReadLine().ToUpper(); //line to caps
@@ -469,26 +332,26 @@ namespace cristal_caverns
                 {
                 InputSIT: // second retry input
                     int a = -1; // variable for invintory entry
-                    WordWrap("Item name?");
-                    string InputT = Console.ReadLine(); // name querry; case sensitive
+                    Text.WordWrap("Item name?");
+                    string InputT = Console.ReadLine().ToUpper(); // name querry; case sensitive
                     try
                     {
                         for(var i = 0; i <= @in.inventory.Length; i++) // go through the inventory
                         {
                             item A = @in.inventory[i]; // item to A for easy refference
                             if (A != null) // isn null?
-                                if (A.name == InputT)
+                                if (A.name.ToUpper() == InputT)
                                 {
                                     a = i; // record index
                                     break;  
                                 }
                         }
                         if (!@in.inventory[a].movable) // movable?
-                            WordWrap("This item cannot be moved.");
+                            Text.WordWrap("This item cannot be moved.");
                         else
                         {
                             InputSETT: // third input retry
-                            WordWrap("Transfer item (Y/N)?");
+                            Text.WordWrap("Transfer item (Y/N)?");
                             string input = Console.ReadLine().ToUpper(); // transfer from @in to @out
                             try
                             {
@@ -499,41 +362,42 @@ namespace cristal_caverns
                                         {
                                             @out.inventory[i] = @in.inventory[a]; // copy item
                                             @in.inventory[a] = null; // delete previous item
+                                            Text.Log("Item","Moved "+@out.inventory[i].name,Debug); // log moved item
                                             break;
                                         }
                                     goto InputSI;
                                 }
                                 else if (input[0] == 'N') // no...
                                 {
-                                    WordWrap(""); // blank line?
+                                    Text.WordWrap(""); // blank line?
                                 }
                             }
                             catch
                             {
-                                WordWrap("Invalid input."); // third retry goto...
+                                Text.WordWrap("Invalid input."); // third retry goto...
                                 goto InputSETT;
                             }
                         }
                     }
                     catch
                     {
-                        WordWrap("Invalid input."); // second retry goto...
+                        Text.WordWrap("Invalid input."); // second retry goto...
                         goto InputSIT;
                     }
                 }
                 else if (Input[0] == 'N')
                 {
-                    WordWrap("Closing this inventory"); // exit...
+                    Text.WordWrap("Closing this inventory"); // exit...
                 }
                 else
                 {
-                    WordWrap("Invalid input."); // first retry goto if random reply
+                    Text.WordWrap("Invalid input."); // first retry goto if random reply
                     goto InputSI;
                 }
             }
             catch
             {
-                WordWrap("Invalid input."); // first retry goto if breaks
+                Text.WordWrap("Invalid input."); // first retry goto if breaks
                 goto InputSI;
             }
         }
@@ -552,9 +416,9 @@ namespace cristal_caverns
             Console.Title = "Cristal Caverns"; // name my window
 
             Console.SetWindowSize(Console.WindowWidth, Console.WindowHeight); // useless?
-
+            Text.Log("@@@@@@@@@","Debug data for Cristal Caverns",Debug); // auto debug log
+            Text.Log("Start Path", System.IO.Path.GetFullPath("..") ,Debug);
             Debug.AutoFlush = true;
-            Debug.WriteLine(DateTime.Now + " | @@@@@@@ | " + "Debug data for Cristal caverns."); // inital debug output
 
             Load(); // load function
             for (int x = 0; x < Map1.GetLength(0); x++) //x iterator
@@ -575,15 +439,15 @@ namespace cristal_caverns
             {
                 now = loadRoom(now[0], now[1], now[2]); // loads room and displays; returns next room index
                 for (int i = 0; i < now.Length; i++) // debug
-                    Debug.WriteLine(DateTime.Now + " | Load R  | " + now[i]);
+                    Text.Log("Load Room",now[i].ToString(),Debug);
                 if (now[0] == 100 && now[1] == 100 && now[2] == 100) // if I win...
                     break; //exit
             }
 
             Console.Clear(); // clear
-            Image(@"100_100_100.txt", 100); // win image
+            Text.Art(@"100_100_100.txt", 100); // win image
             Console.SetCursorPosition(0, Console.CursorTop + 1); // down a line
-            WordWrap("Press a key to close..."); // close message
+            Text.WordWrap("Press a key to close..."); // close message
             Console.ReadKey(); // pause...
             
         }
