@@ -1,872 +1,872 @@
-4/19/2016 3:07:53 PM |@@@@@@@@@| Debug data for Cristal Caverns
-4/19/2016 3:07:53 PM |Start Pat| C:\Users\Tommy\Source\Repos\Programming-tests\cristal caverns
-4/19/2016 3:07:53 PM |Path     | \Save_template.txt
-4/19/2016 3:07:53 PM |Line     | // Template save file
-4/19/2016 3:07:53 PM |Line     | // Formated in plain text
-4/19/2016 3:07:53 PM |Line     | // Cristal Caverns is a project created by TMQ inspired by the DOS game of a simmalar name
-4/19/2016 3:07:53 PM |Line     | // Directions are always in North South East West Up Down
-4/19/2016 3:07:53 PM |Line     | // Start room is ALWAYS at (0,0,0)
-4/19/2016 3:07:53 PM |Line     | // End room is ALWAYS at (100,100,100)
-4/19/2016 3:07:53 PM |Line     | // Map dimentions are from 0 to 100 in all axis NEGITIVE VALUES DON'T WORK
-4/19/2016 3:07:53 PM |Line     | // Save file REQUIRES Items to be defined AFTER Caverns
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | // Cavern Format is as follows 
-4/19/2016 3:07:53 PM |Line     | // Cavern: X< Y< Z< Room Discription; N Discription: S Discription: E Discription: W Discription: U Discription: D Discription: X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|>
-4/19/2016 3:07:53 PM |Line     | // X,Y,Z Are absolute position
-4/19/2016 3:07:53 PM |Line     | // Discriptions are NOT allowed to contain the following <;:|>~^
-4/19/2016 3:07:53 PM |Line     | // Path routes (X|Y|Z|>) are the XYZ of the destination room
-4/19/2016 3:07:53 PM |Line     | // path^ defines a pic file (pic/%path%) remember to append.txt . ONLY ascii art works.
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | Cavern: 0< 0< 0< You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.; To the North, the path is clear and straight leading to what You think is another similar cavern.: To the South, the path is winding and narrow leading into the darkness.: To the East, the path winds and pans down out of view.: To the West, there is a straight narrow path leading to a much larger looking cavern.: Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.:  : 1|0|0|> 99|0|0|> 0|0|1|> 0|0|99|> 0|0|0|> 0|0|0|> 000_000_000.txt^
-4/19/2016 3:07:53 PM |Pos      | 0
-4/19/2016 3:07:53 PM |Pointer  | 1,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 4,2
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Discripti| You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.
-4/19/2016 3:07:53 PM |Pointer  | 217,8
-4/19/2016 3:07:53 PM |Exit     | To the North, the path is clear and straight leading to what You think is another similar cavern.
-4/19/2016 3:07:53 PM |Pointer  | 316,218
-4/19/2016 3:07:53 PM |Exit     | To the South, the path is winding and narrow leading into the darkness.
-4/19/2016 3:07:53 PM |Pointer  | 389,317
-4/19/2016 3:07:53 PM |Exit     | To the East, the path winds and pans down out of view.
-4/19/2016 3:07:53 PM |Pointer  | 445,390
-4/19/2016 3:07:53 PM |Exit     | To the West, there is a straight narrow path leading to a much larger looking cavern.
-4/19/2016 3:07:53 PM |Pointer  | 532,446
-4/19/2016 3:07:53 PM |Exit     | Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.
-4/19/2016 3:07:53 PM |Pointer  | 658,533
-4/19/2016 3:07:53 PM |Exit     |  
-4/19/2016 3:07:53 PM |Pointer  | 661,659
-4/19/2016 3:07:53 PM |Route    |  1|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 669,662
-4/19/2016 3:07:53 PM |Route[]  |  1
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  99|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 678,670
-4/19/2016 3:07:53 PM |Route[]  |  99
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 5,4
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 7,6
-4/19/2016 3:07:53 PM |Route    |  0|0|1|
-4/19/2016 3:07:53 PM |Pointer  | 686,679
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|99|
-4/19/2016 3:07:53 PM |Pointer  | 695,687
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 703,696
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 711,704
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Exit     | 000_000_000.txt
-4/19/2016 3:07:53 PM |Pointer  | 728,712
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | Cavern: 1< 0< 0< You Enter a medium sized circular cavern percing through many layers above. The cavern has a small clear pool in the middle with what looks to be a glowing cristal in the bottom. There is an exit to the South.; North: To the south a straight and narrow tunnel leads to an unfamiliar room.: East: West: Up: There is a deep pool in the center of the room.: 1|0|0|> 100|100|100|> 1|0|0|> 1|0|0|> 1|0|0|> 0|99|99|> 001_000_000.txt^
-4/19/2016 3:07:53 PM |Pos      | 1
-4/19/2016 3:07:53 PM |Pointer  | 1,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 4,2
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Discripti| You Enter a medium sized circular cavern percing through many layers above. The cavern has a small clear pool in the middle with what looks to be a glowing cristal in the bottom. There is an exit to the South.
-4/19/2016 3:07:53 PM |Pointer  | 218,8
-4/19/2016 3:07:53 PM |Exit     | North
-4/19/2016 3:07:53 PM |Pointer  | 225,219
-4/19/2016 3:07:53 PM |Exit     | To the south a straight and narrow tunnel leads to an unfamiliar room.
-4/19/2016 3:07:53 PM |Pointer  | 297,226
-4/19/2016 3:07:53 PM |Exit     | East
-4/19/2016 3:07:53 PM |Pointer  | 303,298
-4/19/2016 3:07:53 PM |Exit     | West
-4/19/2016 3:07:53 PM |Pointer  | 309,304
-4/19/2016 3:07:53 PM |Exit     | Up
-4/19/2016 3:07:53 PM |Pointer  | 313,310
-4/19/2016 3:07:53 PM |Exit     | There is a deep pool in the center of the room.
-4/19/2016 3:07:53 PM |Pointer  | 362,314
-4/19/2016 3:07:53 PM |Route    |  1|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 370,363
-4/19/2016 3:07:53 PM |Route[]  |  1
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  100|100|100|
-4/19/2016 3:07:53 PM |Pointer  | 384,371
-4/19/2016 3:07:53 PM |Route[]  |  100
-4/19/2016 3:07:53 PM |Pointer  | 4,0
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 12,9
-4/19/2016 3:07:53 PM |Route    |  1|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 392,385
-4/19/2016 3:07:53 PM |Route[]  |  1
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  1|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 400,393
-4/19/2016 3:07:53 PM |Route[]  |  1
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  1|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 408,401
-4/19/2016 3:07:53 PM |Route[]  |  1
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|99|99|
-4/19/2016 3:07:53 PM |Pointer  | 418,409
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Exit     | 001_000_000.txt
-4/19/2016 3:07:53 PM |Pointer  | 435,419
-4/19/2016 3:07:53 PM |Line     | Cavern: 99< 0< 0< You Enter a small cramped cave after what seemed to be an eternity of walking. This crammped cavern is unstable and looks like it could colapse at any time.; To the north is a small winding tunnel leading into the darkness.: To the South The cavern wall is cracked and rough.: To the East the cavern wall has broken in several places letting water seep through.: West: The ceiling is full of salagtites that are pointed and fragile.: : 0|0|0|> 99|0|0|> 99|0|0|> 99|0|0|> 99|0|0|> 99|0|0|> 099_000_000.txt^ 
-4/19/2016 3:07:53 PM |Pos      | 99
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Discripti| You Enter a small cramped cave after what seemed to be an eternity of walking. This crammped cavern is unstable and looks like it could colapse at any time.
-4/19/2016 3:07:53 PM |Pointer  | 166,9
-4/19/2016 3:07:53 PM |Exit     | To the north is a small winding tunnel leading into the darkness.
-4/19/2016 3:07:53 PM |Pointer  | 233,167
-4/19/2016 3:07:53 PM |Exit     | To the South The cavern wall is cracked and rough.
-4/19/2016 3:07:53 PM |Pointer  | 285,234
-4/19/2016 3:07:53 PM |Exit     | To the East the cavern wall has broken in several places letting water seep through.
-4/19/2016 3:07:53 PM |Pointer  | 371,286
-4/19/2016 3:07:53 PM |Exit     | West
-4/19/2016 3:07:53 PM |Pointer  | 377,372
-4/19/2016 3:07:53 PM |Exit     | The ceiling is full of salagtites that are pointed and fragile.
-4/19/2016 3:07:53 PM |Pointer  | 442,378
-4/19/2016 3:07:53 PM |Exit     | 
-4/19/2016 3:07:53 PM |Pointer  | 444,443
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 452,445
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  99|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 461,453
-4/19/2016 3:07:53 PM |Route[]  |  99
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 5,4
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 7,6
-4/19/2016 3:07:53 PM |Route    |  99|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 470,462
-4/19/2016 3:07:53 PM |Route[]  |  99
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 5,4
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 7,6
-4/19/2016 3:07:53 PM |Route    |  99|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 479,471
-4/19/2016 3:07:53 PM |Route[]  |  99
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 5,4
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 7,6
-4/19/2016 3:07:53 PM |Route    |  99|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 488,480
-4/19/2016 3:07:53 PM |Route[]  |  99
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 5,4
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 7,6
-4/19/2016 3:07:53 PM |Route    |  99|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 497,489
-4/19/2016 3:07:53 PM |Route[]  |  99
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 5,4
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 7,6
-4/19/2016 3:07:53 PM |Exit     | 099_000_000.txt
-4/19/2016 3:07:53 PM |Pointer  | 514,498
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | Cavern: 0< 0< 1< You arive at a small, cramped and half-flooded cavern. The darkness does not seem to go away no matter where your torch is held, The cave also smells faintly of natural gas.; North: South: East: To the West a tunnel slowly climbs up out of the room traveling to what feels to be a brighter area.: Up: Down: 0|0|1|> 0|0|1|> 0|0|1|> 0|0|0|> 0|0|1|> 0|0|1|> 000_000_001.txt^
-4/19/2016 3:07:53 PM |Pos      | 0
-4/19/2016 3:07:53 PM |Pointer  | 1,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 4,2
-4/19/2016 3:07:53 PM |Pos      |  1
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Discripti| You arive at a small, cramped and half-flooded cavern. The darkness does not seem to go away no matter where your torch is held, The cave also smells faintly of natural gas.
-4/19/2016 3:07:53 PM |Pointer  | 182,8
-4/19/2016 3:07:53 PM |Exit     | North
-4/19/2016 3:07:53 PM |Pointer  | 189,183
-4/19/2016 3:07:53 PM |Exit     | South
-4/19/2016 3:07:53 PM |Pointer  | 196,190
-4/19/2016 3:07:53 PM |Exit     | East
-4/19/2016 3:07:53 PM |Pointer  | 202,197
-4/19/2016 3:07:53 PM |Exit     | To the West a tunnel slowly climbs up out of the room traveling to what feels to be a brighter area.
-4/19/2016 3:07:53 PM |Pointer  | 304,203
-4/19/2016 3:07:53 PM |Exit     | Up
-4/19/2016 3:07:53 PM |Pointer  | 308,305
-4/19/2016 3:07:53 PM |Exit     | Down
-4/19/2016 3:07:53 PM |Pointer  | 314,309
-4/19/2016 3:07:53 PM |Route    |  0|0|1|
-4/19/2016 3:07:53 PM |Pointer  | 322,315
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|1|
-4/19/2016 3:07:53 PM |Pointer  | 330,323
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|1|
-4/19/2016 3:07:53 PM |Pointer  | 338,331
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 346,339
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|1|
-4/19/2016 3:07:53 PM |Pointer  | 354,347
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|1|
-4/19/2016 3:07:53 PM |Pointer  | 362,355
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Exit     | 000_000_001.txt
-4/19/2016 3:07:53 PM |Pointer  | 379,363
-4/19/2016 3:07:53 PM |Line     | Cavern: 0< 0< 99< You arive in a massive cavern that is brightly lit by Bio-lumenecent plants and a large pond in the middle being filled by a waterfall. The room is partialy filled with Ancient machinery that still apears to be working.; To the North there is an Ancent room with a Button inside.: To the South the wall is filled with ancent machinery.: To the East There is a long and straight exit leading to an open room.: To the west the wall is filled with a large tank of glowing fluid.: Above you is a tall arched ceiling with water poring through an opening near the top of the room.: The floor looks smooth in all directions, only dipping at the pond in the middle.: 1|0|99|>  0|0|99|>  0|0|0|> 0|0|99|> 0|1|99|> 0|99|99|> 000_000_099.txt^
-4/19/2016 3:07:53 PM |Pos      | 0
-4/19/2016 3:07:53 PM |Pointer  | 1,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 4,2
-4/19/2016 3:07:53 PM |Pos      |  99
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Discripti| You arive in a massive cavern that is brightly lit by Bio-lumenecent plants and a large pond in the middle being filled by a waterfall. The room is partialy filled with Ancient machinery that still apears to be working.
-4/19/2016 3:07:53 PM |Pointer  | 229,9
-4/19/2016 3:07:53 PM |Exit     | To the North there is an Ancent room with a Button inside.
-4/19/2016 3:07:53 PM |Pointer  | 289,230
-4/19/2016 3:07:53 PM |Exit     | To the South the wall is filled with ancent machinery.
-4/19/2016 3:07:53 PM |Pointer  | 345,290
-4/19/2016 3:07:53 PM |Exit     | To the East There is a long and straight exit leading to an open room.
-4/19/2016 3:07:53 PM |Pointer  | 417,346
-4/19/2016 3:07:53 PM |Exit     | To the west the wall is filled with a large tank of glowing fluid.
-4/19/2016 3:07:53 PM |Pointer  | 485,418
-4/19/2016 3:07:53 PM |Exit     | Above you is a tall arched ceiling with water poring through an opening near the top of the room.
-4/19/2016 3:07:53 PM |Pointer  | 584,486
-4/19/2016 3:07:53 PM |Exit     | The floor looks smooth in all directions, only dipping at the pond in the middle.
-4/19/2016 3:07:53 PM |Pointer  | 667,585
-4/19/2016 3:07:53 PM |Route    |  1|0|99|
-4/19/2016 3:07:53 PM |Pointer  | 676,668
-4/19/2016 3:07:53 PM |Route[]  |  1
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |   0|0|99|
-4/19/2016 3:07:53 PM |Pointer  | 686,677
-4/19/2016 3:07:53 PM |Route[]  |   0
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 5,4
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Route    |   0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 695,687
-4/19/2016 3:07:53 PM |Route[]  |   0
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 5,4
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 7,6
-4/19/2016 3:07:53 PM |Route    |  0|0|99|
-4/19/2016 3:07:53 PM |Pointer  | 704,696
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |  0|1|99|
-4/19/2016 3:07:53 PM |Pointer  | 713,705
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |  0|99|99|
-4/19/2016 3:07:53 PM |Pointer  | 723,714
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Exit     | 000_000_099.txt
-4/19/2016 3:07:53 PM |Pointer  | 740,724
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | Cavern: 0< 99< 99< You arive at a submerged room with little to see. There is an air pocket on the East wall.; In the North there is a contraption draining water leading to the room above.: In the South the cavern closes off in a smooth wall.: In the East the ceiling slopes up letting you breath. There is also a Long tunnel under water leading out of the room.: The west wall is crumbling brickwork wth a gap showing that something was once sealed off there.: Above you is a strange glowing cavern.: The bottom of the cavern is smooth leaving nowhere to go.: 0|1|99|> 0|99|99|> 0|99|98|> 1|0|0|> 0|0|99|> 0|99|99|> 000_099_099.txt^
-4/19/2016 3:07:53 PM |Pos      | 0
-4/19/2016 3:07:53 PM |Pointer  | 1,0
-4/19/2016 3:07:53 PM |Pos      |  99
-4/19/2016 3:07:53 PM |Pointer  | 5,2
-4/19/2016 3:07:53 PM |Pos      |  99
-4/19/2016 3:07:53 PM |Pointer  | 9,6
-4/19/2016 3:07:53 PM |Discripti| You arive at a submerged room with little to see. There is an air pocket on the East wall.
-4/19/2016 3:07:53 PM |Pointer  | 101,10
-4/19/2016 3:07:53 PM |Exit     | In the North there is a contraption draining water leading to the room above.
-4/19/2016 3:07:53 PM |Pointer  | 180,102
-4/19/2016 3:07:53 PM |Exit     | In the South the cavern closes off in a smooth wall.
-4/19/2016 3:07:53 PM |Pointer  | 234,181
-4/19/2016 3:07:53 PM |Exit     | In the East the ceiling slopes up letting you breath. There is also a Long tunnel under water leading out of the room.
-4/19/2016 3:07:53 PM |Pointer  | 354,235
-4/19/2016 3:07:53 PM |Exit     | The west wall is crumbling brickwork wth a gap showing that something was once sealed off there.
-4/19/2016 3:07:53 PM |Pointer  | 452,355
-4/19/2016 3:07:53 PM |Exit     | Above you is a strange glowing cavern.
-4/19/2016 3:07:53 PM |Pointer  | 492,453
-4/19/2016 3:07:53 PM |Exit     | The bottom of the cavern is smooth leaving nowhere to go.
-4/19/2016 3:07:53 PM |Pointer  | 551,493
-4/19/2016 3:07:53 PM |Route    |  0|1|99|
-4/19/2016 3:07:53 PM |Pointer  | 560,552
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |  0|99|99|
-4/19/2016 3:07:53 PM |Pointer  | 570,561
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Route    |  0|99|98|
-4/19/2016 3:07:53 PM |Pointer  | 580,571
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Route[]  | 98
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Route    |  1|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 588,581
-4/19/2016 3:07:53 PM |Route[]  |  1
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|99|
-4/19/2016 3:07:53 PM |Pointer  | 597,589
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |  0|99|99|
-4/19/2016 3:07:53 PM |Pointer  | 607,598
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Exit     | 000_099_099.txt
-4/19/2016 3:07:53 PM |Pointer  | 624,608
-4/19/2016 3:07:53 PM |Line     | Cavern: 0< 1< 99< You arive into a room with a large holding tank built into the floor. The walls Glow with a starnge luminecence.; On the North wall there is a set of gauges and levers around a closed door.: On the South wall there is a door leading to a windowed room.: On the East wall there is a Large mirrior.: On the West wall there is a Large plauque with ancient unfamiliar writing on it.: There is a Ladder leading up from this room. There is also a Medium pipe protruding from the ceiling pouring water into the holding tank.: Below you in the holding tank there is a large pipe leading down.: 1|1|99|> 99|1|99|> 0|1|99|> 0|1|99|> 0|2|99|> 0|0|99|> 000_001_099.txt^
-4/19/2016 3:07:53 PM |Pos      | 0
-4/19/2016 3:07:53 PM |Pointer  | 1,0
-4/19/2016 3:07:53 PM |Pos      |  1
-4/19/2016 3:07:53 PM |Pointer  | 4,2
-4/19/2016 3:07:53 PM |Pos      |  99
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Discripti| You arive into a room with a large holding tank built into the floor. The walls Glow with a starnge luminecence.
-4/19/2016 3:07:53 PM |Pointer  | 122,9
-4/19/2016 3:07:53 PM |Exit     | On the North wall there is a set of gauges and levers around a closed door.
-4/19/2016 3:07:53 PM |Pointer  | 199,123
-4/19/2016 3:07:53 PM |Exit     | On the South wall there is a door leading to a windowed room.
-4/19/2016 3:07:53 PM |Pointer  | 262,200
-4/19/2016 3:07:53 PM |Exit     | On the East wall there is a Large mirrior.
-4/19/2016 3:07:53 PM |Pointer  | 306,263
-4/19/2016 3:07:53 PM |Exit     | On the West wall there is a Large plauque with ancient unfamiliar writing on it.
-4/19/2016 3:07:53 PM |Pointer  | 388,307
-4/19/2016 3:07:53 PM |Exit     | There is a Ladder leading up from this room. There is also a Medium pipe protruding from the ceiling pouring water into the holding tank.
-4/19/2016 3:07:53 PM |Pointer  | 527,389
-4/19/2016 3:07:53 PM |Exit     | Below you in the holding tank there is a large pipe leading down.
-4/19/2016 3:07:53 PM |Pointer  | 594,528
-4/19/2016 3:07:53 PM |Route    |  1|1|99|
-4/19/2016 3:07:53 PM |Pointer  | 603,595
-4/19/2016 3:07:53 PM |Route[]  |  1
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |  99|1|99|
-4/19/2016 3:07:53 PM |Pointer  | 613,604
-4/19/2016 3:07:53 PM |Route[]  |  99
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 5,4
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Route    |  0|1|99|
-4/19/2016 3:07:53 PM |Pointer  | 622,614
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |  0|1|99|
-4/19/2016 3:07:53 PM |Pointer  | 631,623
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 1
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |  0|2|99|
-4/19/2016 3:07:53 PM |Pointer  | 640,632
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 2
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Route    |  0|0|99|
-4/19/2016 3:07:53 PM |Pointer  | 649,641
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 99
-4/19/2016 3:07:53 PM |Pointer  | 7,5
-4/19/2016 3:07:53 PM |Exit     | 000_001_099.txt
-4/19/2016 3:07:53 PM |Pointer  | 666,650
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | Cavern: 1< 0< 99< Discription; N: S: E: W: U: D: 0|0|0|> 0|0|0|> 0|0|0|> 0|0|0|> 0|0|0|> 0|0|0|> error.txt^
-4/19/2016 3:07:53 PM |Pos      | 1
-4/19/2016 3:07:53 PM |Pointer  | 1,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 4,2
-4/19/2016 3:07:53 PM |Pos      |  99
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Discripti| Discription
-4/19/2016 3:07:53 PM |Pointer  | 21,9
-4/19/2016 3:07:53 PM |Exit     | N
-4/19/2016 3:07:53 PM |Pointer  | 24,22
-4/19/2016 3:07:53 PM |Exit     | S
-4/19/2016 3:07:53 PM |Pointer  | 27,25
-4/19/2016 3:07:53 PM |Exit     | E
-4/19/2016 3:07:53 PM |Pointer  | 30,28
-4/19/2016 3:07:53 PM |Exit     | W
-4/19/2016 3:07:53 PM |Pointer  | 33,31
-4/19/2016 3:07:53 PM |Exit     | U
-4/19/2016 3:07:53 PM |Pointer  | 36,34
-4/19/2016 3:07:53 PM |Exit     | D
-4/19/2016 3:07:53 PM |Pointer  | 39,37
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 47,40
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 55,48
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 63,56
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 71,64
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 79,72
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Route    |  0|0|0|
-4/19/2016 3:07:53 PM |Pointer  | 87,80
-4/19/2016 3:07:53 PM |Route[]  |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 4,3
-4/19/2016 3:07:53 PM |Route[]  | 0
-4/19/2016 3:07:53 PM |Pointer  | 6,5
-4/19/2016 3:07:53 PM |Exit     | error.txt
-4/19/2016 3:07:53 PM |Pointer  | 98,88
-4/19/2016 3:07:53 PM |Line     | // win cavern
-4/19/2016 3:07:53 PM |Line     | Cavern: 100< 100< 100< You have sucssesfully escaped the caverns and can now go back to your life above ground.; Win: Win: Win: Win: Win: Win: 100|100|100|> 100|100|100|> 100|100|100|> 100|100|100|> 100|100|100|> 100|100|100|> 100_100_100.txt^
-4/19/2016 3:07:53 PM |Pos      | 100
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Pos      |  100
-4/19/2016 3:07:53 PM |Pointer  | 8,4
-4/19/2016 3:07:53 PM |Pos      |  100
-4/19/2016 3:07:53 PM |Pointer  | 13,9
-4/19/2016 3:07:53 PM |Discripti| You have sucssesfully escaped the caverns and can now go back to your life above ground.
-4/19/2016 3:07:53 PM |Pointer  | 103,14
-4/19/2016 3:07:53 PM |Exit     | Win
-4/19/2016 3:07:53 PM |Pointer  | 108,104
-4/19/2016 3:07:53 PM |Exit     | Win
-4/19/2016 3:07:53 PM |Pointer  | 113,109
-4/19/2016 3:07:53 PM |Exit     | Win
-4/19/2016 3:07:53 PM |Pointer  | 118,114
-4/19/2016 3:07:53 PM |Exit     | Win
-4/19/2016 3:07:53 PM |Pointer  | 123,119
-4/19/2016 3:07:53 PM |Exit     | Win
-4/19/2016 3:07:53 PM |Pointer  | 128,124
-4/19/2016 3:07:53 PM |Exit     | Win
-4/19/2016 3:07:53 PM |Pointer  | 133,129
-4/19/2016 3:07:53 PM |Route    |  100|100|100|
-4/19/2016 3:07:53 PM |Pointer  | 147,134
-4/19/2016 3:07:53 PM |Route[]  |  100
-4/19/2016 3:07:53 PM |Pointer  | 4,0
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 12,9
-4/19/2016 3:07:53 PM |Route    |  100|100|100|
-4/19/2016 3:07:53 PM |Pointer  | 161,148
-4/19/2016 3:07:53 PM |Route[]  |  100
-4/19/2016 3:07:53 PM |Pointer  | 4,0
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 12,9
-4/19/2016 3:07:53 PM |Route    |  100|100|100|
-4/19/2016 3:07:53 PM |Pointer  | 175,162
-4/19/2016 3:07:53 PM |Route[]  |  100
-4/19/2016 3:07:53 PM |Pointer  | 4,0
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 12,9
-4/19/2016 3:07:53 PM |Route    |  100|100|100|
-4/19/2016 3:07:53 PM |Pointer  | 189,176
-4/19/2016 3:07:53 PM |Route[]  |  100
-4/19/2016 3:07:53 PM |Pointer  | 4,0
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 12,9
-4/19/2016 3:07:53 PM |Route    |  100|100|100|
-4/19/2016 3:07:53 PM |Pointer  | 203,190
-4/19/2016 3:07:53 PM |Route[]  |  100
-4/19/2016 3:07:53 PM |Pointer  | 4,0
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 12,9
-4/19/2016 3:07:53 PM |Route    |  100|100|100|
-4/19/2016 3:07:53 PM |Pointer  | 217,204
-4/19/2016 3:07:53 PM |Route[]  |  100
-4/19/2016 3:07:53 PM |Pointer  | 4,0
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 8,5
-4/19/2016 3:07:53 PM |Route[]  | 100
-4/19/2016 3:07:53 PM |Pointer  | 12,9
-4/19/2016 3:07:53 PM |Exit     | 100_100_100.txt
-4/19/2016 3:07:53 PM |Pointer  | 234,218
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | // Item format is as follows
-4/19/2016 3:07:53 PM |Line     | // Item: X< Y< Z< Item name; Item discription: Amount~
-4/19/2016 3:07:53 PM |Line     | // X,Y,Z Are absolute position
-4/19/2016 3:07:53 PM |Line     | // Discriptions are NOT allowed to contain the following <;:|>~^
-4/19/2016 3:07:53 PM |Line     | // Items have NO use aside from place markers
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | Item: 0< 0< 0< Torch; This torch was found in the cavern after you fell. It seems to be exelent at keeping the darkness at bay.: 1~ True|
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Name     | Torch
-4/19/2016 3:07:53 PM |Pointer  | 15,9
-4/19/2016 3:07:53 PM |Discripti| This torch was found in the cavern after you fell. It seems to be exelent at keeping the darkness at bay.
-4/19/2016 3:07:53 PM |Pointer  | 122,16
-4/19/2016 3:07:53 PM |Amount   |  1
-4/19/2016 3:07:53 PM |Pointer  | 125,123
-4/19/2016 3:07:53 PM |Movable  |  True
-4/19/2016 3:07:53 PM |Pointer  | 131,126
-4/19/2016 3:07:53 PM |Line     | Item: 0< 0< 0< Lighter; This Lighter survived the fall and was used to light the torch.: 1~ True|
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Name     | Lighter
-4/19/2016 3:07:53 PM |Pointer  | 17,9
-4/19/2016 3:07:53 PM |Discripti| This Lighter survived the fall and was used to light the torch.
-4/19/2016 3:07:53 PM |Pointer  | 82,18
-4/19/2016 3:07:53 PM |Amount   |  1
-4/19/2016 3:07:53 PM |Pointer  | 85,83
-4/19/2016 3:07:53 PM |Movable  |  True
-4/19/2016 3:07:53 PM |Pointer  | 91,86
-4/19/2016 3:07:53 PM |Line     | Item: 0< 0< 0< Skull; Apears to be the skull of some other unfortunate who fell down centuries ago.: 1~ False|
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Name     | Skull
-4/19/2016 3:07:53 PM |Pointer  | 15,9
-4/19/2016 3:07:53 PM |Discripti| Apears to be the skull of some other unfortunate who fell down centuries ago.
-4/19/2016 3:07:53 PM |Pointer  | 94,16
-4/19/2016 3:07:53 PM |Amount   |  1
-4/19/2016 3:07:53 PM |Pointer  | 97,95
-4/19/2016 3:07:53 PM |Movable  |  False
-4/19/2016 3:07:53 PM |Pointer  | 104,98
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | Item: 1< 0< 0< Fish; large strong fish are swimming in this pool.: 1~ False|
-4/19/2016 3:07:53 PM |Pos      |  1
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Name     | Fish
-4/19/2016 3:07:53 PM |Pointer  | 14,9
-4/19/2016 3:07:53 PM |Discripti| large strong fish are swimming in this pool.
-4/19/2016 3:07:53 PM |Pointer  | 60,15
-4/19/2016 3:07:53 PM |Amount   |  1
-4/19/2016 3:07:53 PM |Pointer  | 63,61
-4/19/2016 3:07:53 PM |Movable  |  False
-4/19/2016 3:07:53 PM |Pointer  | 70,64
-4/19/2016 3:07:53 PM |Line     | Item: 99< 0< 0< Gravel; The floor of this cavern is littered with small pebbles.: 1~ False| 
-4/19/2016 3:07:53 PM |Pos      |  99
-4/19/2016 3:07:53 PM |Pointer  | 3,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 6,4
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 9,7
-4/19/2016 3:07:53 PM |Name     | Gravel
-4/19/2016 3:07:53 PM |Pointer  | 17,10
-4/19/2016 3:07:53 PM |Discripti| The floor of this cavern is littered with small pebbles.
-4/19/2016 3:07:53 PM |Pointer  | 75,18
-4/19/2016 3:07:53 PM |Amount   |  1
-4/19/2016 3:07:53 PM |Pointer  | 78,76
-4/19/2016 3:07:53 PM |Movable  |  False
-4/19/2016 3:07:53 PM |Pointer  | 85,79
-4/19/2016 3:07:53 PM |Line     | 
-4/19/2016 3:07:53 PM |Line     | Item: 0< 0< 99< Lever; Apears to be connected to some large complex contraption with gears all over. You ponder what it function it has, but are unable to figure it out.: 3~ False|
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Pos      |  99
-4/19/2016 3:07:53 PM |Pointer  | 9,6
-4/19/2016 3:07:53 PM |Name     | Lever
-4/19/2016 3:07:53 PM |Pointer  | 16,10
-4/19/2016 3:07:53 PM |Discripti| Apears to be connected to some large complex contraption with gears all over. You ponder what it function it has, but are unable to figure it out.
-4/19/2016 3:07:53 PM |Pointer  | 164,17
-4/19/2016 3:07:53 PM |Amount   |  3
-4/19/2016 3:07:53 PM |Pointer  | 167,165
-4/19/2016 3:07:53 PM |Movable  |  False
-4/19/2016 3:07:53 PM |Pointer  | 174,168
-4/19/2016 3:07:53 PM |Line     | Item: 0< 0< 99< Cog; Apears to be a cog that fell of a complex contraption. You searched for a place on the contraption to put it but could not find one.: 17~ True|
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Pos      |  99
-4/19/2016 3:07:53 PM |Pointer  | 9,6
-4/19/2016 3:07:53 PM |Name     | Cog
-4/19/2016 3:07:53 PM |Pointer  | 14,10
-4/19/2016 3:07:53 PM |Discripti| Apears to be a cog that fell of a complex contraption. You searched for a place on the contraption to put it but could not find one.
-4/19/2016 3:07:53 PM |Pointer  | 148,15
-4/19/2016 3:07:53 PM |Amount   |  17
-4/19/2016 3:07:53 PM |Pointer  | 152,149
-4/19/2016 3:07:53 PM |Movable  |  True
-4/19/2016 3:07:53 PM |Pointer  | 158,153
-4/19/2016 3:07:53 PM |Line     | Item: 0< 0< 1< Driftwood; Apears to be a peice of driftwood, but where it came from is unknown.: 1~ False|
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 2,0
-4/19/2016 3:07:53 PM |Pos      |  0
-4/19/2016 3:07:53 PM |Pointer  | 5,3
-4/19/2016 3:07:53 PM |Pos      |  1
-4/19/2016 3:07:53 PM |Pointer  | 8,6
-4/19/2016 3:07:53 PM |Name     | Driftwood
-4/19/2016 3:07:53 PM |Pointer  | 19,9
-4/19/2016 3:07:53 PM |Discripti| Apears to be a peice of driftwood, but where it came from is unknown.
-4/19/2016 3:07:53 PM |Pointer  | 90,20
-4/19/2016 3:07:53 PM |Amount   |  1
-4/19/2016 3:07:53 PM |Pointer  | 93,91
-4/19/2016 3:07:53 PM |Movable  |  False
-4/19/2016 3:07:53 PM |Pointer  | 100,94
-4/19/2016 3:07:53 PM |Cavern   | 0,0,0
-4/19/2016 3:07:53 PM |Discripti| You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.
-4/19/2016 3:07:53 PM |exit     | 0 |To the North, the path is clear and straight leading to what You think is another similar cavern.
-4/19/2016 3:07:53 PM |exit     | 1 |To the South, the path is winding and narrow leading into the darkness.
-4/19/2016 3:07:53 PM |exit     | 2 |To the East, the path winds and pans down out of view.
-4/19/2016 3:07:53 PM |exit     | 3 |To the West, there is a straight narrow path leading to a much larger looking cavern.
-4/19/2016 3:07:53 PM |exit     | 4 |Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.
-4/19/2016 3:07:53 PM |exit     | 5 | 
-4/19/2016 3:07:53 PM |Cavern   | 0,0,1
-4/19/2016 3:07:53 PM |Discripti| You arive at a small, cramped and half-flooded cavern. The darkness does not seem to go away no matter where your torch is held, The cave also smells faintly of natural gas.
-4/19/2016 3:07:53 PM |exit     | 0 |North
-4/19/2016 3:07:53 PM |exit     | 1 |South
-4/19/2016 3:07:53 PM |exit     | 2 |East
-4/19/2016 3:07:53 PM |exit     | 3 |To the West a tunnel slowly climbs up out of the room traveling to what feels to be a brighter area.
-4/19/2016 3:07:53 PM |exit     | 4 |Up
-4/19/2016 3:07:53 PM |exit     | 5 |Down
-4/19/2016 3:07:53 PM |Cavern   | 0,0,99
-4/19/2016 3:07:53 PM |Discripti| You arive in a massive cavern that is brightly lit by Bio-lumenecent plants and a large pond in the middle being filled by a waterfall. The room is partialy filled with Ancient machinery that still apears to be working.
-4/19/2016 3:07:53 PM |exit     | 0 |To the North there is an Ancent room with a Button inside.
-4/19/2016 3:07:53 PM |exit     | 1 |To the South the wall is filled with ancent machinery.
-4/19/2016 3:07:53 PM |exit     | 2 |To the East There is a long and straight exit leading to an open room.
-4/19/2016 3:07:53 PM |exit     | 3 |To the west the wall is filled with a large tank of glowing fluid.
-4/19/2016 3:07:53 PM |exit     | 4 |Above you is a tall arched ceiling with water poring through an opening near the top of the room.
-4/19/2016 3:07:53 PM |exit     | 5 |The floor looks smooth in all directions, only dipping at the pond in the middle.
-4/19/2016 3:07:53 PM |Cavern   | 0,1,99
-4/19/2016 3:07:53 PM |Discripti| You arive into a room with a large holding tank built into the floor. The walls Glow with a starnge luminecence.
-4/19/2016 3:07:53 PM |exit     | 0 |On the North wall there is a set of gauges and levers around a closed door.
-4/19/2016 3:07:53 PM |exit     | 1 |On the South wall there is a door leading to a windowed room.
-4/19/2016 3:07:53 PM |exit     | 2 |On the East wall there is a Large mirrior.
-4/19/2016 3:07:53 PM |exit     | 3 |On the West wall there is a Large plauque with ancient unfamiliar writing on it.
-4/19/2016 3:07:53 PM |exit     | 4 |There is a Ladder leading up from this room. There is also a Medium pipe protruding from the ceiling pouring water into the holding tank.
-4/19/2016 3:07:53 PM |exit     | 5 |Below you in the holding tank there is a large pipe leading down.
-4/19/2016 3:07:53 PM |Cavern   | 0,99,99
-4/19/2016 3:07:53 PM |Discripti| You arive at a submerged room with little to see. There is an air pocket on the East wall.
-4/19/2016 3:07:53 PM |exit     | 0 |In the North there is a contraption draining water leading to the room above.
-4/19/2016 3:07:53 PM |exit     | 1 |In the South the cavern closes off in a smooth wall.
-4/19/2016 3:07:53 PM |exit     | 2 |In the East the ceiling slopes up letting you breath. There is also a Long tunnel under water leading out of the room.
-4/19/2016 3:07:53 PM |exit     | 3 |The west wall is crumbling brickwork wth a gap showing that something was once sealed off there.
-4/19/2016 3:07:53 PM |exit     | 4 |Above you is a strange glowing cavern.
-4/19/2016 3:07:53 PM |exit     | 5 |The bottom of the cavern is smooth leaving nowhere to go.
-4/19/2016 3:07:53 PM |Cavern   | 1,0,0
-4/19/2016 3:07:53 PM |Discripti| You Enter a medium sized circular cavern percing through many layers above. The cavern has a small clear pool in the middle with what looks to be a glowing cristal in the bottom. There is an exit to the South.
-4/19/2016 3:07:53 PM |exit     | 0 |North
-4/19/2016 3:07:53 PM |exit     | 1 |To the south a straight and narrow tunnel leads to an unfamiliar room.
-4/19/2016 3:07:53 PM |exit     | 2 |East
-4/19/2016 3:07:53 PM |exit     | 3 |West
-4/19/2016 3:07:53 PM |exit     | 4 |Up
-4/19/2016 3:07:53 PM |exit     | 5 |There is a deep pool in the center of the room.
-4/19/2016 3:07:53 PM |Cavern   | 1,0,99
-4/19/2016 3:07:53 PM |Discripti| Discription
-4/19/2016 3:07:53 PM |exit     | 0 |N
-4/19/2016 3:07:53 PM |exit     | 1 |S
-4/19/2016 3:07:53 PM |exit     | 2 |E
-4/19/2016 3:07:53 PM |exit     | 3 |W
-4/19/2016 3:07:53 PM |exit     | 4 |U
-4/19/2016 3:07:53 PM |exit     | 5 |D
-4/19/2016 3:07:53 PM |Cavern   | 99,0,0
-4/19/2016 3:07:53 PM |Discripti| You Enter a small cramped cave after what seemed to be an eternity of walking. This crammped cavern is unstable and looks like it could colapse at any time.
-4/19/2016 3:07:53 PM |exit     | 0 |To the north is a small winding tunnel leading into the darkness.
-4/19/2016 3:07:53 PM |exit     | 1 |To the South The cavern wall is cracked and rough.
-4/19/2016 3:07:53 PM |exit     | 2 |To the East the cavern wall has broken in several places letting water seep through.
-4/19/2016 3:07:53 PM |exit     | 3 |West
-4/19/2016 3:07:53 PM |exit     | 4 |The ceiling is full of salagtites that are pointed and fragile.
-4/19/2016 3:07:53 PM |exit     | 5 |
-4/19/2016 3:07:53 PM |Cavern   | 100,100,100
-4/19/2016 3:07:53 PM |Discripti| You have sucssesfully escaped the caverns and can now go back to your life above ground.
-4/19/2016 3:07:53 PM |exit     | 0 |Win
-4/19/2016 3:07:53 PM |exit     | 1 |Win
-4/19/2016 3:07:53 PM |exit     | 2 |Win
-4/19/2016 3:07:53 PM |exit     | 3 |Win
-4/19/2016 3:07:53 PM |exit     | 4 |Win
-4/19/2016 3:07:53 PM |exit     | 5 |Win
-4/19/2016 3:07:53 PM |Cavern   | 0,0,0
-4/19/2016 3:07:53 PM |Discripti| You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.
-4/19/2016 3:07:53 PM |exit     | 0 |To the North, the path is clear and straight leading to what You think is another similar cavern.
-4/19/2016 3:07:53 PM |exit     | 1 |To the South, the path is winding and narrow leading into the darkness.
-4/19/2016 3:07:53 PM |exit     | 2 |To the East, the path winds and pans down out of view.
-4/19/2016 3:07:53 PM |exit     | 3 |To the West, there is a straight narrow path leading to a much larger looking cavern.
-4/19/2016 3:07:53 PM |exit     | 4 |Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.
-4/19/2016 3:07:53 PM |exit     | 5 | 
+6/5/2016 12:13:10 PM |@@@@@@@@@| Debug data for Cristal Caverns
+6/5/2016 12:13:10 PM |Start Pat| C:\Users\Tommy\Source\Repos\Programming-tests\cristal caverns
+6/5/2016 12:13:10 PM |Path     | \Save_template.txt
+6/5/2016 12:13:10 PM |Line     | // Template save file
+6/5/2016 12:13:10 PM |Line     | // Formated in plain text
+6/5/2016 12:13:10 PM |Line     | // Cristal Caverns is a project created by TMQ inspired by the DOS game of a simmalar name
+6/5/2016 12:13:10 PM |Line     | // Directions are always in North South East West Up Down
+6/5/2016 12:13:10 PM |Line     | // Start room is ALWAYS at (0,0,0)
+6/5/2016 12:13:10 PM |Line     | // End room is ALWAYS at (100,100,100)
+6/5/2016 12:13:10 PM |Line     | // Map dimentions are from 0 to 100 in all axis NEGITIVE VALUES DON'T WORK
+6/5/2016 12:13:10 PM |Line     | // Save file REQUIRES Items to be defined AFTER Caverns
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | // Cavern Format is as follows 
+6/5/2016 12:13:10 PM |Line     | // Cavern: X< Y< Z< Room Discription; N Discription: S Discription: E Discription: W Discription: U Discription: D Discription: X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|> X|Y|Z|>
+6/5/2016 12:13:10 PM |Line     | // X,Y,Z Are absolute position
+6/5/2016 12:13:10 PM |Line     | // Discriptions are NOT allowed to contain the following <;:|>~^
+6/5/2016 12:13:10 PM |Line     | // Path routes (X|Y|Z|>) are the XYZ of the destination room
+6/5/2016 12:13:10 PM |Line     | // path^ defines a pic file (pic/%path%) remember to append.txt . ONLY ascii art works.
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | Cavern: 0< 0< 0< You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.; To the North, the path is clear and straight leading to what You think is another similar cavern.: To the South, the path is winding and narrow leading into the darkness.: To the East, the path winds and pans down out of view.: To the West, there is a straight narrow path leading to a much larger looking cavern.: Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.:  : 1|0|0|> 99|0|0|> 0|0|1|> 0|0|99|> 0|0|0|> 0|0|0|> 000_000_000.txt^
+6/5/2016 12:13:10 PM |Pos      | 0
+6/5/2016 12:13:10 PM |Pointer  | 1,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 4,2
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Discripti| You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.
+6/5/2016 12:13:10 PM |Pointer  | 217,8
+6/5/2016 12:13:10 PM |Exit     | To the North, the path is clear and straight leading to what You think is another similar cavern.
+6/5/2016 12:13:10 PM |Pointer  | 316,218
+6/5/2016 12:13:10 PM |Exit     | To the South, the path is winding and narrow leading into the darkness.
+6/5/2016 12:13:10 PM |Pointer  | 389,317
+6/5/2016 12:13:10 PM |Exit     | To the East, the path winds and pans down out of view.
+6/5/2016 12:13:10 PM |Pointer  | 445,390
+6/5/2016 12:13:10 PM |Exit     | To the West, there is a straight narrow path leading to a much larger looking cavern.
+6/5/2016 12:13:10 PM |Pointer  | 532,446
+6/5/2016 12:13:10 PM |Exit     | Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.
+6/5/2016 12:13:10 PM |Pointer  | 658,533
+6/5/2016 12:13:10 PM |Exit     |  
+6/5/2016 12:13:10 PM |Pointer  | 661,659
+6/5/2016 12:13:10 PM |Route    |  1|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 669,662
+6/5/2016 12:13:10 PM |Route[]  |  1
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  99|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 678,670
+6/5/2016 12:13:10 PM |Route[]  |  99
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 5,4
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 7,6
+6/5/2016 12:13:10 PM |Route    |  0|0|1|
+6/5/2016 12:13:10 PM |Pointer  | 686,679
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|99|
+6/5/2016 12:13:10 PM |Pointer  | 695,687
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 703,696
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 711,704
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Exit     | 000_000_000.txt
+6/5/2016 12:13:10 PM |Pointer  | 728,712
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | Cavern: 1< 0< 0< You Enter a medium sized circular cavern percing through many layers above. The cavern has a small clear pool in the middle with what looks to be a glowing cristal in the bottom. There is an exit to the South.; North: To the south a straight and narrow tunnel leads to an unfamiliar room.: East: West: Up: There is a deep pool in the center of the room.: 1|0|0|> 100|100|100|> 1|0|0|> 1|0|0|> 1|0|0|> 0|99|99|> 001_000_000.txt^
+6/5/2016 12:13:10 PM |Pos      | 1
+6/5/2016 12:13:10 PM |Pointer  | 1,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 4,2
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Discripti| You Enter a medium sized circular cavern percing through many layers above. The cavern has a small clear pool in the middle with what looks to be a glowing cristal in the bottom. There is an exit to the South.
+6/5/2016 12:13:10 PM |Pointer  | 218,8
+6/5/2016 12:13:10 PM |Exit     | North
+6/5/2016 12:13:10 PM |Pointer  | 225,219
+6/5/2016 12:13:10 PM |Exit     | To the south a straight and narrow tunnel leads to an unfamiliar room.
+6/5/2016 12:13:10 PM |Pointer  | 297,226
+6/5/2016 12:13:10 PM |Exit     | East
+6/5/2016 12:13:10 PM |Pointer  | 303,298
+6/5/2016 12:13:10 PM |Exit     | West
+6/5/2016 12:13:10 PM |Pointer  | 309,304
+6/5/2016 12:13:10 PM |Exit     | Up
+6/5/2016 12:13:10 PM |Pointer  | 313,310
+6/5/2016 12:13:10 PM |Exit     | There is a deep pool in the center of the room.
+6/5/2016 12:13:10 PM |Pointer  | 362,314
+6/5/2016 12:13:10 PM |Route    |  1|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 370,363
+6/5/2016 12:13:10 PM |Route[]  |  1
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  100|100|100|
+6/5/2016 12:13:10 PM |Pointer  | 384,371
+6/5/2016 12:13:10 PM |Route[]  |  100
+6/5/2016 12:13:10 PM |Pointer  | 4,0
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 12,9
+6/5/2016 12:13:10 PM |Route    |  1|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 392,385
+6/5/2016 12:13:10 PM |Route[]  |  1
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  1|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 400,393
+6/5/2016 12:13:10 PM |Route[]  |  1
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  1|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 408,401
+6/5/2016 12:13:10 PM |Route[]  |  1
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|99|99|
+6/5/2016 12:13:10 PM |Pointer  | 418,409
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Exit     | 001_000_000.txt
+6/5/2016 12:13:10 PM |Pointer  | 435,419
+6/5/2016 12:13:10 PM |Line     | Cavern: 99< 0< 0< You Enter a small cramped cave after what seemed to be an eternity of walking. This crammped cavern is unstable and looks like it could colapse at any time.; To the north is a small winding tunnel leading into the darkness.: To the South The cavern wall is cracked and rough.: To the East the cavern wall has broken in several places letting water seep through.: West: The ceiling is full of salagtites that are pointed and fragile.: : 0|0|0|> 99|0|0|> 99|0|0|> 99|0|0|> 99|0|0|> 99|0|0|> 099_000_000.txt^ 
+6/5/2016 12:13:10 PM |Pos      | 99
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Discripti| You Enter a small cramped cave after what seemed to be an eternity of walking. This crammped cavern is unstable and looks like it could colapse at any time.
+6/5/2016 12:13:10 PM |Pointer  | 166,9
+6/5/2016 12:13:10 PM |Exit     | To the north is a small winding tunnel leading into the darkness.
+6/5/2016 12:13:10 PM |Pointer  | 233,167
+6/5/2016 12:13:10 PM |Exit     | To the South The cavern wall is cracked and rough.
+6/5/2016 12:13:10 PM |Pointer  | 285,234
+6/5/2016 12:13:10 PM |Exit     | To the East the cavern wall has broken in several places letting water seep through.
+6/5/2016 12:13:10 PM |Pointer  | 371,286
+6/5/2016 12:13:10 PM |Exit     | West
+6/5/2016 12:13:10 PM |Pointer  | 377,372
+6/5/2016 12:13:10 PM |Exit     | The ceiling is full of salagtites that are pointed and fragile.
+6/5/2016 12:13:10 PM |Pointer  | 442,378
+6/5/2016 12:13:10 PM |Exit     | 
+6/5/2016 12:13:10 PM |Pointer  | 444,443
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 452,445
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  99|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 461,453
+6/5/2016 12:13:10 PM |Route[]  |  99
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 5,4
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 7,6
+6/5/2016 12:13:10 PM |Route    |  99|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 470,462
+6/5/2016 12:13:10 PM |Route[]  |  99
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 5,4
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 7,6
+6/5/2016 12:13:10 PM |Route    |  99|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 479,471
+6/5/2016 12:13:10 PM |Route[]  |  99
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 5,4
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 7,6
+6/5/2016 12:13:10 PM |Route    |  99|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 488,480
+6/5/2016 12:13:10 PM |Route[]  |  99
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 5,4
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 7,6
+6/5/2016 12:13:10 PM |Route    |  99|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 497,489
+6/5/2016 12:13:10 PM |Route[]  |  99
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 5,4
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 7,6
+6/5/2016 12:13:10 PM |Exit     | 099_000_000.txt
+6/5/2016 12:13:10 PM |Pointer  | 514,498
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | Cavern: 0< 0< 1< You arive at a small, cramped and half-flooded cavern. The darkness does not seem to go away no matter where your torch is held, The cave also smells faintly of natural gas.; North: South: East: To the West a tunnel slowly climbs up out of the room traveling to what feels to be a brighter area.: Up: Down: 0|0|1|> 0|0|1|> 0|0|1|> 0|0|0|> 0|0|1|> 0|0|1|> 000_000_001.txt^
+6/5/2016 12:13:10 PM |Pos      | 0
+6/5/2016 12:13:10 PM |Pointer  | 1,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 4,2
+6/5/2016 12:13:10 PM |Pos      |  1
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Discripti| You arive at a small, cramped and half-flooded cavern. The darkness does not seem to go away no matter where your torch is held, The cave also smells faintly of natural gas.
+6/5/2016 12:13:10 PM |Pointer  | 182,8
+6/5/2016 12:13:10 PM |Exit     | North
+6/5/2016 12:13:10 PM |Pointer  | 189,183
+6/5/2016 12:13:10 PM |Exit     | South
+6/5/2016 12:13:10 PM |Pointer  | 196,190
+6/5/2016 12:13:10 PM |Exit     | East
+6/5/2016 12:13:10 PM |Pointer  | 202,197
+6/5/2016 12:13:10 PM |Exit     | To the West a tunnel slowly climbs up out of the room traveling to what feels to be a brighter area.
+6/5/2016 12:13:10 PM |Pointer  | 304,203
+6/5/2016 12:13:10 PM |Exit     | Up
+6/5/2016 12:13:10 PM |Pointer  | 308,305
+6/5/2016 12:13:10 PM |Exit     | Down
+6/5/2016 12:13:10 PM |Pointer  | 314,309
+6/5/2016 12:13:10 PM |Route    |  0|0|1|
+6/5/2016 12:13:10 PM |Pointer  | 322,315
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|1|
+6/5/2016 12:13:10 PM |Pointer  | 330,323
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|1|
+6/5/2016 12:13:10 PM |Pointer  | 338,331
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 346,339
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|1|
+6/5/2016 12:13:10 PM |Pointer  | 354,347
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|1|
+6/5/2016 12:13:10 PM |Pointer  | 362,355
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Exit     | 000_000_001.txt
+6/5/2016 12:13:10 PM |Pointer  | 379,363
+6/5/2016 12:13:10 PM |Line     | Cavern: 0< 0< 99< You arive in a massive cavern that is brightly lit by Bio-lumenecent plants and a large pond in the middle being filled by a waterfall. The room is partialy filled with Ancient machinery that still apears to be working.; To the North there is an Ancent room with a Button inside.: To the South the wall is filled with ancent machinery.: To the East There is a long and straight exit leading to an open room.: To the west the wall is filled with a large tank of glowing fluid.: Above you is a tall arched ceiling with water poring through an opening near the top of the room.: The floor looks smooth in all directions, only dipping at the pond in the middle.: 1|0|99|>  0|0|99|>  0|0|0|> 0|0|99|> 0|1|99|> 0|99|99|> 000_000_099.txt^
+6/5/2016 12:13:10 PM |Pos      | 0
+6/5/2016 12:13:10 PM |Pointer  | 1,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 4,2
+6/5/2016 12:13:10 PM |Pos      |  99
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Discripti| You arive in a massive cavern that is brightly lit by Bio-lumenecent plants and a large pond in the middle being filled by a waterfall. The room is partialy filled with Ancient machinery that still apears to be working.
+6/5/2016 12:13:10 PM |Pointer  | 229,9
+6/5/2016 12:13:10 PM |Exit     | To the North there is an Ancent room with a Button inside.
+6/5/2016 12:13:10 PM |Pointer  | 289,230
+6/5/2016 12:13:10 PM |Exit     | To the South the wall is filled with ancent machinery.
+6/5/2016 12:13:10 PM |Pointer  | 345,290
+6/5/2016 12:13:10 PM |Exit     | To the East There is a long and straight exit leading to an open room.
+6/5/2016 12:13:10 PM |Pointer  | 417,346
+6/5/2016 12:13:10 PM |Exit     | To the west the wall is filled with a large tank of glowing fluid.
+6/5/2016 12:13:10 PM |Pointer  | 485,418
+6/5/2016 12:13:10 PM |Exit     | Above you is a tall arched ceiling with water poring through an opening near the top of the room.
+6/5/2016 12:13:10 PM |Pointer  | 584,486
+6/5/2016 12:13:10 PM |Exit     | The floor looks smooth in all directions, only dipping at the pond in the middle.
+6/5/2016 12:13:10 PM |Pointer  | 667,585
+6/5/2016 12:13:10 PM |Route    |  1|0|99|
+6/5/2016 12:13:10 PM |Pointer  | 676,668
+6/5/2016 12:13:10 PM |Route[]  |  1
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |   0|0|99|
+6/5/2016 12:13:10 PM |Pointer  | 686,677
+6/5/2016 12:13:10 PM |Route[]  |   0
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 5,4
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Route    |   0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 695,687
+6/5/2016 12:13:10 PM |Route[]  |   0
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 5,4
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 7,6
+6/5/2016 12:13:10 PM |Route    |  0|0|99|
+6/5/2016 12:13:10 PM |Pointer  | 704,696
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |  0|1|99|
+6/5/2016 12:13:10 PM |Pointer  | 713,705
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |  0|99|99|
+6/5/2016 12:13:10 PM |Pointer  | 723,714
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Exit     | 000_000_099.txt
+6/5/2016 12:13:10 PM |Pointer  | 740,724
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | Cavern: 0< 99< 99< You arive at a submerged room with little to see. There is an air pocket on the East wall.; In the North there is a contraption draining water leading to the room above.: In the South the cavern closes off in a smooth wall.: In the East the ceiling slopes up letting you breath. There is also a Long tunnel under water leading out of the room.: The west wall is crumbling brickwork wth a gap showing that something was once sealed off there.: Above you is a strange glowing cavern.: The bottom of the cavern is smooth leaving nowhere to go.: 0|1|99|> 0|99|99|> 0|99|98|> 1|0|0|> 0|0|99|> 0|99|99|> 000_099_099.txt^
+6/5/2016 12:13:10 PM |Pos      | 0
+6/5/2016 12:13:10 PM |Pointer  | 1,0
+6/5/2016 12:13:10 PM |Pos      |  99
+6/5/2016 12:13:10 PM |Pointer  | 5,2
+6/5/2016 12:13:10 PM |Pos      |  99
+6/5/2016 12:13:10 PM |Pointer  | 9,6
+6/5/2016 12:13:10 PM |Discripti| You arive at a submerged room with little to see. There is an air pocket on the East wall.
+6/5/2016 12:13:10 PM |Pointer  | 101,10
+6/5/2016 12:13:10 PM |Exit     | In the North there is a contraption draining water leading to the room above.
+6/5/2016 12:13:10 PM |Pointer  | 180,102
+6/5/2016 12:13:10 PM |Exit     | In the South the cavern closes off in a smooth wall.
+6/5/2016 12:13:10 PM |Pointer  | 234,181
+6/5/2016 12:13:10 PM |Exit     | In the East the ceiling slopes up letting you breath. There is also a Long tunnel under water leading out of the room.
+6/5/2016 12:13:10 PM |Pointer  | 354,235
+6/5/2016 12:13:10 PM |Exit     | The west wall is crumbling brickwork wth a gap showing that something was once sealed off there.
+6/5/2016 12:13:10 PM |Pointer  | 452,355
+6/5/2016 12:13:10 PM |Exit     | Above you is a strange glowing cavern.
+6/5/2016 12:13:10 PM |Pointer  | 492,453
+6/5/2016 12:13:10 PM |Exit     | The bottom of the cavern is smooth leaving nowhere to go.
+6/5/2016 12:13:10 PM |Pointer  | 551,493
+6/5/2016 12:13:10 PM |Route    |  0|1|99|
+6/5/2016 12:13:10 PM |Pointer  | 560,552
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |  0|99|99|
+6/5/2016 12:13:10 PM |Pointer  | 570,561
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Route    |  0|99|98|
+6/5/2016 12:13:10 PM |Pointer  | 580,571
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Route[]  | 98
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Route    |  1|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 588,581
+6/5/2016 12:13:10 PM |Route[]  |  1
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|99|
+6/5/2016 12:13:10 PM |Pointer  | 597,589
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |  0|99|99|
+6/5/2016 12:13:10 PM |Pointer  | 607,598
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Exit     | 000_099_099.txt
+6/5/2016 12:13:10 PM |Pointer  | 624,608
+6/5/2016 12:13:10 PM |Line     | Cavern: 0< 1< 99< You arive into a room with a large holding tank built into the floor. The walls Glow with a starnge luminecence.; On the North wall there is a set of gauges and levers around a closed door.: On the South wall there is a door leading to a windowed room.: On the East wall there is a Large mirrior.: On the West wall there is a Large plauque with ancient unfamiliar writing on it.: There is a Ladder leading up from this room. There is also a Medium pipe protruding from the ceiling pouring water into the holding tank.: Below you in the holding tank there is a large pipe leading down.: 1|1|99|> 99|1|99|> 0|1|99|> 0|1|99|> 0|2|99|> 0|0|99|> 000_001_099.txt^
+6/5/2016 12:13:10 PM |Pos      | 0
+6/5/2016 12:13:10 PM |Pointer  | 1,0
+6/5/2016 12:13:10 PM |Pos      |  1
+6/5/2016 12:13:10 PM |Pointer  | 4,2
+6/5/2016 12:13:10 PM |Pos      |  99
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Discripti| You arive into a room with a large holding tank built into the floor. The walls Glow with a starnge luminecence.
+6/5/2016 12:13:10 PM |Pointer  | 122,9
+6/5/2016 12:13:10 PM |Exit     | On the North wall there is a set of gauges and levers around a closed door.
+6/5/2016 12:13:10 PM |Pointer  | 199,123
+6/5/2016 12:13:10 PM |Exit     | On the South wall there is a door leading to a windowed room.
+6/5/2016 12:13:10 PM |Pointer  | 262,200
+6/5/2016 12:13:10 PM |Exit     | On the East wall there is a Large mirrior.
+6/5/2016 12:13:10 PM |Pointer  | 306,263
+6/5/2016 12:13:10 PM |Exit     | On the West wall there is a Large plauque with ancient unfamiliar writing on it.
+6/5/2016 12:13:10 PM |Pointer  | 388,307
+6/5/2016 12:13:10 PM |Exit     | There is a Ladder leading up from this room. There is also a Medium pipe protruding from the ceiling pouring water into the holding tank.
+6/5/2016 12:13:10 PM |Pointer  | 527,389
+6/5/2016 12:13:10 PM |Exit     | Below you in the holding tank there is a large pipe leading down.
+6/5/2016 12:13:10 PM |Pointer  | 594,528
+6/5/2016 12:13:10 PM |Route    |  1|1|99|
+6/5/2016 12:13:10 PM |Pointer  | 603,595
+6/5/2016 12:13:10 PM |Route[]  |  1
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |  99|1|99|
+6/5/2016 12:13:10 PM |Pointer  | 613,604
+6/5/2016 12:13:10 PM |Route[]  |  99
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 5,4
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Route    |  0|1|99|
+6/5/2016 12:13:10 PM |Pointer  | 622,614
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |  0|1|99|
+6/5/2016 12:13:10 PM |Pointer  | 631,623
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 1
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |  0|2|99|
+6/5/2016 12:13:10 PM |Pointer  | 640,632
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 2
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Route    |  0|0|99|
+6/5/2016 12:13:10 PM |Pointer  | 649,641
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 99
+6/5/2016 12:13:10 PM |Pointer  | 7,5
+6/5/2016 12:13:10 PM |Exit     | 000_001_099.txt
+6/5/2016 12:13:10 PM |Pointer  | 666,650
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | Cavern: 1< 0< 99< Discription; N: S: E: W: U: D: 0|0|0|> 0|0|0|> 0|0|0|> 0|0|0|> 0|0|0|> 0|0|0|> error.txt^
+6/5/2016 12:13:10 PM |Pos      | 1
+6/5/2016 12:13:10 PM |Pointer  | 1,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 4,2
+6/5/2016 12:13:10 PM |Pos      |  99
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Discripti| Discription
+6/5/2016 12:13:10 PM |Pointer  | 21,9
+6/5/2016 12:13:10 PM |Exit     | N
+6/5/2016 12:13:10 PM |Pointer  | 24,22
+6/5/2016 12:13:10 PM |Exit     | S
+6/5/2016 12:13:10 PM |Pointer  | 27,25
+6/5/2016 12:13:10 PM |Exit     | E
+6/5/2016 12:13:10 PM |Pointer  | 30,28
+6/5/2016 12:13:10 PM |Exit     | W
+6/5/2016 12:13:10 PM |Pointer  | 33,31
+6/5/2016 12:13:10 PM |Exit     | U
+6/5/2016 12:13:10 PM |Pointer  | 36,34
+6/5/2016 12:13:10 PM |Exit     | D
+6/5/2016 12:13:10 PM |Pointer  | 39,37
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 47,40
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 55,48
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 63,56
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 71,64
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 79,72
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Route    |  0|0|0|
+6/5/2016 12:13:10 PM |Pointer  | 87,80
+6/5/2016 12:13:10 PM |Route[]  |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 4,3
+6/5/2016 12:13:10 PM |Route[]  | 0
+6/5/2016 12:13:10 PM |Pointer  | 6,5
+6/5/2016 12:13:10 PM |Exit     | error.txt
+6/5/2016 12:13:10 PM |Pointer  | 98,88
+6/5/2016 12:13:10 PM |Line     | // win cavern
+6/5/2016 12:13:10 PM |Line     | Cavern: 100< 100< 100< You have sucssesfully escaped the caverns and can now go back to your life above ground.; Win: Win: Win: Win: Win: Win: 100|100|100|> 100|100|100|> 100|100|100|> 100|100|100|> 100|100|100|> 100|100|100|> 100_100_100.txt^
+6/5/2016 12:13:10 PM |Pos      | 100
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Pos      |  100
+6/5/2016 12:13:10 PM |Pointer  | 8,4
+6/5/2016 12:13:10 PM |Pos      |  100
+6/5/2016 12:13:10 PM |Pointer  | 13,9
+6/5/2016 12:13:10 PM |Discripti| You have sucssesfully escaped the caverns and can now go back to your life above ground.
+6/5/2016 12:13:10 PM |Pointer  | 103,14
+6/5/2016 12:13:10 PM |Exit     | Win
+6/5/2016 12:13:10 PM |Pointer  | 108,104
+6/5/2016 12:13:10 PM |Exit     | Win
+6/5/2016 12:13:10 PM |Pointer  | 113,109
+6/5/2016 12:13:10 PM |Exit     | Win
+6/5/2016 12:13:10 PM |Pointer  | 118,114
+6/5/2016 12:13:10 PM |Exit     | Win
+6/5/2016 12:13:10 PM |Pointer  | 123,119
+6/5/2016 12:13:10 PM |Exit     | Win
+6/5/2016 12:13:10 PM |Pointer  | 128,124
+6/5/2016 12:13:10 PM |Exit     | Win
+6/5/2016 12:13:10 PM |Pointer  | 133,129
+6/5/2016 12:13:10 PM |Route    |  100|100|100|
+6/5/2016 12:13:10 PM |Pointer  | 147,134
+6/5/2016 12:13:10 PM |Route[]  |  100
+6/5/2016 12:13:10 PM |Pointer  | 4,0
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 12,9
+6/5/2016 12:13:10 PM |Route    |  100|100|100|
+6/5/2016 12:13:10 PM |Pointer  | 161,148
+6/5/2016 12:13:10 PM |Route[]  |  100
+6/5/2016 12:13:10 PM |Pointer  | 4,0
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 12,9
+6/5/2016 12:13:10 PM |Route    |  100|100|100|
+6/5/2016 12:13:10 PM |Pointer  | 175,162
+6/5/2016 12:13:10 PM |Route[]  |  100
+6/5/2016 12:13:10 PM |Pointer  | 4,0
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 12,9
+6/5/2016 12:13:10 PM |Route    |  100|100|100|
+6/5/2016 12:13:10 PM |Pointer  | 189,176
+6/5/2016 12:13:10 PM |Route[]  |  100
+6/5/2016 12:13:10 PM |Pointer  | 4,0
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 12,9
+6/5/2016 12:13:10 PM |Route    |  100|100|100|
+6/5/2016 12:13:10 PM |Pointer  | 203,190
+6/5/2016 12:13:10 PM |Route[]  |  100
+6/5/2016 12:13:10 PM |Pointer  | 4,0
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 12,9
+6/5/2016 12:13:10 PM |Route    |  100|100|100|
+6/5/2016 12:13:10 PM |Pointer  | 217,204
+6/5/2016 12:13:10 PM |Route[]  |  100
+6/5/2016 12:13:10 PM |Pointer  | 4,0
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 8,5
+6/5/2016 12:13:10 PM |Route[]  | 100
+6/5/2016 12:13:10 PM |Pointer  | 12,9
+6/5/2016 12:13:10 PM |Exit     | 100_100_100.txt
+6/5/2016 12:13:10 PM |Pointer  | 234,218
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | // Item format is as follows
+6/5/2016 12:13:10 PM |Line     | // Item: X< Y< Z< Item name; Item discription: Amount~
+6/5/2016 12:13:10 PM |Line     | // X,Y,Z Are absolute position
+6/5/2016 12:13:10 PM |Line     | // Discriptions are NOT allowed to contain the following <;:|>~^
+6/5/2016 12:13:10 PM |Line     | // Items have NO use aside from place markers
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | Item: 0< 0< 0< Torch; This torch was found in the cavern after you fell. It seems to be exelent at keeping the darkness at bay.: 1~ True|
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Name     | Torch
+6/5/2016 12:13:10 PM |Pointer  | 15,9
+6/5/2016 12:13:10 PM |Discripti| This torch was found in the cavern after you fell. It seems to be exelent at keeping the darkness at bay.
+6/5/2016 12:13:10 PM |Pointer  | 122,16
+6/5/2016 12:13:10 PM |Amount   |  1
+6/5/2016 12:13:10 PM |Pointer  | 125,123
+6/5/2016 12:13:10 PM |Movable  |  True
+6/5/2016 12:13:10 PM |Pointer  | 131,126
+6/5/2016 12:13:10 PM |Line     | Item: 0< 0< 0< Lighter; This Lighter survived the fall and was used to light the torch.: 1~ True|
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Name     | Lighter
+6/5/2016 12:13:10 PM |Pointer  | 17,9
+6/5/2016 12:13:10 PM |Discripti| This Lighter survived the fall and was used to light the torch.
+6/5/2016 12:13:10 PM |Pointer  | 82,18
+6/5/2016 12:13:10 PM |Amount   |  1
+6/5/2016 12:13:10 PM |Pointer  | 85,83
+6/5/2016 12:13:10 PM |Movable  |  True
+6/5/2016 12:13:10 PM |Pointer  | 91,86
+6/5/2016 12:13:10 PM |Line     | Item: 0< 0< 0< Skull; Apears to be the skull of some other unfortunate who fell down centuries ago.: 1~ False|
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Name     | Skull
+6/5/2016 12:13:10 PM |Pointer  | 15,9
+6/5/2016 12:13:10 PM |Discripti| Apears to be the skull of some other unfortunate who fell down centuries ago.
+6/5/2016 12:13:10 PM |Pointer  | 94,16
+6/5/2016 12:13:10 PM |Amount   |  1
+6/5/2016 12:13:10 PM |Pointer  | 97,95
+6/5/2016 12:13:10 PM |Movable  |  False
+6/5/2016 12:13:10 PM |Pointer  | 104,98
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | Item: 1< 0< 0< Fish; large strong fish are swimming in this pool.: 1~ False|
+6/5/2016 12:13:10 PM |Pos      |  1
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Name     | Fish
+6/5/2016 12:13:10 PM |Pointer  | 14,9
+6/5/2016 12:13:10 PM |Discripti| large strong fish are swimming in this pool.
+6/5/2016 12:13:10 PM |Pointer  | 60,15
+6/5/2016 12:13:10 PM |Amount   |  1
+6/5/2016 12:13:10 PM |Pointer  | 63,61
+6/5/2016 12:13:10 PM |Movable  |  False
+6/5/2016 12:13:10 PM |Pointer  | 70,64
+6/5/2016 12:13:10 PM |Line     | Item: 99< 0< 0< Gravel; The floor of this cavern is littered with small pebbles.: 1~ False| 
+6/5/2016 12:13:10 PM |Pos      |  99
+6/5/2016 12:13:10 PM |Pointer  | 3,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 6,4
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 9,7
+6/5/2016 12:13:10 PM |Name     | Gravel
+6/5/2016 12:13:10 PM |Pointer  | 17,10
+6/5/2016 12:13:10 PM |Discripti| The floor of this cavern is littered with small pebbles.
+6/5/2016 12:13:10 PM |Pointer  | 75,18
+6/5/2016 12:13:10 PM |Amount   |  1
+6/5/2016 12:13:10 PM |Pointer  | 78,76
+6/5/2016 12:13:10 PM |Movable  |  False
+6/5/2016 12:13:10 PM |Pointer  | 85,79
+6/5/2016 12:13:10 PM |Line     | 
+6/5/2016 12:13:10 PM |Line     | Item: 0< 0< 99< Lever; Apears to be connected to some large complex contraption with gears all over. You ponder what it function it has, but are unable to figure it out.: 3~ False|
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Pos      |  99
+6/5/2016 12:13:10 PM |Pointer  | 9,6
+6/5/2016 12:13:10 PM |Name     | Lever
+6/5/2016 12:13:10 PM |Pointer  | 16,10
+6/5/2016 12:13:10 PM |Discripti| Apears to be connected to some large complex contraption with gears all over. You ponder what it function it has, but are unable to figure it out.
+6/5/2016 12:13:10 PM |Pointer  | 164,17
+6/5/2016 12:13:10 PM |Amount   |  3
+6/5/2016 12:13:10 PM |Pointer  | 167,165
+6/5/2016 12:13:10 PM |Movable  |  False
+6/5/2016 12:13:10 PM |Pointer  | 174,168
+6/5/2016 12:13:10 PM |Line     | Item: 0< 0< 99< Cog; Apears to be a cog that fell of a complex contraption. You searched for a place on the contraption to put it but could not find one.: 17~ True|
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Pos      |  99
+6/5/2016 12:13:10 PM |Pointer  | 9,6
+6/5/2016 12:13:10 PM |Name     | Cog
+6/5/2016 12:13:10 PM |Pointer  | 14,10
+6/5/2016 12:13:10 PM |Discripti| Apears to be a cog that fell of a complex contraption. You searched for a place on the contraption to put it but could not find one.
+6/5/2016 12:13:10 PM |Pointer  | 148,15
+6/5/2016 12:13:10 PM |Amount   |  17
+6/5/2016 12:13:10 PM |Pointer  | 152,149
+6/5/2016 12:13:10 PM |Movable  |  True
+6/5/2016 12:13:10 PM |Pointer  | 158,153
+6/5/2016 12:13:10 PM |Line     | Item: 0< 0< 1< Driftwood; Apears to be a peice of driftwood, but where it came from is unknown.: 1~ False|
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 2,0
+6/5/2016 12:13:10 PM |Pos      |  0
+6/5/2016 12:13:10 PM |Pointer  | 5,3
+6/5/2016 12:13:10 PM |Pos      |  1
+6/5/2016 12:13:10 PM |Pointer  | 8,6
+6/5/2016 12:13:10 PM |Name     | Driftwood
+6/5/2016 12:13:10 PM |Pointer  | 19,9
+6/5/2016 12:13:10 PM |Discripti| Apears to be a peice of driftwood, but where it came from is unknown.
+6/5/2016 12:13:10 PM |Pointer  | 90,20
+6/5/2016 12:13:10 PM |Amount   |  1
+6/5/2016 12:13:10 PM |Pointer  | 93,91
+6/5/2016 12:13:10 PM |Movable  |  False
+6/5/2016 12:13:10 PM |Pointer  | 100,94
+6/5/2016 12:13:10 PM |Cavern   | 0,0,0
+6/5/2016 12:13:10 PM |Discripti| You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.
+6/5/2016 12:13:10 PM |exit     | 0 |To the North, the path is clear and straight leading to what You think is another similar cavern.
+6/5/2016 12:13:10 PM |exit     | 1 |To the South, the path is winding and narrow leading into the darkness.
+6/5/2016 12:13:10 PM |exit     | 2 |To the East, the path winds and pans down out of view.
+6/5/2016 12:13:10 PM |exit     | 3 |To the West, there is a straight narrow path leading to a much larger looking cavern.
+6/5/2016 12:13:10 PM |exit     | 4 |Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.
+6/5/2016 12:13:10 PM |exit     | 5 | 
+6/5/2016 12:13:10 PM |Cavern   | 0,0,1
+6/5/2016 12:13:10 PM |Discripti| You arive at a small, cramped and half-flooded cavern. The darkness does not seem to go away no matter where your torch is held, The cave also smells faintly of natural gas.
+6/5/2016 12:13:10 PM |exit     | 0 |North
+6/5/2016 12:13:10 PM |exit     | 1 |South
+6/5/2016 12:13:10 PM |exit     | 2 |East
+6/5/2016 12:13:10 PM |exit     | 3 |To the West a tunnel slowly climbs up out of the room traveling to what feels to be a brighter area.
+6/5/2016 12:13:10 PM |exit     | 4 |Up
+6/5/2016 12:13:10 PM |exit     | 5 |Down
+6/5/2016 12:13:10 PM |Cavern   | 0,0,99
+6/5/2016 12:13:10 PM |Discripti| You arive in a massive cavern that is brightly lit by Bio-lumenecent plants and a large pond in the middle being filled by a waterfall. The room is partialy filled with Ancient machinery that still apears to be working.
+6/5/2016 12:13:10 PM |exit     | 0 |To the North there is an Ancent room with a Button inside.
+6/5/2016 12:13:10 PM |exit     | 1 |To the South the wall is filled with ancent machinery.
+6/5/2016 12:13:10 PM |exit     | 2 |To the East There is a long and straight exit leading to an open room.
+6/5/2016 12:13:10 PM |exit     | 3 |To the west the wall is filled with a large tank of glowing fluid.
+6/5/2016 12:13:10 PM |exit     | 4 |Above you is a tall arched ceiling with water poring through an opening near the top of the room.
+6/5/2016 12:13:10 PM |exit     | 5 |The floor looks smooth in all directions, only dipping at the pond in the middle.
+6/5/2016 12:13:10 PM |Cavern   | 0,1,99
+6/5/2016 12:13:10 PM |Discripti| You arive into a room with a large holding tank built into the floor. The walls Glow with a starnge luminecence.
+6/5/2016 12:13:10 PM |exit     | 0 |On the North wall there is a set of gauges and levers around a closed door.
+6/5/2016 12:13:10 PM |exit     | 1 |On the South wall there is a door leading to a windowed room.
+6/5/2016 12:13:10 PM |exit     | 2 |On the East wall there is a Large mirrior.
+6/5/2016 12:13:10 PM |exit     | 3 |On the West wall there is a Large plauque with ancient unfamiliar writing on it.
+6/5/2016 12:13:10 PM |exit     | 4 |There is a Ladder leading up from this room. There is also a Medium pipe protruding from the ceiling pouring water into the holding tank.
+6/5/2016 12:13:10 PM |exit     | 5 |Below you in the holding tank there is a large pipe leading down.
+6/5/2016 12:13:10 PM |Cavern   | 0,99,99
+6/5/2016 12:13:10 PM |Discripti| You arive at a submerged room with little to see. There is an air pocket on the East wall.
+6/5/2016 12:13:10 PM |exit     | 0 |In the North there is a contraption draining water leading to the room above.
+6/5/2016 12:13:10 PM |exit     | 1 |In the South the cavern closes off in a smooth wall.
+6/5/2016 12:13:10 PM |exit     | 2 |In the East the ceiling slopes up letting you breath. There is also a Long tunnel under water leading out of the room.
+6/5/2016 12:13:10 PM |exit     | 3 |The west wall is crumbling brickwork wth a gap showing that something was once sealed off there.
+6/5/2016 12:13:10 PM |exit     | 4 |Above you is a strange glowing cavern.
+6/5/2016 12:13:10 PM |exit     | 5 |The bottom of the cavern is smooth leaving nowhere to go.
+6/5/2016 12:13:10 PM |Cavern   | 1,0,0
+6/5/2016 12:13:10 PM |Discripti| You Enter a medium sized circular cavern percing through many layers above. The cavern has a small clear pool in the middle with what looks to be a glowing cristal in the bottom. There is an exit to the South.
+6/5/2016 12:13:10 PM |exit     | 0 |North
+6/5/2016 12:13:10 PM |exit     | 1 |To the south a straight and narrow tunnel leads to an unfamiliar room.
+6/5/2016 12:13:10 PM |exit     | 2 |East
+6/5/2016 12:13:10 PM |exit     | 3 |West
+6/5/2016 12:13:10 PM |exit     | 4 |Up
+6/5/2016 12:13:10 PM |exit     | 5 |There is a deep pool in the center of the room.
+6/5/2016 12:13:10 PM |Cavern   | 1,0,99
+6/5/2016 12:13:10 PM |Discripti| Discription
+6/5/2016 12:13:10 PM |exit     | 0 |N
+6/5/2016 12:13:10 PM |exit     | 1 |S
+6/5/2016 12:13:10 PM |exit     | 2 |E
+6/5/2016 12:13:10 PM |exit     | 3 |W
+6/5/2016 12:13:10 PM |exit     | 4 |U
+6/5/2016 12:13:10 PM |exit     | 5 |D
+6/5/2016 12:13:10 PM |Cavern   | 99,0,0
+6/5/2016 12:13:10 PM |Discripti| You Enter a small cramped cave after what seemed to be an eternity of walking. This crammped cavern is unstable and looks like it could colapse at any time.
+6/5/2016 12:13:10 PM |exit     | 0 |To the north is a small winding tunnel leading into the darkness.
+6/5/2016 12:13:10 PM |exit     | 1 |To the South The cavern wall is cracked and rough.
+6/5/2016 12:13:10 PM |exit     | 2 |To the East the cavern wall has broken in several places letting water seep through.
+6/5/2016 12:13:10 PM |exit     | 3 |West
+6/5/2016 12:13:10 PM |exit     | 4 |The ceiling is full of salagtites that are pointed and fragile.
+6/5/2016 12:13:10 PM |exit     | 5 |
+6/5/2016 12:13:10 PM |Cavern   | 100,100,100
+6/5/2016 12:13:10 PM |Discripti| You have sucssesfully escaped the caverns and can now go back to your life above ground.
+6/5/2016 12:13:10 PM |exit     | 0 |Win
+6/5/2016 12:13:10 PM |exit     | 1 |Win
+6/5/2016 12:13:10 PM |exit     | 2 |Win
+6/5/2016 12:13:10 PM |exit     | 3 |Win
+6/5/2016 12:13:10 PM |exit     | 4 |Win
+6/5/2016 12:13:10 PM |exit     | 5 |Win
+6/5/2016 12:13:10 PM |Cavern   | 0,0,0
+6/5/2016 12:13:10 PM |Discripti| You wake to find your self trapped in a cave system with no clear way out. You decide to explore these caverns in an atempt to escape this dark area. There are exits to the North, South, East and to the West.
+6/5/2016 12:13:10 PM |exit     | 0 |To the North, the path is clear and straight leading to what You think is another similar cavern.
+6/5/2016 12:13:10 PM |exit     | 1 |To the South, the path is winding and narrow leading into the darkness.
+6/5/2016 12:13:10 PM |exit     | 2 |To the East, the path winds and pans down out of view.
+6/5/2016 12:13:10 PM |exit     | 3 |To the West, there is a straight narrow path leading to a much larger looking cavern.
+6/5/2016 12:13:10 PM |exit     | 4 |Above you you see a large hole in the roof of the cavern leading to the surface, but the sides are to steep to climb out of.
+6/5/2016 12:13:10 PM |exit     | 5 | 

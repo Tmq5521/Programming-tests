@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <TimePickerFlyout x:Key="FlyoutBase1"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" FlyoutBase.AttachedFlyout="{StaticResource FlyoutBase1}">
+        <TimePicker x:Name="AlarmTime" HorizontalAlignment="Left" Margin="951,118,0,0" VerticalAlignment="Top" Height="39" RenderTransformOrigin="0.49,0.753" Time="10:0:0"/>
+        <ToggleSwitch x:Name="AlarmToggle" Header="Alarm" HorizontalAlignment="Left" Margin="1224,96,0,0" VerticalAlignment="Top" RequestedTheme="Light" IsOn="True" Toggled="AlarmToggle_Toggled"/>
+        <Canvas x:Name="Test" HorizontalAlignment="Left" Height="100" Margin="307,400,0,0" VerticalAlignment="Top" Width="100" Background="Black"/>
+
+    </Grid>
+</Page>

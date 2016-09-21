@@ -9,11 +9,11 @@
 using namespace std;
 using namespace chrono;
 
+float (*sqrt_global)(float) = sqrt;
 
-
-bool isPrime(unsigned int nums[],unsigned int i)
+static bool isPrime(unsigned int nums[],unsigned int i)
 {
-	double root = sqrt(i);
+	double root = sqrt_global(i);
 	for (unsigned int test = 1; test <= root; ++test)
 	{
 		if (nums[test] > root)
