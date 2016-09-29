@@ -1,0 +1,546 @@
+/* :asset_packager_compatibility, 'config/asset_packages.yml' @ 1472248442 */
+
+
+/* :files, 'public/stylesheets/shared', ... @ (none) */
+
+
+/* :files, 'app/views', ... @ 1472248442 */
+/* app/views/pdfs/shared.css @ 1472248441 */
+body.no_scrolling {overflow-y: hidden}
+body.no_scrolling.for_bots {overflow: auto}
+
+
+/* app/views/pdfs/_seo_shared.css @ 1472248441 */
+.seo_perks {text-transform: uppercase; margin-bottom: 23px; font-size: 16px; color: #8c9d9d}
+.seo_perks .perk {margin-right: 20px}
+.seo_perks .perk .icon {margin-right: 7px}
+.seo_images {margin: 0 15px 0 32px; overflow: hidden; height: 75px; white-space: nowrap}
+.seo_images .thumb {width: 55px; height: 75px; margin-right: 24px; position: relative; background-color: #E6E8E9; box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); display: inline-block}
+.seo_images .thumb:hover .overlay, .seo_images .thumb.hover .overlay {opacity: 0.5}
+.seo_images .thumb:hover .overlay .sprite, .seo_images .thumb.hover .overlay .sprite {opacity: 0.5}
+.seo_images .thumb:hover .main_action, .seo_images .thumb.hover .main_action {opacity: 1}
+.seo_images .thumb.is_book .shadow_overlay {display: block}
+.seo_images .thumb .shadow_overlay {display: none}
+.seo_images .thumb .overlay, .seo_images .thumb .shadow_overlay, .seo_images .thumb .doc_link {position: absolute; top: 0; right: 0; bottom: 0; left: 0}
+.seo_images .thumb .overlay {-webkit-transition: opacity 0.1s ease-in-out;transition: opacity 0.1s ease-in-out; opacity: 0; background: #3d4044}
+.seo_images .thumb .overlay .sprite {position: absolute; opacity: 0; left: 50%; top: 50%; margin-left: -23px; margin-top: -18px}
+.seo_images .thumb .shadow_overlay {background: url('https://s2-f.scribdassets.com/images/petunia/thumbnail_overlay_185x250.png?1472248508') 0 0 no-repeat; background-size: cover}
+.seo_images .thumb.is_book {box-shadow: 0 0 8px rgba(0, 0, 0, 0.1)}
+.seo_images .thumb:last-child {margin-right: 0px}
+.seo_quotes {text-align: center; color: #666}
+.seo_quotes .quote {display: inline-block; vertical-align: top; width: 44px; height: 44px; background-image: url('https://s1-f.scribdassets.com/images/read2/quotemark.png?1472248508'); background-size: cover}
+.seo_quotes .quote.quote_right {background-image: url('https://s1-f.scribdassets.com/images/read2/quoteend.png?1472248508')}
+.seo_quotes .quote_body {display: inline-block; text-align: left; font-size: 18px; font-weight: 200; width: 50%; margin-left: 32px; margin-right: 24px; vertical-align: top; position: relative}
+.seo_quotes .quote_body .single_quote {opacity: 0; position: absolute; top: 0; left: 0; right: 0}
+.seo_quotes .quote_body .single_quote.fade_out {opacity: 0; -webkit-transition: opacity 1s ease-in-out; transition: opacity 1s ease-in-out}
+.seo_quotes .quote_body .single_quote.fade_in {opacity: 1; -webkit-transition: opacity 1.3s cubic-bezier(1, 0, 0.69, 0); transition: opacity 1.3s cubic-bezier(1, 0, 0.69, 0)}
+.seo_quotes .quote_author {font-weight: bold}
+.seo_dialog {border-radius: 2px}
+.seo_dialog .close_button {margin-top: 10px; margin-right: 10px}
+.seo_dialog .wrapper {width: 550px; box-sizing: border-box; font-size: 17px; color: #333}
+.seo_dialog .title {font-weight: 200; font-size: 30px; border-bottom: 1px solid #e9e9e9; margin: 0; padding: 40px 40px 30px 40px}
+.seo_dialog .content {padding-top: 30px}
+.seo_dialog p {margin-top: 0; margin-bottom: 30px}
+.seo_dialog .flat_btn {margin-right: 12px; padding-left: 40px; padding-right: 40px}
+.seo_dialog .flat_btn.yes_btn {font-weight: bold}
+.seo_banner_spacer {display: none}
+
+
+/* app/views/shared/carousels/paddles.css @ 1472248442 */
+.has_paddles.paddles_visible .paddle {opacity: 0.3}
+.has_paddles .paddle {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; border: none; cursor: pointer; outline: none; position: absolute; width: 17px; height: 30px; z-index: 3; top: 94px; opacity: 0; -webkit-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out}
+.has_paddles .paddle:hover, .has_paddles .paddle:focus {opacity: 1}
+.has_paddles .page_left {left: 0; background: url('https://s2-f.scribdassets.com/images/home/logged_in/ic_home_control_left_arrow.png?1472248508') left center no-repeat}
+.has_paddles .page_right {right: 0; background: url('https://s1-f.scribdassets.com/images/home/logged_in/ic_home_control_right_arrow.png?1472248508') right center no-repeat}
+.has_paddles.on_first_page .page_left {display: none}
+.has_paddles.on_last_page .page_right {display: none}
+.smaller_doc_thumb_width.show_title .paddle {top: 80px}
+.smaller_doc_thumb_width .paddle {top: 60px}
+
+
+/* app/views/shared/carousels/document_cell.css @ 1472248442 */
+@-webkit-keyframes popin {0% {opacity: 0; -webkit-transform: scale(0.8); transform: scale(0.8)}
+75% {-webkit-transform: scale(1.3);transform: scale(1.3)}
+100% {opacity: 1; -webkit-transform: scale(1); transform: scale(1)}
+}
+@keyframes popin {0% {opacity: 0; -webkit-transform: scale(0.8); transform: scale(0.8)}
+75% {-webkit-transform: scale(1.3);transform: scale(1.3)}
+100% {opacity: 1; -webkit-transform: scale(1); transform: scale(1)}
+}
+.has_document_cells .block_layer {/* This element covers the cell to prevent pointer events. */ position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 10}
+.has_document_cells .list_view_data {display: none}
+.has_document_cells.list_view_mode .document_cell {margin: 15px 0 35px 0; width: auto; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start}
+.has_document_cells.list_view_mode .document_cell .thumb {margin-bottom: 0; width: 108px; height: 144px}
+.has_document_cells.list_view_mode .document_cell .thumb .comic_series_cover {width: 108px; height: 144px}
+.has_document_cells.list_view_mode .document_cell .star_ratings {padding: 6px 0}
+.has_document_cells.list_view_mode .document_cell .star_ratings .stats {font-size: 14px}
+.has_document_cells.list_view_mode .document_cell .subtitle {display: none}
+.has_document_cells.list_view_mode .document_cell .list_view_data {display: block}
+.has_document_cells.list_view_mode .document_cell .list_view_data .page_count, .has_document_cells.list_view_mode .document_cell .list_view_data .views_count {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; color: #999}
+.has_document_cells.list_view_mode .document_cell .under_title.one_line {display: none}
+.has_document_cells.list_view_mode .document_cell .under_title:not(.one_line) {display: none}
+.has_document_cells .doc_link {display: inline-block; width: 100%}
+.has_document_cells .document_cell {width: 144px; white-space: normal; vertical-align: top; text-align: left}
+.has_document_cells .document_cell.interaction_disabled {position: relative}
+.has_document_cells .document_cell.smaller_cell {width: 108px}
+.has_document_cells .document_cell.smaller_cell .under_title {display: none}
+.has_document_cells .document_cell.smaller_cell .thumb {width: 108px; height: 144px}
+.has_document_cells .document_cell.smaller_cell .thumb .comic_series_cover {width: 108px; height: 144px}
+.has_document_cells .document_cell.smaller_cell .thumb .under_title {display: none}
+.has_document_cells .document_cell.smallest_cell {width: 72px}
+.has_document_cells .document_cell.smallest_cell .under_title {display: none}
+.has_document_cells .document_cell.smallest_cell .thumb {width: 72px; height: 96px; margin-right: 20px}
+.has_document_cells .document_cell.smallest_cell .thumb .comic_series_cover {width: 72px; height: 96px}
+.has_document_cells .document_cell.smallest_cell .thumb .under_title {display: none}
+.has_document_cells .document_cell.is_series .series_lines {position: absolute; top: -4px; left: 0; right: 0; margin: 0 3px; border-top: 2px solid #1a7bba}
+.has_document_cells .document_cell.is_series .series_lines:before {border-top: 2px solid #1a7bba; opacity: 0.3; content: ''; display: block; position: absolute; left: 6px; right: 6px; top: -10px}
+.has_document_cells .document_cell.is_series .series_lines:after {border-top: 2px solid #1a7bba; content: ''; display: block; position: absolute; left: 3px; right: 3px; top: -6px; opacity: 0.7}
+.has_document_cells .document_cell.in_my_library:not(.is_series) .reading_progress_outer {display: block}
+.has_document_cells .document_cell.no_book_page.is_audiobook .action_layer .read_icon {display: none}
+.has_document_cells .document_cell.no_book_page.is_audiobook .action_layer .play_icon {display: block}
+.has_document_cells .document_cell.no_book_page .action_layer .read_icon {display: block}
+.has_document_cells .document_cell .under_title {margin-top: 20px; font-family: Livory, serif; font-style: italic; text-align: center; font-size: 16px; line-height: 21px; max-height: 42px; overflow: hidden; display: block; color: #444}
+.has_document_cells .document_cell .under_title:not(.one_line) {display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical}
+.has_document_cells .document_cell .under_title.one_line {white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.has_document_cells .document_cell .subtitle {font-family: Livory, serif; font-style: italic; text-align: center; font-size: 16px; line-height: 21px; max-height: 21px; overflow: hidden; display: block; color: #444}
+.has_document_cells .document_cell .flag {top: 0; bottom: auto; display: block; white-space: nowrap}
+.has_document_cells .document_cell .thumb {position: relative; background-color: #E6E8E9; box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); width: 144px; height: 192px; margin-bottom: 14px}
+.has_document_cells .document_cell .thumb:hover .overlay, .has_document_cells .document_cell .thumb.hover .overlay {opacity: 0.5}
+.has_document_cells .document_cell .thumb:hover .overlay .sprite, .has_document_cells .document_cell .thumb.hover .overlay .sprite {opacity: 0.5}
+.has_document_cells .document_cell .thumb:hover .main_action, .has_document_cells .document_cell .thumb.hover .main_action {opacity: 1}
+.has_document_cells .document_cell .thumb.is_book .shadow_overlay {display: block}
+.has_document_cells .document_cell .thumb .shadow_overlay {display: none}
+.has_document_cells .document_cell .thumb .overlay, .has_document_cells .document_cell .thumb .shadow_overlay, .has_document_cells .document_cell .thumb .doc_link {position: absolute; top: 0; right: 0; bottom: 0; left: 0}
+.has_document_cells .document_cell .thumb .overlay {-webkit-transition: opacity 0.1s ease-in-out;transition: opacity 0.1s ease-in-out; opacity: 0; background: #3d4044}
+.has_document_cells .document_cell .thumb .overlay .sprite {position: absolute; opacity: 0; left: 50%; top: 50%; margin-left: -23px; margin-top: -18px}
+.has_document_cells .document_cell .thumb .shadow_overlay {background: url('https://s2-f.scribdassets.com/images/petunia/thumbnail_overlay_185x250.png?1472248508') 0 0 no-repeat; background-size: cover}
+.has_document_cells .document_cell .thumb > img {width: 100%; height: 100%}
+.has_document_cells .document_cell .thumb > img.lazy_loading {opacity: 0}
+.has_document_cells .document_cell .document_title {color: #333333; margin: 10px 15px 0 15px; word-wrap: break-word; font-size: 14px; line-height: 15px; overflow: hidden; max-height: 30px}
+.has_document_cells .document_cell .document_title a {color: inherit}
+.has_document_cells .document_cell .list_view_data {margin-left: 15px}
+.has_document_cells .document_cell .list_view_title {font-family: Livory, serif; font-style: italic; font-size: 16px; line-height: 20px; color: #444; font-size: 16px; line-height: 20px; max-height: 40px; overflow: hidden; display: block; max-width: 400px; word-wrap: break-word}
+.has_document_cells .document_cell .decorative {font-family: Livory, serif}
+.has_document_cells .document_cell .list_view_publisher {font-size: 14px; word-wrap: break-word; line-height: 1.5}
+.has_document_cells .document_cell .action_layer .main_action {position: absolute; left: 50%; top: 50%; color: white; z-index: 1; opacity: 0; -webkit-transition: opacity 0.2s ease-in-out; transition: opacity 0.2s ease-in-out}
+.has_document_cells .document_cell .action_layer .info_icon {font-size: 25px; margin-left: -5px; margin-top: -18px}
+.has_document_cells .document_cell .action_layer .read_icon {display: none; font-size: 40px; margin-left: -20px; margin-top: -16px}
+.has_document_cells .document_cell .action_layer .play_icon {display: none; font-size: 44px; margin-left: -22px; margin-top: -20px}
+.has_document_cells .document_cell.has_color_background .reading_progress_outer {background: #135987}
+.has_document_cells .document_cell.has_color_background .reading_progress_outer .reading_progress_outer_dark_overlay {display: block}
+.has_document_cells .flag {position: absolute; color: white; font-size: 9px; font-weight: bold; letter-spacing: 1px; border-radius: 0; bottom: -20px; height: 20px; line-height: 21px; left: 0; right: 0; text-align: center}
+.has_document_cells .has_flag .content {margin-top: 30px}
+.has_document_cells .has_flag .flag {display: block}
+.has_document_cells .has_flag.is_purchase .flag {background: #1A7BBA}
+.has_document_cells .has_flag.is_geo_restricted .flag, .has_document_cells .has_flag.is_expiring_content .flag {background: #999999}
+.has_document_cells .has_flag.is_sample .flag {background: #C1C1BE}
+.has_document_cells .has_flag.is_scribd_select .flag {position: absolute; top: 0; left: 0; width: 45px; height: 45px; font-size: 16px; color: #fff; opacity: 0.9}
+.has_document_cells .has_flag.is_scribd_select .flag:before, .has_document_cells .has_flag.is_scribd_select .flag:after {position: absolute; top: 0; content: ""; display: block; border-style: solid}
+.has_document_cells .has_flag.is_scribd_select .flag:before {border-width: 47px 47px 0 0; border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent}
+.has_document_cells .has_flag.is_scribd_select .flag:after {border-width: 45px 45px 0 0; border-color: #fff transparent transparent transparent}
+.has_document_cells .has_flag.is_scribd_select .flag span {position: absolute; top: 0; left: 0; width: 25.875px; height: 27.9px; line-height: 27.9px; z-index: 1; text-align: center; background-repeat: no-repeat; background-size: 100%}
+.has_document_cells .has_flag.is_scribd_select .flag span {background-image: url('https://s2-f.scribdassets.com/images/badges/scribd_selects_logo.svg?1472248508')}
+.has_document_cells .reading_progress_outer {display: none; bottom: -12px; position: absolute; left: 0; right: 0; height: 5px; background: #e1e1e1; border-radius: 10px; overflow: hidden}
+.has_document_cells .reading_progress_outer.dark {background: #135987}
+.has_document_cells .reading_progress_outer .reading_progress_inner {background: #6ac6e2; position: absolute; top: 0; bottom: 0; left: 0}
+.has_document_cells .reading_progress_outer .reading_progress_outer_dark_overlay {display: none; background: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; right: 0; bottom: 0}
+
+
+/* :class_inlines, 'app/views', ... @ 1472248442 */
+/* app/views/shared/filtered_document_page.css @ 1472248442 */
+.autogen_class_views_shared_filtered_document_page {text-align: left}
+.autogen_class_views_shared_filtered_document_page .page_header {min-height: 100px; padding: 0 45px; position: relative; zoom: 1}
+.autogen_class_views_shared_filtered_document_page .page_header:after {content: ""; display: table; clear: both}
+.autogen_class_views_shared_filtered_document_page .page_header .filter_buttons {margin-top: 20px; padding-bottom: 30px}
+.autogen_class_views_shared_filtered_document_page .page_header .filter_buttons .flat_btn {vertical-align: middle}
+.autogen_class_views_shared_filtered_document_page .page_header h1 .split {display: inline-block; vertical-align: middle; margin: 0 15px; font-size: 20px; color: #1a7bba}
+.autogen_class_views_shared_filtered_document_page .page_header .header_right {text-align: right; position: absolute; right: 45px; top: 37px}
+.autogen_class_views_shared_filtered_document_page .page_header .search_form .search_input {width: 300px; background: url('https://s1-f.scribdassets.com/images/profiles/blue-mag.png?1472248508') 96% 50% no-repeat}
+.autogen_class_views_shared_filtered_document_page .page_header .page_label {color: #999}
+.autogen_class_views_shared_filtered_document_page .page_header .page_label:before {content: "("}
+.autogen_class_views_shared_filtered_document_page .page_header .page_label:after {content: ")"}
+.autogen_class_views_shared_filtered_document_page .filter_picker {display: none; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1; padding-top: 30px; background: white}
+.autogen_class_views_shared_filtered_document_page .filter_picker.open {display: block}
+.autogen_class_views_shared_filtered_document_page .filter_picker .filter_picker_inner {padding: 0 45px 0 45px}
+.autogen_class_views_shared_filtered_document_page .filter_picker .filter_group {display: inline-block; vertical-align: top; margin-right: 55px; margin-bottom: 30px}
+.autogen_class_views_shared_filtered_document_page .filter_picker .filter_label {margin: 0; margin-bottom: 10px; font-weight: bold}
+.autogen_class_views_shared_filtered_document_page .filter_picker .picker_item {display: block; line-height: 1.5; color: #666}
+.autogen_class_views_shared_filtered_document_page .filter_picker .picker_item.selected {font-weight: bold}
+.autogen_class_views_shared_filtered_document_page .document_drop {margin-top: 40px}
+.autogen_class_views_shared_filtered_document_page .empty_message {margin: 40px 45px; color: #666; font-size: 28px}
+.autogen_class_views_shared_filtered_document_page .shared_pmp_promo_banner {margin: 30px 45px 0 45px}
+
+
+/* app/views/shared/ad_code.css @ 1472248441 */
+.ads_disabled .hidden_on_ads_disabled {display: none}
+
+
+/* app/views/archive_flow/_doc_info.css @ 1472248440 */
+.lightbox .autogen_class_views_archive_flow_doc_info .doc_info {background-color: transparent}
+.autogen_class_views_archive_flow_doc_info .doc_info {overflow: auto; background-color: #ecf3f5}
+.autogen_class_views_archive_flow_doc_info .doc_info .thumbnail {width: 183px; height: 250px}
+.autogen_class_views_archive_flow_doc_info .doc_info .overlay {width: 183px; height: 250px}
+.autogen_class_views_archive_flow_doc_info .doc_info .info {font-family: Sofia Pro, sans-serif; font-family: Helvetica, sans-serif; margin-top: 10px}
+.autogen_class_views_archive_flow_doc_info .doc_info .info h2 {font-weight: normal; line-height: 17px; word-break: break-word; max-width: 300px}
+.autogen_class_views_archive_flow_doc_info .doc_info .info h5 {color: #146c88; font-weight: normal}
+.autogen_class_views_archive_flow_doc_info .doc_info .info p {color: #666; line-height: 20px}
+.autogen_class_views_archive_flow_doc_info .doc_info .info .file_types {color: #b3b3b3}
+.autogen_class_views_archive_flow_doc_info .doc_info .info * {font-size: 13px; width: 360px; margin: 0; padding: 0 0 5px 0}
+
+
+/* app/views/shared/app_download_promo/lightbox.css @ 1472248441 */
+.autogen_class_views_shared_app_download_promo_lightbox {box-shadow: 0 0 4px rgba(0, 0, 0, 0.4); background-image: url('https://s2-f.scribdassets.com/images/shared/app_download_promo/background_lightbox.jpg?1472248508'); background-color: #eee; height: 485px; width: 712px}
+.autogen_class_views_shared_app_download_promo_lightbox .wrapper .content {padding: 0; border-width: 0}
+.autogen_class_views_shared_app_download_promo_lightbox .close_button {z-index: 1}
+.autogen_class_views_shared_app_download_promo_lightbox .close_button .icon-close {color: #fff}
+.autogen_class_views_shared_app_download_promo_lightbox .inline_flash {z-index: 2}
+.autogen_class_views_shared_app_download_promo_lightbox .flasher_notification {border-bottom: 1px solid #fff}
+
+
+/* app/views/pdfs/errors/_base.css @ 1472248441 */
+.autogen_class_views_pdfs_errors_base .page_header h1 {margin: 30px 0}
+.autogen_class_views_pdfs_errors_base #leaderboard_ad_gam {width: 728px; margin: 45px auto}
+
+
+/* app/views/pdfs/errors/deleted.css @ 1472248441 */
+.autogen_class_views_pdfs_errors_deleted h2 {margin: 40px 45px}
+
+
+/* app/views/pdfs/lightboxes/_download_lightbox.css @ 1472248441 */
+.autogen_class_views_pdfs_lightboxes_download_lightbox {width: 650px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .document_data {font-size: 16px; line-height: 1.5}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .document_data .data_value {color: #999}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .format_picker {margin: 20px 0}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .format_picker .format_row {margin-bottom: 5px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .format_picker .format_row:last-child {margin-bottom: 0}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .buttons {text-align: right}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .buttons .button_sub_action {margin-right: 5px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .primary_message {font-size: 20px; text-align: center; margin: 5px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .secondary_message {font-size: 16px; text-align: center; margin: 5px; color: #999}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .secondary_message a {color: #666; text-decoration: underline}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper h3 {text-align: center}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper .document_grid {padding-left: 10px}
+.autogen_class_views_pdfs_lightboxes_download_lightbox .rec_wrapper .document_grid .object_cell.document_cell {margin-bottom: 45px}
+
+
+/* app/views/pdfs/lightboxes/embed_lightbox.css @ 1472248441 */
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .embed_header, .autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link {border-bottom: 1px solid #E2E2E2}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .embed_header h2 {font-size: 18px; font-weight: normal; color: #666; margin: 15px 30px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .input_row {display: block; margin: 20px 0 10px 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .copy_link_label {display: inline-block; color: #666; font-size: 12px; width: 65px; margin-right: 10px; margin-bottom: 10px; margin-left: 32px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .link_options {margin: 10px 30px 20px 107px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .link_options label {color: #666; font-size: 13px; margin-right: 20px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .link_options label span {vertical-align: middle}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .link_options input {vertical-align: middle; margin-right: 4px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .copy_link .document_url_input {width: 500px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .content {padding: 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .left_col {min-height: 600px; width: 360px; float: left; border-right: 1px solid #E2E2E2}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .right_col {margin: 0 auto; margin-left: 360px; overflow: hidden}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .doc_preview {padding: 10px; min-width: 400px; overflow: hidden}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container {position: relative; padding: 20px 10px 20px 32px; border-bottom: 1px solid #E2E2E2}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container.top {padding-bottom: 30px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container.darker {background: #f2f2f2}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container.bottom {border-bottom: 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container .embed_control {margin-left: 100px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .control_container .control_name {color: #666; font-size: 12px; float: left; text-align: left; width: 100px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .note {position: absolute; bottom: 7px; right: 12px; color: #333; font-size: 9px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .code_input {border: 1px solid #909ca4; border-radius: 2px 0 0 2px; box-shadow: inset 0 1px 2px -1px #aaa; font-size: 12px; padding: 5px; height: 140px; width: 300px; resize: none; color: gray; overflow-y: hidden}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .code_input_container .control_name {width: auto; margin-bottom: 15px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options {font-size: 11px; text-align: left; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options label {color: #666}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options .active {color: #666}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options .inactive {color: #1FA3D6; cursor: pointer}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options:hover {text-decoration: none}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options.left {float: left}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .toggle_options.right {float: right}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .label {text-align: left; font-size: 11px; color: #666}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker {position: relative; width: 400px; height: 120px; padding: 0; margin: 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker li {float: left; padding: 1px; padding: 8px; margin-right: 2px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker li.active {background: #e6eef1; padding: 7px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker .thumb {background: #CBD1D7; border: 1px solid #B0B5BA; margin-top: 8px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size {margin-top: 10px; margin-left: 16px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .inputs label {display: block}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .inputs .label {display: inline-block; width: 40px; text-align: right; margin-right: 10px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .custom_width, .autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .custom_height {width: 40px; margin-bottom: 5px; padding-top: 5px; padding-bottom: 5px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .custom_size .unit {font-size: 12px; color: #666}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options {text-align: left}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options label {display: block; margin-bottom: 5px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options input[type="checkbox"] {vertical-align: middle}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options .label, .autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options select {font-size: 13px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options .label {margin-right: 4px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options .label.right_label {margin-left: 4px; margin-right: 0}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .misc_options .starting_page {width: 30px; padding-top: 5px; padding-bottom: 5px}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .size_picker {list-style: none}
+.autogen_class_views_pdfs_lightboxes_embed_lightbox .sub {color: #999}
+
+
+/* app/views/pdfs/lightboxes/flag_doc_lightbox.css @ 1472248441 */
+.autogen_class_views_pdfs_lightboxes_flag_doc_lightbox {width: 600px}
+.autogen_class_views_pdfs_lightboxes_flag_doc_lightbox.loading .loader {display: inline-block; margin-left: 10px}
+.autogen_class_views_pdfs_lightboxes_flag_doc_lightbox.loading .close_link {display: none}
+.autogen_class_views_pdfs_lightboxes_flag_doc_lightbox p {margin: 0 0 20px 0}
+.autogen_class_views_pdfs_lightboxes_flag_doc_lightbox .flag_list label {display: block; margin-bottom: 10px}
+.autogen_class_views_pdfs_lightboxes_flag_doc_lightbox .close_link {font-size: 13px; margin-left: 10px}
+
+
+/* app/views/pdfs/lightboxes/_print_lightbox.css @ 1472248441 */
+.autogen_class_views_pdfs_lightboxes_print_lightbox .buttons {text-align: right}
+
+
+/* app/views/pdfs/_page_blur_promo.css @ 1472248441 */
+.autogen_class_views_pdfs_page_blur_promo {width: 100%; height: 100%; display: none; position: absolute; top: 0}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo_overlay {background-color: #fff; opacity: 0.96}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo {border: 1px solid #d4d4d4; background: #f4f4f4; position: absolute; top: 40%; left: 50%; width: 270px; padding: 20px; margin-left: -145px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); text-align: center}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo h2 {font-size: 18px; margin: 0 0 15px 0}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo p {font-size: 14px; margin: 0}
+.autogen_class_views_pdfs_page_blur_promo .page_blur_promo .flat_btn {margin-top: 15px}
+
+
+/* app/views/pdfs/_seo_banner.css @ 1472248441 */
+.autogen_class_views_pdfs_seo_banner {height: 109px; box-sizing: border-box; background: #15234A; background-image: url('https://s1-f.scribdassets.com/images/read2/seo_background.jpg?1472248508'); background-size: cover; background-position: 50% 50%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; /*polyfill*/ display: -webkit-flex; -webkit-justify-content: -webkit-space-between; justify-content: -webkit-space-between; -webkit-align-items: -webkit-center; align-items: -webkit-center; text-align: center}
+.autogen_class_views_pdfs_seo_banner .books_image {background-image: url('https://s1-f.scribdassets.com/images/read2/seo_banner_books_large.png?1472248508'); width: 530px; height: 100%; background-position: 50% 100%; background-repeat: no-repeat; vertical-align: bottom}
+@media (max-width: 1300px) {.autogen_class_views_pdfs_seo_banner .books_image {background-image: url('https://s2-f.scribdassets.com/images/read2/seo_banner_books_small.png?1472248508'); width: 275px}
+}
+.autogen_class_views_pdfs_seo_banner .message_area {text-align: left; margin-top: 10px; margin-bottom: 10px; margin-left: 45px; margin-right: 20px}
+.autogen_class_views_pdfs_seo_banner .message_area h1 {color: white; margin: 0; margin-bottom: 5px; font-family: Livory, serif; font-size: 24px}
+@media (max-width: 1300px) {.autogen_class_views_pdfs_seo_banner .message_area h1 {font-size: 18px}
+}
+.autogen_class_views_pdfs_seo_banner .message_area h2 {color: white; margin: 0; font-weight: normal; font-size: 16px}
+.autogen_class_views_pdfs_seo_banner .button_area {margin-right: 40px; margin-left: 20px}
+.autogen_class_views_pdfs_seo_banner .button_area a {white-space: nowrap}
+.autogen_class_views_pdfs_seo_banner .button_area a:visited {color: #fff}
+.autogen_class_views_pdfs_seo_banner .seo_banner_under_cta {margin: 0px; color: #fff; padding-top: 8px; font-size: 12px; font-weight: normal}
+.autogen_class_views_pdfs_seo_banner.clickable {cursor: pointer}
+.autogen_class_views_pdfs_seo_banner.clickable:hover {opacity: 0.9; -webkit-transition: opacity 0.1s ease-in-out; transition: opacity 0.1s ease-in-out}
+
+
+/* app/views/pdfs/_seo_lightbox.css @ 1472248441 */
+.autogen_class_views_pdfs_seo_lightbox > .wrapper > .content {padding: 0; text-align: center; background-size: cover; border-top: 0}
+.autogen_class_views_pdfs_seo_lightbox .header {padding-top: 10px; background-image: url('https://s1-f.scribdassets.com/images/landing/home2_landing/hero2.jpg?1472248508'); background-size: cover; background-position: 0 -60px}
+.autogen_class_views_pdfs_seo_lightbox .footer {background-color: #fafafa; padding-bottom: 15px}
+.autogen_class_views_pdfs_seo_lightbox h1, .autogen_class_views_pdfs_seo_lightbox h2 {-webkit-transform: translateY(0px);transform: translateY(0px); -webkit-transition: -webkit-transform 0.3s ease; transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; transition: transform 0.3s ease, -webkit-transform 0.3s ease; line-height: normal}
+.autogen_class_views_pdfs_seo_lightbox h1 {font-size: 68px; margin: 20px 0; color: white; font-weight: 200}
+.autogen_class_views_pdfs_seo_lightbox h2 {font-size: 32px; color: white; font-weight: 400; margin-bottom: 20px; margin-top: 10px}
+.autogen_class_views_pdfs_seo_lightbox .seo_perks {font-weight: bold; font-size: 14px; text-transform: uppercase; color: #666; padding-bottom: 23px; margin: 0}
+.autogen_class_views_pdfs_seo_lightbox .seo_images {margin: 20px 60px 0; height: 120px; padding: 10px}
+.autogen_class_views_pdfs_seo_lightbox .seo_images .thumb {width: 76px; height: 100px; box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.24), 0px 2px 7px rgba(0, 0, 0, 0.26); margin-right: 15px}
+.autogen_class_views_pdfs_seo_lightbox .seo_images .thumb:last-child {margin-right: 0}
+.autogen_class_views_pdfs_seo_lightbox .close_button {color: white; z-index: 1500}
+.autogen_class_views_pdfs_seo_lightbox .start_trial_btn {margin-bottom: 58px; padding: 0 60px; -webkit-transition: opacity 0.3s ease; transition: opacity 0.3s ease; opacity: 1}
+.autogen_class_views_pdfs_seo_lightbox .overlay {background: #fff}
+.autogen_class_views_pdfs_seo_lightbox .devices {background: url('https://s1-f.scribdassets.com/images/payments/icons.png?1472248508') center center no-repeat; width: 190px; height: 21px; margin: 0 auto}
+
+
+/* app/views/pdfs/show.css @ 1472248441 */
+.autogen_class_views_pdfs_show {position: absolute; top: 100px; bottom: 0; right: 0; left: 0; z-index: 2; background: white; min-width: 996px}
+.autogen_class_views_pdfs_show .renewal_nag {display: none}
+.autogen_class_views_pdfs_show.has_toolbar_nag .document_column .document_scroller {top: 115px}
+.autogen_class_views_pdfs_show.has_toolbar_nag .renewal_nag, .autogen_class_views_pdfs_show.has_toolbar_nag .trial_upsell {display: block}
+.autogen_class_views_pdfs_show.fullscreen {top: 0; z-index: 20}
+.autogen_class_views_pdfs_show.fullscreen .sidebar_column {display: none}
+.autogen_class_views_pdfs_show.fullscreen .document_column {right: 0}
+.autogen_class_views_pdfs_show.for_bots {position: static}
+.autogen_class_views_pdfs_show.for_bots .document_column, .autogen_class_views_pdfs_show.for_bots .sidebar_column {position: static}
+.autogen_class_views_pdfs_show.for_bots .document_column {-webkit-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1}
+.autogen_class_views_pdfs_show.for_bots .document_column .document_scroller {position: static}
+.autogen_class_views_pdfs_show.for_bots .document_columns_wrapper {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex}
+.autogen_class_views_pdfs_show.for_bots .bot_text_column {box-sizing: border-box; max-width: 1024px; padding: 0 40px; margin: 0 auto}
+.autogen_class_views_pdfs_show.has_seo_banner {bottom: 109px}
+.autogen_class_views_pdfs_show .document_column, .autogen_class_views_pdfs_show .sidebar_column {position: absolute; top: 0; bottom: 0}
+.autogen_class_views_pdfs_show .document_column {left: 0; right: 450px; overflow: hidden}
+@media (max-width: 1400px) {.autogen_class_views_pdfs_show .document_column {right: 340px}
+}
+.autogen_class_views_pdfs_show .document_column .document_scroller {position: absolute; top: 50px; left: 0; right: 0; bottom: 0; overflow: auto}
+.autogen_class_views_pdfs_show .sidebar_column {box-sizing: border-box; overflow: hidden; overflow-y: auto; right: 0; width: 450px; border-left: 1px solid #e1e1e1; z-index: 3}
+.autogen_class_views_pdfs_show .sidebar_column .padded_sidebar {padding: 16px 40px 20px 40px}
+@media (max-width: 1400px) {.autogen_class_views_pdfs_show .sidebar_column {width: 340px}
+.autogen_class_views_pdfs_show .sidebar_column .padded_sidebar {padding-left: 20px; padding-right: 20px}
+}
+.autogen_class_views_pdfs_show .document_footer {border-top: 1px solid #e1e1e1; width: 100%; padding-top: 20px; margin-bottom: 80px}
+.autogen_class_views_pdfs_show .document_footer .inner_footer {max-width: 1024px; margin: 0 auto}
+.autogen_class_views_pdfs_show .document_footer .document_carousel {margin-left: 5px; margin-right: 10px}
+.autogen_class_views_pdfs_show .document_footer .document_carousel h2 {font-size: 18px; color: #555; font-weight: normal; margin-bottom: 10px}
+.autogen_class_views_pdfs_show .document_container {margin: 40px 0}
+.autogen_class_views_pdfs_show .document_container .outer_page {margin-left: auto; margin-right: auto; box-shadow: 0 0 0 2px #f0f0f0; overflow: hidden}
+.autogen_class_views_pdfs_show .trial_upsell {padding: 0 10px; text-align: center; height: 64px; line-height: 66px; display: none; border-bottom: 1px solid #e1e1e1; white-space: nowrap}
+@media (max-width: 1180px) {.autogen_class_views_pdfs_show .trial_upsell .unimportant_copy {display: none}
+}
+.autogen_class_views_pdfs_show .trial_upsell .flat_btn {position: relative; top: 3px; margin-left: 20px}
+.autogen_class_views_pdfs_show .fourgen_highlight {background: #ff5; box-shadow: 0 0 0 10px #ff5}
+.autogen_class_views_pdfs_show .fourgen_highlight.fourgen_highlight_selected {background: #fdd835; box-shadow: 0 0 0 10px #fdd835}
+.autogen_class_views_pdfs_show #Doc_Top_Leaderboard_ATF_728x90_container {margin: 0 auto; margin-top: 20px}
+.autogen_class_views_pdfs_show .between_page_ads {margin: 30px auto}
+.autogen_class_views_pdfs_show .ad_debug_placeholder {background: #A287C0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center}
+.autogen_class_views_pdfs_show .ad_debug_placeholder.ad_refresh_unit:before {content: "Refresh ad"}
+.autogen_class_views_pdfs_show .ad_debug_placeholder:before {content: "Advertisement"; color: rgba(255, 255, 255, 0.8); font-weight: bold}
+.autogen_class_views_pdfs_show .seo_banner {position: absolute; top: 100%; left: 0; right: 0}
+.autogen_class_views_pdfs_show .page_missing_explanation {padding: 40px}
+.autogen_class_views_pdfs_show .page_missing_explanation.outer_page {box-shadow: none}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner {overflow: hidden; border: 1px solid #e1e1e1; background: #f4f4f4; padding: 10px; text-align: right; line-height: 1.5; max-width: 650px; margin: 0 auto}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .home_btn {min-width: 140px}
+@media (max-width: 1200px) {.autogen_class_views_pdfs_show .page_missing_explanation_inner .home_btn {padding: 0 15px}
+}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .page_missing_explanation_contents {color: #666; float: left; text-align: left}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .missing_page_number_title {color: #444}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .missing_page_number_title.single_row {margin-top: 6px}
+.autogen_class_views_pdfs_show .page_missing_explanation_inner .missing_page_buy_button {margin-top: 2px}
+.autogen_class_views_pdfs_show .toolbar_notification {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: 65px; line-height: 65px; padding: 0 0 0 35px}
+.autogen_class_views_pdfs_show .templates {display: none}
+
+
+/* app/views/pdfs/_sidebar.css @ 1472248441 */
+.autogen_class_views_pdfs_sidebar h1 {font-family: Livory, serif; font-weight: normal; font-style: italic; font-size: 26px; line-height: 32px; color: #444; margin: 0; word-wrap: break-word; overflow: hidden; text-overflow: ellipsis; /* to truncate long titles */ /* Is this better? */ display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical}
+.autogen_class_views_pdfs_sidebar .download_app_promo_lightbox {display: inline-block; margin-top: 15px}
+.autogen_class_views_pdfs_sidebar .document_edit_row {font-size: 14px; margin-bottom: 10px}
+.autogen_class_views_pdfs_sidebar .document_edit_row .icon {font-size: 14px; margin-right: 5px; vertical-align: -1px}
+.autogen_class_views_pdfs_sidebar .publish_info {font-size: 14px; color: #666; margin-top: 3px}
+.autogen_class_views_pdfs_sidebar .publish_info .decorative {font-family: Livory, serif}
+.autogen_class_views_pdfs_sidebar .share_row .sharing_buttons {display: inline-block}
+.autogen_class_views_pdfs_sidebar .share_row .embed_cell {padding-left: 10px; margin-left: 11px; height: 23px; line-height: 23px; border-left: 1px solid #e1e1e1; display: inline-block; text-transform: uppercase; font-size: 12px; font-weight: bold}
+.autogen_class_views_pdfs_sidebar .share_row .embed_cell .icon {vertical-align: -1px; margin-right: 3px; font-size: 14px}
+.autogen_class_views_pdfs_sidebar .document_stats {font-size: 14px; color: #666; padding: 12px 0; margin: 14px 0; white-space: nowrap; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1}
+.autogen_class_views_pdfs_sidebar .document_stats .stats {color: #666}
+.autogen_class_views_pdfs_sidebar .document_stats .stat_cell {padding: 0 12px; height: 24px; line-height: 24px; display: inline-block; border-right: 1px solid #e1e1e1}
+.autogen_class_views_pdfs_sidebar .document_stats .stat_cell:first-child {padding-left: 0}
+.autogen_class_views_pdfs_sidebar .document_stats .stat_cell:last-child {border-right: 0}
+.autogen_class_views_pdfs_sidebar .document_actions {margin-top: 20px; white-space: nowrap}
+.autogen_class_views_pdfs_sidebar .document_actions .action_button {margin-right: 10px}
+@media (max-width: 1400px) {.autogen_class_views_pdfs_sidebar .document_actions .action_button {width: 224px; margin-bottom: 10px}
+.autogen_class_views_pdfs_sidebar .document_actions > div, .autogen_class_views_pdfs_sidebar .document_actions > .react_mount_node {display: block; margin: 0}
+}
+.autogen_class_views_pdfs_sidebar .availability {font-size: 14px; color: #666; margin: 15px 0}
+.autogen_class_views_pdfs_sidebar h3 {text-transform: uppercase; font-size: 14px; font-weight: bold; color: #444}
+.autogen_class_views_pdfs_sidebar .collapse_data.show_more .on_less {display: none}
+.autogen_class_views_pdfs_sidebar .collapse_data.show_more span.on_more {display: inline}
+.autogen_class_views_pdfs_sidebar .collapse_data.show_more div.on_more {display: block}
+.autogen_class_views_pdfs_sidebar .collapse_data .on_more {display: none}
+.autogen_class_views_pdfs_sidebar .collapse_data .description_header {margin: 24px 0 12px 0}
+.autogen_class_views_pdfs_sidebar .collapse_data .description_content {font-size: 16px; line-height: 26px; color: #666; word-wrap: break-word}
+.autogen_class_views_pdfs_sidebar .collapse_data .more_toggle {margin-top: 10px; font-size: 14px}
+.autogen_class_views_pdfs_sidebar .collapse_data .document_metadata {font-size: 14px; margin-top: 16px}
+.autogen_class_views_pdfs_sidebar .collapse_data .data_row {color: #666; margin: 8px 0}
+.autogen_class_views_pdfs_sidebar #Doc_Sideboard_MediumRectangle_ATF_300x250_container, .autogen_class_views_pdfs_sidebar #Doc_Sideboard_HalfPage_Pinned_300x600_container {margin: 20px auto 20px auto}
+@media (max-width: 1400px) {.autogen_class_views_pdfs_sidebar #Doc_Sideboard_MediumRectangle_ATF_300x250_container, .autogen_class_views_pdfs_sidebar #Doc_Sideboard_HalfPage_Pinned_300x600_container {margin-right: 0; margin-left: -10px}
+}
+.autogen_class_views_pdfs_sidebar .has_document_cells .doc_link {display: inline; width: auto}
+
+
+/* app/views/pdfs/sidebar/_admin_panel.css @ 1472248441 */
+.document_admin_panel {text-align: left; padding: 8px; margin-bottom: 8px; background: #F4EEF4; border: 1px solid #AF89AF; border-radius: 2px}
+.document_admin_panel h3 {margin: 0px; font-size: 18px}
+.document_admin_panel .visible_when_open {display: none}
+.document_admin_panel.open .visible_when_open {display: inline}
+.document_admin_panel.open .visible_when_closed {display: none}
+.document_admin_panel .toggle_admin_btn img {vertical-align: middle}
+.document_admin_panel a {display: inline-block; margin-right: 10px}
+.document_admin_panel a.disabled {color: black; cursor: default}
+
+
+/* app/views/pdfs/_sidebar_footer.css @ 1472248441 */
+.autogen_class_views_pdfs_sidebar_footer {border-top: 0; text-align: left; padding: 40px 0}
+.autogen_class_views_pdfs_sidebar_footer .padded_footer {padding-left: 40px}
+@media (max-width: 1400px) {.autogen_class_views_pdfs_sidebar_footer .padded_footer {padding-left: 20px}
+}
+.autogen_class_views_pdfs_sidebar_footer .joint_column {width: 180px}
+.autogen_class_views_pdfs_sidebar_footer .joint_column .column {margin-bottom: 20px}
+.autogen_class_views_pdfs_sidebar_footer .joint_column:last-child {margin-bottom: 0}
+.autogen_class_views_pdfs_sidebar_footer .external_links {margin: 20px 40px 20px -8px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center}
+@media (max-width: 1400px) {.autogen_class_views_pdfs_sidebar_footer .external_links {-webkit-box-align: start;-webkit-align-items: flex-start;-ms-flex-align: start;align-items: flex-start; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; margin-right: 0}
+}
+.autogen_class_views_pdfs_sidebar_footer .external_links .social_buttons {-webkit-box-ordinal-group: 2;-webkit-order: 1;-ms-flex-order: 1;order: 1}
+.autogen_class_views_pdfs_sidebar_footer .external_links .app_store_buttons {-webkit-box-ordinal-group: 3;-webkit-order: 2;-ms-flex-order: 2;order: 2; -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; text-align: right}
+@media (max-width: 1400px) {.autogen_class_views_pdfs_sidebar_footer .external_links .app_store_buttons {margin-top: 5px; float: none}
+.autogen_class_views_pdfs_sidebar_footer .external_links .app_store_buttons img {margin-left: 8px; margin-right: 5px}
+}
+.autogen_class_views_pdfs_sidebar_footer .external_links .app_store_buttons > a {display: inline-block}
+.autogen_class_views_pdfs_sidebar_footer .external_links .app_store_buttons img {display: block; height: 35px; margin-right: 10px}
+.autogen_class_views_pdfs_sidebar_footer .secondary_links {padding: 0 0 0 40px}
+@media (max-width: 1400px) {.autogen_class_views_pdfs_sidebar_footer .secondary_links {padding-left: 20px}
+}
+.autogen_class_views_pdfs_sidebar_footer .secondary_links > span, .autogen_class_views_pdfs_sidebar_footer .secondary_links > a {display: block; margin: 15px 0}
+.autogen_class_views_pdfs_sidebar_footer .secondary_links > span:last-child, .autogen_class_views_pdfs_sidebar_footer .secondary_links > a:last-child {margin-bottom: 0}
+.autogen_class_views_pdfs_sidebar_footer .secondary_links .dot_divider {display: none}
+
+
+/* app/views/pdfs/_ssi_recommendations.css @ 1472248441 */
+.autogen_class_views_pdfs_ssi_recommendations .footer_rec_docs {display: none}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs {margin-top: 30px; border-top: 1px solid #e1e1e1}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs h3 {margin: 20px 0 0px 0}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .documents_page {display: none}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .documents_page.visible {display: block}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; font-size: 14px; color: #999}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .bar {display: inline-block; height: 12px; vertical-align: -1px; width: 1px; background: #ccc; margin: 0 10px}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .pager_navigate {float: right}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .pager_navigate a {color: inherit; cursor: default; opacity: 0.5}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .pager_navigate a.active {opacity: 1; color: #1a7bba; cursor: pointer}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .related_pager .pager_navigate a.active:hover {color: #6ac6e2}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .has_document_cells .document_cell {margin: 15px 0 35px 0; width: auto; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .has_document_cells .document_cell a {color: #444; -webkit-transition: color 0.1s ease; transition: color 0.1s ease}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .has_document_cells .document_cell a:hover {color: #6ac6e2}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .has_document_cells .document_cell .thumb {-webkit-box-flex: 0;-webkit-flex: none;-ms-flex: none;flex: none; margin-bottom: 0; width: 108px; height: 144px}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .has_document_cells .document_cell .related_data {margin-left: 15px}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .has_document_cells .document_cell .related_title {font-family: Livory, serif; font-style: italic; font-size: 16px; line-height: 20px; color: #444; word-wrap: break-word}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .has_document_cells .document_cell .decorative {font-family: Livory, serif}
+.autogen_class_views_pdfs_ssi_recommendations .sidebar_rec_docs .has_document_cells .document_cell .related_publisher {font-size: 14px; word-wrap: break-word}
+
+
+/* app/views/pdfs/_toolbar.css @ 1472248441 */
+.autogen_class_views_pdfs_toolbar {z-index: 2; background: #f4f4f4; height: 50px; line-height: 50px; box-shadow: 0 1px 0 #e1e1e1; text-align: center; position: relative}
+.autogen_class_views_pdfs_toolbar .left_tools {position: absolute; left: 31px; top: 0}
+.autogen_class_views_pdfs_toolbar .left_tools .toolbar_scribd_logo {width: 82px; height: 21px; display: inline-block; vertical-align: top; background-image: url('https://s1-f.scribdassets.com/images/scribd_logo_gray.svg?1472248508'); background-size: cover; margin-top: 15px; margin-right: 25px}
+.autogen_class_views_pdfs_toolbar .right_tools {position: absolute; right: 31px; top: 0}
+.autogen_class_views_pdfs_toolbar .right_tools .toolbar_btn {margin-left: 15px}
+.autogen_class_views_pdfs_toolbar .right_tools .toolbar_btn:first-child {margin-left: 0}
+.autogen_class_views_pdfs_toolbar .right_tools .flat_btn {position: relative; top: 3px}
+.autogen_class_views_pdfs_toolbar .center_tools > * {margin-right: 15px}
+.autogen_class_views_pdfs_toolbar .center_tools > *:last-child {margin-right: 0}
+.autogen_class_views_pdfs_toolbar .toolbar_pager {display: inline-block; line-height: normal; vertical-align: top; font-size: 14px; color: #999; margin-top: 11px}
+.autogen_class_views_pdfs_toolbar .toolbar_pager .total_pages {position: relative; top: 2px}
+.autogen_class_views_pdfs_toolbar .toolbar_pager .page_input {box-sizing: border-box; font-family: Sofia Pro, sans-serif; border-radius: 3px; border: 1px solid #e1e1e1; font-size: 14px; width: 30px; text-align: center; height: 30px; margin-right: 10px; color: #1a7bba}
+.autogen_class_views_pdfs_toolbar .toolbar_btn {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; -webkit-transition: color 0.1s ease; transition: color 0.1s ease; width: 30px; height: 30px; line-height: 30px; font-size: 26px; display: inline-block; vertical-align: top; margin-top: 11px; color: #999; cursor: pointer}
+.autogen_class_views_pdfs_toolbar .toolbar_btn.disabled {opacity: 0.5; cursor: default}
+.autogen_class_views_pdfs_toolbar .toolbar_btn.active, .autogen_class_views_pdfs_toolbar .toolbar_btn:hover {color: #6ac6e2}
+.autogen_class_views_pdfs_toolbar .toolbar_btn:active {color: #1a7bba}
+.autogen_class_views_pdfs_toolbar .results_popup {line-height: normal; text-align: left; width: 340px; max-height: 340px; background: white; position: absolute; top: 100%; left: 0; margin-top: 20px; border: 1px solid #e1e1e1; border-radius: 4px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding-top: 15px; overflow: hidden; overflow-y: auto}
+.autogen_class_views_pdfs_toolbar .results_popup .results_header {padding: 0 18px; margin-bottom: 10px; color: #666; font-size: 14px}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row {font-size: 14px; color: #ccc; padding: 8px 18px}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.available {color: #999}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.available:hover, .autogen_class_views_pdfs_toolbar .results_popup .results_row.available:active {background: #f4f4f4}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.available:hover a, .autogen_class_views_pdfs_toolbar .results_popup .results_row.available:active a {color: #6ac6e2}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.available:active a {color: #1a7bba}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row.selected {background: #f4f4f4}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row .result_page_number {float: right}
+.autogen_class_views_pdfs_toolbar .results_popup .results_row a {display: block; margin-right: 25px; color: #666}
+.autogen_class_views_pdfs_toolbar .toc_wrapper {display: inline-block; vertical-align: top; position: relative; margin-right: 11px}
+.autogen_class_views_pdfs_toolbar .toc_wrapper .toolbar_btn {display: block}
+.autogen_class_views_pdfs_toolbar .toc_wrapper .results_header {font-weight: bold; text-transform: uppercase}
+.autogen_class_views_pdfs_toolbar .toc_wrapper .table_of_contents .toc_row.current {font-weight: bold}
+.autogen_class_views_pdfs_toolbar .search_wrapper {display: inline-block; vertical-align: top; margin-top: 11px; position: relative; margin-left: 4px}
+.autogen_class_views_pdfs_toolbar .search_results.empty {padding: 15px 0}
+.autogen_class_views_pdfs_toolbar .search_results.empty .results_header {margin-bottom: 0}
+.autogen_class_views_pdfs_toolbar .doc_search {background: white; line-height: normal; border-radius: 3px; border: 1px solid #e1e1e1; height: 28px; width: 240px}
+@media (max-width: 1180px) {.autogen_class_views_pdfs_toolbar .doc_search {width: 162px}
+}
+.autogen_class_views_pdfs_toolbar .doc_search.has_text .search_input {padding-right: 25px}
+.autogen_class_views_pdfs_toolbar .doc_search.focused .search_icon, .autogen_class_views_pdfs_toolbar .doc_search.open .search_icon {color: #1a7bba}
+.autogen_class_views_pdfs_toolbar .doc_search .search_input {box-sizing: border-box; font-size: 14px; border: 0; padding: 0; background: transparent; display: block; width: 100%; vertical-align: top; font-family: Sofia Pro, sans-serif; padding: 0 0 2px 28px; height: 28px; padding-bottom: 2px}
+.autogen_class_views_pdfs_toolbar .doc_search .scribd_spinner {position: absolute; top: 5px; left: 5px}
+.autogen_class_views_pdfs_toolbar .doc_search .search_close_icon, .autogen_class_views_pdfs_toolbar .doc_search .search_icon {width: 20px; height: 20px; line-height: 20px; text-align: center; color: #ccc; -webkit-transition: color 0.15s; transition: color 0.15s}
+.autogen_class_views_pdfs_toolbar .doc_search .search_icon {position: absolute; top: 5px; left: 5px}
+.autogen_class_views_pdfs_toolbar .doc_search .search_close_icon {cursor: pointer; position: absolute; top: 5px; right: 5px; color: #ccc}
+.autogen_class_views_pdfs_toolbar .doc_search .search_close_icon:hover {color: #666}
+.autogen_class_views_pdfs_toolbar .doc_search .search_close_icon:active {color: #444}
+
+
+/* app/views/shared/reading_progress/external_progress_lightbox.css @ 1472248442 */
+.autogen_class_views_shared_reading_progress_external_progress_lightbox {max-width: 505px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-radius: 4px; box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); border: 1px solid #e1e1e1}
+.autogen_class_views_shared_reading_progress_external_progress_lightbox p {margin-bottom: 0}
+.autogen_class_views_shared_reading_progress_external_progress_lightbox .content {border: none}
+
+
+/* app/views/shared/reading_progress/past_preview_lightbox.css @ 1472248442 */
+.autogen_class_views_shared_reading_progress_past_preview_lightbox {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-radius: 4px; box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); border: 1px solid #e1e1e1}
+.autogen_class_views_shared_reading_progress_past_preview_lightbox .icon-close {display: none}
+.autogen_class_views_shared_reading_progress_past_preview_lightbox .content {border: none}
+.autogen_class_views_shared_reading_progress_past_preview_lightbox .actions {text-align: right}
+.autogen_class_views_shared_reading_progress_past_preview_lightbox .library_button {margin-left: 20px}

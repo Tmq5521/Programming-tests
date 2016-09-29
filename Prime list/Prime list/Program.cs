@@ -1,60 +1,60 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace Prime_list
 {
     class Program
     {
+
+        static ulong IsPrime(ulong i, ulong[] nums, ulong index)
+        {
+            double Root = Math.Sqrt(i);
+            for (ulong e = 1;nums[e] <= Root; ++e)
+            {
+                if (i % nums[e] == 0)
+                    return i;
+            }
+            nums[index] = i;
+            index += index;
+            return i;
+        }
+
+
         static void Main(string[] args)
         {
-            Console.Title = "Prime finder";
+            Console.Title = "Primes";
+            Stopwatch St1 = new Stopwatch();
+            St1.Reset();
+            St1.Start();
 
-            FileStream fs = new FileStream(@"../../list.txt", FileMode.Create, FileAccess.ReadWrite);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.AutoFlush = true;
-            sw.WriteLine(1);
+            ulong amount = 20000000;
+            ulong[] nums = new ulong[amount];
+            nums[0] = 2;
+            nums[1] = 3;
+            ulong index = 2;
+            ulong i = 3;
+            ulong I = 3;
 
-            double[] nums = new double[1];
-            int index = 0;
-            double i = 2;
-            bool prime;
-
-            Console.WriteLine("How many Primes?");
-            int amount = int.Parse(Console.ReadLine());
-            while (amount >= nums.Length + 2)
+            //while (amount > index)
+            while(amount >= i)
             {
-                prime = true;
-                if (index <= 11)
-                { 
-                    for (double v = 2; v < i; v++)
-                    {
-                        if (i % v == 0)
-                            prime = false;
-                    }
-                }
-                else
+                i += 2;
+                if (Math.Sqrt(I) < i)
                 {
-                    foreach (double num in nums)
-                    {
-                        if (i % num == 0)
-                            prime = false;
-                    }
+                   I = IsPrime(i, nums, index);
+                    if (nums[index] != 0)
+                        index += 1;
                 }
-                if (prime)
-                {
-                    index = index + 1;
-                    sw.WriteLine(i);
-                    Console.WriteLine(i);
-                    Array.Resize<double>(ref nums, index);
-                    nums[index - 1] = i;
-                }
-                i = i + 1;
+                //if (IsPrime(i, nums, index))
+                //{
+                //    nums[index] = i;
+                //    index = ++index;
+                //} 
             }
-            Console.WriteLine("Done!");
+
+            St1.Stop();
+            Console.WriteLine(St1.ElapsedMilliseconds);
             Console.ReadKey();
         }
     }
