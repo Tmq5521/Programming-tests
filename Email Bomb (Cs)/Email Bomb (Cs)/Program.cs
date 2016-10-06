@@ -48,7 +48,7 @@ namespace Email_Bomb__Cs_
                 int[] cursor = new int[2];
                 cursor[0] = Console.CursorLeft;
                 cursor[1] = Console.CursorTop;
-                for (int i = 0; i <= max; i++)
+                for (int i = 0; i < max; i++)
                 { 
                     Console.SetCursorPosition(cursor[0], cursor[1]);
                     try
