@@ -11,13 +11,19 @@ def inputStr(Display):
 
 commit = inputStr("Commit message: ")
 
+print("\n{:+^40}".format("Add"))
 os.system("git add *")
-print()
+
+print("\n{:+^40}".format("Commit"))
 os.system("git commit -m \""+commit+"\"")
-print()
+
+print("\n{:+^40}".format("Push"))
 os.system("git push")
-print()
+
+print("\n{:+^40}".format("Pull"))
 os.system("git pull")
-print()
+
+print("\n{:+^40}".format("End"))
 os.system("pause")
+
 sys.exit()
