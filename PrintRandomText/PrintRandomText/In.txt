@@ -1,4 +1,4 @@
-Up
-Down
-Left
-Right
+RR
+Rr
+rR
+rr

@@ -1,7 +1,6 @@
 // Primes List.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include <cmath>
 #include <iostream>
 #include <chrono>
@@ -10,6 +9,7 @@
 using namespace std;
 using namespace chrono;
 
+//double *sqrt_local = &sqrt ;
 
 
 bool isPrime(unsigned int nums[],unsigned int i)
@@ -55,8 +55,6 @@ void main()
 	high_resolution_clock::time_point end = high_resolution_clock::now();
 	duration<double> time_span = duration_cast<duration<double>>(end - start);
 
-	int random;
-
 	cout << time_span.count() << endl;
 	cout << index << endl;
 	
@@ -69,3 +67,4 @@ void main()
 	}
 	system("pause");
 }
+
