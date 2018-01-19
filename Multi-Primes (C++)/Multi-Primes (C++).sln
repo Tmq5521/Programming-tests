@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Multi-Primes (C++)", "Multi-Primes (C++)\Multi-Primes (C++).vcxproj", "{BF4CC0D3-56A0-4701-8288-F624C7504CBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF4CC0D3-56A0-4701-8288-F624C7504CBA}.Debug|x64.ActiveCfg = Debug|x64
+		{BF4CC0D3-56A0-4701-8288-F624C7504CBA}.Debug|x64.Build.0 = Debug|x64
+		{BF4CC0D3-56A0-4701-8288-F624C7504CBA}.Debug|x86.ActiveCfg = Debug|Win32
+		{BF4CC0D3-56A0-4701-8288-F624C7504CBA}.Debug|x86.Build.0 = Debug|Win32
+		{BF4CC0D3-56A0-4701-8288-F624C7504CBA}.Release|x64.ActiveCfg = Release|x64
+		{BF4CC0D3-56A0-4701-8288-F624C7504CBA}.Release|x64.Build.0 = Release|x64
+		{BF4CC0D3-56A0-4701-8288-F624C7504CBA}.Release|x86.ActiveCfg = Release|Win32
+		{BF4CC0D3-56A0-4701-8288-F624C7504CBA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C8D6638-ED38-4404-AA7A-A4BAA4E6171E}
+	EndGlobalSection
+EndGlobal

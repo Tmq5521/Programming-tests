@@ -10,7 +10,7 @@
 #include <vector>
 #include <thread>
 
-#define _DEBUG_ false
+#define _DEBUG_ true
 
 //using for ease
 using namespace std;
@@ -34,9 +34,9 @@ void isPrime(vector<unsigned int> &nums, unsigned int i, int id)
 			nums.push_back(i);
 
             //display
-            if (_DEBUG_)
-                cout << "Info: Thread[" << id << "]: " << i << endl;
-            
+#if _DEBUG_
+                cout << "Warning: Thread[" << id << "]: " << i << endl;
+#endif            
             //end
             return;
 		}
@@ -52,9 +52,9 @@ void isPrime(vector<unsigned int> &nums, unsigned int i, int id)
     nums.push_back(i);
     
     //display as a warning instead
-    if (_DEBUG_)
-        cout << "Warning: Thread[" << id << "]: " << i << endl;
-    
+#if _DEBUG_
+        cout << "Info: Thread[" << id << "]: " << i << endl;
+#endif
     //end
     return;
 }
@@ -68,15 +68,15 @@ void main()
 	high_resolution_clock::time_point start = high_resolution_clock::now();
 
     //max number to test
-	const int ammount = 20000; //20000000
+	const int ammount = 20000000; //20000000
 
     //Max number of threads
     int tMax = thread::hardware_concurrency();
 
     //Display number of threads
-    if (_DEBUG_)
+#if _DEBUG_
         cout << "Info: Max threads:" << tMax << endl;
-
+#endif
     //prime list and pre-seeding
     std::vector<unsigned int> numbers;
     numbers.push_back(2);
@@ -91,25 +91,26 @@ void main()
     while (i <= ammount)
     {
         //can be checked fast
-        if (i < numbers.back() * numbers.back())
+        //if (sqrt_local(i) < numbers.back())
+        if (true)
         {
             //max threads
-            while (tMax <= threads.size())
+            while ((unsigned int)tMax <= threads.size())
             {
                 //debug full threads warning
-                if (_DEBUG_)
+#if _DEBUG_
                     cout << "Warning: Threads full @ " << tMax << " Threads" << endl;
-
+#endif
                 //for all threads
-                for (int counter = 0; counter < threads.size(); counter++)
+                for (unsigned int counter = 0; counter < threads.size(); counter++)
                 {
                     //still running
                     if (!threads[counter].joinable())
                     {
                         //debug thread stopping
-                        if (_DEBUG_)
+#if _DEBUG_
                             cout << "Info: Thread[" << counter << "]: Deleted" << endl;
-
+#endif
                         //clear thread slot
                         threads.erase(threads.begin()+counter);
                     }
@@ -123,9 +124,9 @@ void main()
             threads.front().detach();
             
             //debug infodump
-            if (_DEBUG_)
-                cout << "Info: Size: " << threads.size() << " int: " << i << " Primes: " << numbers.size() << endl;
-
+#if _DEBUG_
+            cout << "Info: Size: " << threads.size() << " int: " << i << " Primes: " << numbers.size() << endl;
+#endif
             i += 2; //inc if testing num
         }
 
@@ -133,8 +134,9 @@ void main()
         else
         {
             //warn that i is a slow calculation and wait till it is not
-            if (_DEBUG_)
-                cout << "Warning: " << i << " exceeds sqrt(max prime)" << endl;
+#if _DEBUG_
+            cout << "Warning: " << i << " exceeds sqrt(" << numbers[numbers.size()-1] << ")" << endl;
+#endif
         }
     }
 
@@ -154,7 +156,7 @@ void main()
 	cout << endl;
 
     //display primes
-	for (int i = 0; i <= numbers.size() - 1; ++i)
+	for (unsigned int i = 0; i <= numbers.size() - 1; ++i)
 	{
         //print prime with which prime
 		cout << "Info: Prime[" << i+1 << "]: " << numbers[i] << endl;
