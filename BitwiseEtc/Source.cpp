@@ -5,18 +5,18 @@
 
 using namespace std;
 
-void bitPrint(unsigned int);
-unsigned int readLineBinChar();
-void writeLineBinChar(unsigned int);
+void bitPrint(unsigned long long int);
+unsigned long long int readLineBinChar();
+void writeLineBinChar(unsigned long long int);
 
 void main()
 {
-    unsigned int a, b, c, d;
-    unsigned int key;
+    unsigned long long int a, b, c, d;
+    unsigned long long int key;
 
-    a = 0xfbaeacdb;
-    b = 0xdc495921;
-    c = 0xacbfa4d1;
+    a = 0xfbaeacdbabcdefce;
+    b = 0xdc49592112bc93af;
+    c = 0xacbfa4d1f3492dce;
     d = readLineBinChar();
    
     key = a ^ b ^ c ^ d;
@@ -33,7 +33,7 @@ void main()
     system("pause");
 }
 
-void bitPrint(unsigned int bits)
+void bitPrint(unsigned long long int bits)
 {
     cout << bits << " (bin:)";
     for(;bits; bits = bits >> 1)
@@ -43,21 +43,21 @@ void bitPrint(unsigned int bits)
     cout << endl;
 }
 
-unsigned int readLineBinChar()
+unsigned long long int readLineBinChar()
 {
-    unsigned int bits = 0x00;
-    unsigned int c = 0x00;
+    unsigned long long int bits = 0x00;
+    unsigned long long int c = 0x00;
     do
     {
         c = getchar();
-        bits += (unsigned int)c;
+        bits += (unsigned long long int)c;
         bits = bits << 8;
     } while (c != '\n');
 
     return bits;
 }
 
-void writeLineBinChar(unsigned int bits)
+void writeLineBinChar(unsigned long long int bits)
 {
     deque<char> stream;
     while (bits)
